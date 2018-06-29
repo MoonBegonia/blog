@@ -74,16 +74,16 @@ sed -i 's:default=.*:default=0:g' /etc/grub.conf
 reboot
 ```
 
-~~开不了机的打开 vps 后台控制面板的 vnc, 开机卡在 grub 引导, 只需要手动选择内核就可以了~~
+**开不了机的打开 vps 后台控制面板的 vnc, 开机卡在 grub 引导, 只需要手动选择内核就可以了**
 
 安装完成后不要忘记修改 /boot/grub/menu.lst 和 /etc/grub.conf，将这两个文件中旧内核的启动项删除即可避免无法重启的问题。
 
 - 更新到最新版内核
 
-```
+~~~
 yum --enablerepo=elrepo-kernel update -y
 reboot
-```
+~~~
 
 ## CentOS 7
 
