@@ -6,7 +6,7 @@
 # Site
 title: 简记
 subtitle:
-description: 欢迎来到月洒清辉映海棠的小家，简于形，记于心。
+description: 凡是过去，皆为序曲。
 author: 月洒清辉映海棠
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: zh-Hans
@@ -235,8 +235,7 @@ social_icons:
 
 # Sidebar Avatar
 # in directory: /assets/images/avatar.jif
-avatar: /assets/images/avatar.jpg
-
+avatar:
 
 # Table Of Contents in the Sidebar
 toc:
