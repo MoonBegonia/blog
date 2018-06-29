@@ -2,7 +2,7 @@
 title: 开启TCP BBR拥塞控制算法
 categories: overthewall
 tags:
- over the wall
+ - over the wall
 ---
 
 BBR 目的是要尽量跑满带宽, 并且尽量不要有排队的情况, 效果并不比速锐差
