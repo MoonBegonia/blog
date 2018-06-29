@@ -201,7 +201,7 @@ font:
   # Font settings for <code> and code blocks.
   codes:
     external: true
-    family: 
+    family: consolas
     size: 
 
 
@@ -607,7 +607,7 @@ pace: false
 pace_theme: pace-theme-minimal
 
 # Canvas-nest
-canvas_nest: false
+canvas_nest: true
 
 # three_waves
 three_waves: false
@@ -616,7 +616,7 @@ three_waves: false
 canvas_lines: false
 
 # canvas_sphere
-canvas_sphere: true
+canvas_sphere: false
 
 # Only fit scheme Pisces
 # Canvas-ribbon
