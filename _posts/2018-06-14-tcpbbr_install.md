@@ -17,62 +17,76 @@ Linux kernel 4.9+ 已支持 tcp_bbr 下面简单讲述基于 KVM 架构 VPS 如�
 
 - 下载最新内核,最新内核查看 [这里](http://elrepo.org/linux/kernel/el7/x86_64/RPMS/)
 
-```
-wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.16/linux-image-4.16.0-041600-generic_4.16.0-041600.201804012230_amd64.deb
-```
+  ```
+  wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.16/linux-image-4.16.0-041600-generic_4.16.0-041600.201804012230_amd64.deb
+  ```
 
 - 安装内核
-```
-dpkg -i linux-image-4.*.deb
-```
+
+  ```
+  dpkg -i linux-image-4.*.deb
+  ```
+
 - 删除旧内核(可选)
-```
-dpkg -l | grep linux-image
-apt-get purge 旧内核
-```
+
+    ```
+    dpkg -l | grep linux-image
+    apt-get purge 旧内核
+    ```
+
 - 更新 grub 系统引导文件并重启
-```
-update-grub
-reboot
-```
+
+    ```
+    update-grub
+    reboot
+    ```
 
 ## Ubuntu 16.04
 
 <hr>
 
 - 安装 Hardware Enablement Stack (HWE)，自动更新内核
-```
-apt install --install-recommends linux-generic-hwe-16.04
-```
+
+    ```
+    apt install --install-recommends linux-generic-hwe-16.04
+    ```
+
 - 删除旧内核(可选)
-```
-apt autoremove
-```
+
+    ```
+    apt autoremove
+    ```
 
 ## CentOS 6
 
 <hr>
 
 - 下载更换内核,最新内核查看 [这里](http://elrepo.org/linux/kernel/el6/x86_64/RPMS/)
-```
-rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
-rpm -Uvh http://www.elrepo.org/elrepo-release-6-8.el6.elrepo.noarch.rpm
-yum --enablerepo=elrepo-kernel install kernel-ml -y
-```
+
+    ```
+    rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+    rpm -Uvh http://www.elrepo.org/elrepo-release-6-8.el6.elrepo.noarch.rpm
+    yum --enablerepo=elrepo-kernel install kernel-ml -y
+    ```
+
 - 查看内核是否安装成功
-```
-rpm -qa | grep kernel
-```
+
+    ```
+    rpm -qa | grep kernel
+    ```
+
 - 删除旧内核(可选)
-```
-rpm -ev 旧内核
-```
+
+    ```
+    rpm -ev 旧内核
+    ```
+
 - 更新 grub 系统引导文件并重启
 
-```
-sed -i 's:default=.*:default=0:g' /etc/grub.conf
-reboot
-```
+    ```
+    sed -i 's:default=.*:default=0:g' /etc/grub.conf
+    reboot
+    ```
 
 **开不了机的打开 vps 后台控制面板的 vnc, 开机卡在 grub 引导, 只需要手动选择内核就可以了**
 
@@ -80,10 +94,10 @@ reboot
 
 - 更新到最新版内核
 
-~~~
-yum --enablerepo=elrepo-kernel update -y
-reboot
-~~~
+    ```
+    yum --enablerepo=elrepo-kernel update -y
+    reboot
+    ```
 
 ## CentOS 7
 
@@ -91,33 +105,34 @@ reboot
 
 - 下载更换内核,最新内核查看 [这里](http://elrepo.org/linux/kernel/el7/x86_64/RPMS/)
 
-```
-rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
-rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
-yum --enablerepo=elrepo-kernel install kernel-ml -y
-```
+    ```
+    rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+    rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
+    yum --enablerepo=elrepo-kernel install kernel-ml -y
+    ```
 
 - 查看内核是否安装成功
 
-```
-rpm -qa | grep kernel
-```
+    ```
+    rpm -qa | grep kernel
+    ```
 
 - 删除旧内核(可选)
 
-```
-rpm -ev 旧内核
-```
+    ```
+    rpm -ev 旧内核
+    ```
 
 - 更新 grub 系统引导文件并重启
 
-```
-egrep ^menuentry /etc/grub2.cfg | cut -f 2 -d \'
-grub2-set-default 0 # default 0 表示第一个内核设置为默认运行, 选择最新内核就对了
-reboot
-```
+    ```
+    egrep ^menuentry /etc/grub2.cfg | cut -f 2 -d \'
+    grub2-set-default 0 # default 0 表示第一个内核设置为默认运行, 选择最新内核就对了
+    reboot
+    ```
 
-注意，某些服务商（如 Digital Ocean）可能需要首先将 VPS 配置为可自定义内核，然后 grub2 的配置才会生效。
+- 注意，某些服务商（如 Digital Ocean）可能需要首先将 VPS 配置为可自定义内核，然后 grub2 的配置才会生效。
+
 重新启动后，如果会出现 "read-only file system" 的错误，root 账户下执行 mount -o remount rw / 即可
 
 - 更新到最新版内核
