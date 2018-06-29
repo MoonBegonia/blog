@@ -1,0 +1,107 @@
+---
+title: Debian9+/Ubuntu17+解决/etc/rc.local开机启动问题
+categories: Linux Debian
+tags:
+ - Linux
+ - Debian
+---
+
+由于某些软件并没有增加开启启动的服务，很多时候需要手工添加，一般我们都是推荐添加命令到 /etc/rc.local 文件，但是 Debian9+/Ubuntu17+ 默认不带 /etc/rc.local 文件，而 rc.local 服务却还是自带的。
+
+<!-- more -->
+
+**本教程以Debian9为例**
+
+## rc.local服务
+
+```
+root@debian:~# cat /lib/systemd/system/rc.local.service
+#  This file is part of systemd.
+#
+#  systemd is free software; you can redistribute it and/or modify it
+#  under the terms of the GNU Lesser General Public License as published by
+#  the Free Software Foundation; either version 2.1 of the License, or
+#  (at your option) any later version.
+
+# This unit gets pulled automatically into multi-user.target by
+# systemd-rc-local-generator if /etc/rc.local is executable.
+[Unit]
+Description=/etc/rc.local Compatibility
+ConditionFileIsExecutable=/etc/rc.local
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/etc/rc.local start
+TimeoutSec=0
+RemainAfterExit=yes
+GuessMainPID=no
+
+```
+
+## 查看状态(默认为关闭,但是有些还是开启了)
+
+```
+root@debian:~# systemctl status rc-local
+● rc-local.service - /etc/rc.local Compatibility
+   Loaded: loaded (/lib/systemd/system/rc-local.service; static; vendor preset: enabled)
+  Drop-In: /lib/systemd/system/rc-local.service.d
+           └─debian.conf
+   Active: inactive (dead)
+```
+
+## 创建`/etc/rc/local`文件
+
+```
+cat <<EOF >/etc/rc.local
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+#
+exit 0
+EOF
+```
+
+## 赋予执行权限
+
+```
+chmod +x /etc/rc.local
+```
+
+## 启动服务
+
+```
+systemctl start rc-local
+```
+
+## 查看状态
+
+```
+root@debian:~# systemctl status rc-local
+● rc-local.service - /etc/rc.local Compatibility
+   Loaded: loaded (/etc/systemd/system/rc-local.service; static; vendor preset: enabled)
+  Drop-In: /lib/systemd/system/rc-local.service.d
+           └─debian.conf
+   Active: active (running) since Sat 2018-06-23 13:19:34 CST; 11min ago
+  Process: 326 ExecStart=/etc/rc.local start (code=exited, status=0/SUCCESS)
+    Tasks: 16 (limit: 4915)
+   CGroup: /system.slice/rc-local.service
+           ├─ 740 barad_agent
+           ├─ 746 barad_agent
+           ├─ 747 barad_agent
+           ├─ 774 /usr/local/qcloud/YunJing/YDEyes/YDService
+           ├─ 793 /usr/local/qcloud/YunJing/YDLive/YDLive
+           └─1167 /usr/local/qcloud/stargate/sgagent -d
+
+Jun 23 13:19:33 VM-50-229-debian rc.local[326]: Created symlink /etc/systemd/system/multi-user.tar
+Jun 23 13:19:34 VM-50-229-debian systemd[1]: Started /etc/rc.local Compatibility.
+```
