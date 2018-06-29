@@ -13,71 +13,44 @@ Linux kernel 4.9+ 已支持 tcp_bbr 下面简单讲述基于 KVM 架构 VPS 如�
 
 ## Debian 8+ / Ubuntu 14.04
 
-下载最新内核,最新内核查看 [这里](http://elrepo.org/linux/kernel/el7/x86_64/RPMS/)
+最新内核查看 [这里](http://elrepo.org/linux/kernel/el7/x86_64/RPMS/)
 
 ```
+# 下载最新内核
 wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.16/linux-image-4.16.0-041600-generic_4.16.0-041600.201804012230_amd64.deb
-```
-
-安装内核
-
-```
+# 安装内核
 dpkg -i linux-image-4.*.deb
-```
-
-删除旧内核(可选)
-
-```
+# 删除旧内核(可选)
 dpkg -l | grep linux-image
 apt-get purge 旧内核
-```
-
-更新 grub 系统引导文件并重启
-
-```
+# 更新 grub 系统引导文件并重启
 update-grub
 reboot
 ```
 
 ## Ubuntu 16.04
 
-安装 Hardware Enablement Stack (HWE)，自动更新内核
-
 ```
+# 安装 Hardware Enablement Stack (HWE)，自动更新内核
 apt install --install-recommends linux-generic-hwe-16.04
-```
-
-删除旧内核(可选)
-
-```
+# 删除旧内核(可选)
 apt autoremove
 ```
 
 ## CentOS 6
 
-下载更换内核,最新内核查看 [这里](http://elrepo.org/linux/kernel/el6/x86_64/RPMS/)
+最新内核查看 [这里](http://elrepo.org/linux/kernel/el6/x86_64/RPMS/)
 
 ```
+# 下载更换内核
 rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 rpm -Uvh http://www.elrepo.org/elrepo-release-6-8.el6.elrepo.noarch.rpm
 yum --enablerepo=elrepo-kernel install kernel-ml -y
-```
-
-查看内核是否安装成功
-
-```
+# 查看内核是否安装成功
 rpm -qa | grep kernel
-```
-
-删除旧内核(可选)
-
-```
+# 删除旧内核(可选)
 rpm -ev 旧内核
-```
-
-更新 grub 系统引导文件并重启
-
-```
+# 更新 grub 系统引导文件并重启
 sed -i 's:default=.*:default=0:g' /etc/grub.conf
 reboot
 ```
@@ -95,29 +68,18 @@ reboot
 
 ## CentOS 7
 
-下载更换内核,最新内核查看 [这里](http://elrepo.org/linux/kernel/el7/x86_64/RPMS/)
+最新内核查看 [这里](http://elrepo.org/linux/kernel/el7/x86_64/RPMS/)
 
 ```
+# 下载更换内核,
 rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
 yum --enablerepo=elrepo-kernel install kernel-ml -y
-```
-
-查看内核是否安装成功
-
-```
+# 查看内核是否安装成功
 rpm -qa | grep kernel
-```
-
-删除旧内核(可选)
-
-```
+# 删除旧内核(可选)
 rpm -ev 旧内核
-```
-
-更新 grub 系统引导文件并重启
-
-```
+# 更新 grub 系统引导文件并重启
 egrep ^menuentry /etc/grub2.cfg | cut -f 2 -d \'
 grub2-set-default 0 # default 0 表示第一个内核设置为默认运行, 选择最新内核就对了
 reboot
