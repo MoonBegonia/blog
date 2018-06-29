@@ -102,18 +102,10 @@ reboot
 ```
 modprobe tcp_bbr
 echo "tcp_bbr" >> /etc/modules-load.d/modules.conf
-```
-
-执行
-
-```
+# 再执行
 echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
 echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
-```
-
-保存生效
-
-```
+# 保存生效
 sysctl -p
 ```
 
