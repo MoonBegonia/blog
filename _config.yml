@@ -410,7 +410,7 @@ changyan:
 
 # Support for gitalk comments system.
 gitalk:
-  enable: false
+  enable: true
   clientID: fcdb896a42ee148bcebe
   clientSecret: 55fa144a2a8c3ce9a7462d16825d94d5914ec59a
   repo: Gitalk
