@@ -416,6 +416,8 @@ gitalk:
   repo: Gitalk
   owner: MoonBegonia
   admin: MoonBegonia
+  language: zh-CN
+  
 
 # Baidu Share
 # Available value:
