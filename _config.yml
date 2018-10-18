@@ -114,7 +114,7 @@ live2d:
     hOffset: 260
     vOffset: 20
   mobile:
-    show: false
+    show: true
 
 #字数及阅读时长统计
 symbols_count_time:
