@@ -143,6 +143,16 @@ theme_config:
   canvas_lines: false
   canvas_sphere: false
 
+  codeblock:
+    # Manual define the border radius in codeblock
+    # Leave it empty for the default 1
+    border_radius:
+    # Add copy button on codeblock
+    copy_button:
+      enable: true
+      # Show text copy result
+      show_result: true
+
   # Support for gitalk comments system.
   gitalk:
     enable: true
