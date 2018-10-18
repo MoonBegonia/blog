@@ -6,11 +6,11 @@
 
 <script type="text/javascript">
       var gitalk = new Gitalk({
-        clientID: '{{ theme.gitalk_clientID }}',
-        clientSecret: '{{ theme.gitalk_clientSecret }}',
-        repo: '{{ theme.gitalk_repo }}',
-        owner: '{{ theme.gitalk_owner }}',
-        admin: '{{ theme.gitalk_admin }}',
+        clientID: '{{ theme.gitalk.clientID }}',
+        clientSecret: '{{ theme.gitalk.clientSecret }}',
+        repo: '{{ theme.gitalk.repo }}',
+        owner: '{{ theme.gitalk.owner }}',
+        admin: ['{{ theme.gitalk.admin }}'],
         id: md5(window.location.pathname),
         labels: ['gitalk'],
         perPage: 50,
