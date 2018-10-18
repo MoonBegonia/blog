@@ -86,7 +86,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '6.4.2',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -118,7 +118,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://blog-1253491707.piccd.myqcloud.com/images/20181009193626.png/style">
 <meta property="og:image" content="https://blog-1253491707.piccd.myqcloud.com/images/20181009194708.png/style">
-<meta property="og:updated_time" content="2018-10-18T05:43:42.541Z">
+<meta property="og:updated_time" content="2018-10-18T08:14:12.686Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hadoop 系统安装之 Linux 系统安装">
 <meta name="twitter:description" content="本篇主要讲述安装 Hadoop 系统的前提：Linux 系统的安装，因为大多数人日常都是使用 Windows 系统，但是 Hadoop 只能在 Linux 下安装，今天就来说说几种安装 Linux 的方法，仅供参考。">
@@ -390,7 +390,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-10-18 13:43:42" itemprop="dateModified" datetime="2018-10-18T13:43:42+08:00">2018-10-18</time>
+                <time title="修改时间：2018-10-18 16:14:12" itemprop="dateModified" datetime="2018-10-18T16:14:12+08:00">2018-10-18</time>
               
             
           </span>
@@ -443,6 +443,34 @@
           
 
           
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">3.3k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">8 分钟</span>
+              
+            </div>
+          
 
           
 
@@ -461,7 +489,7 @@
       
         <p>本篇主要讲述安装 Hadoop 系统的前提：Linux 系统的安装，因为大多数人日常都是使用 Windows 系统，但是 Hadoop 只能在 Linux 下安装，今天就来说说几种安装 Linux 的方法，仅供参考。</p>
 <a id="more"></a>
-<h2 id="Windows-Subsystem-for-Linux-Windows-Linux-子系统"><a href="#Windows-Subsystem-for-Linux-Windows-Linux-子系统" class="headerlink" title="Windows Subsystem for Linux(Windows Linux 子系统)"></a>Windows Subsystem for Linux(Windows Linux 子系统)</h2><p><strong>安装的 Linux 默认没有图形界面，如果需要图形界面的话可以去搜索教程，各种各样的都有，没几步，很简单</strong></p>
+<h3 id="Windows-Subsystem-for-Linux-Windows-Linux-子系统"><a href="#Windows-Subsystem-for-Linux-Windows-Linux-子系统" class="headerlink" title="Windows Subsystem for Linux(Windows Linux 子系统)"></a>Windows Subsystem for Linux(Windows Linux 子系统)</h3><p><strong>安装的 Linux 默认没有图形界面，如果需要图形界面的话可以去搜索教程，各种各样的都有，没几步，很简单</strong></p>
 <p>首先要开启 WSL 框架组件</p>
 <p><img src="https://blog-1253491707.piccd.myqcloud.com/images/20181009193626.png/style" alt=""></p>
 <p>重启后打开 Microsoft store 搜索Linux ，会发现有许多的 Linux 系统可供选择，在这里我选择 Ubuntu 安装</p>
@@ -480,10 +508,10 @@
 <p>然后将上面的一个源复制粘贴到文件的最前面(右击鼠标粘贴)</p>
 <p>保存后在命令行输入 <code>apt update</code> 更新配置</p>
 <p>如果你想愉快地使用 WSL 的话，建议替换一下 Windows 自带的 cmd，不仅不好用还丑，cmder、gitbash等都还不错，想替换的可以搜索<code>Windows cmd 替换工具</code>自行选择，这里不多做赘述。当然选择 SSH 登录也是一种不错的方案。这种方式等下再讲。</p>
-<h2 id="虚拟机"><a href="#虚拟机" class="headerlink" title="虚拟机"></a>虚拟机</h2><p>虚拟机方案有两种，下载软件或者是开启 Windows 自带的 hyper-V虚拟机组件，hyper-V在 Windows 功能中启用就好，虚拟机软件的话我这里放两个出来，其他的一些就不说了，软件都大同小异，重点还是学习 Linux。</p>
+<h3 id="虚拟机"><a href="#虚拟机" class="headerlink" title="虚拟机"></a>虚拟机</h3><p>虚拟机方案有两种，下载软件或者是开启 Windows 自带的 hyper-V虚拟机组件，hyper-V在 Windows 功能中启用就好，虚拟机软件的话我这里放两个出来，其他的一些就不说了，软件都大同小异，重点还是学习 Linux。</p>
 <p><a href="http://www.dayanzai.me/vmware-workstation.html" target="_blank" rel="noopener">VMware Workstation Pro</a> ：VMware Workstation 是虚拟机中的佼佼者，大名鼎鼎</p>
 <p><a href="http://www.dayanzai.me/vmware-player.html" target="_blank" rel="noopener">VMware Player 15.0.0</a> ：VMware Player 是 VMware 推出的免费精简版本，简单但不简陋，也是一个不错的选择</p>
-<h2 id="Windows、Linux-双系统"><a href="#Windows、Linux-双系统" class="headerlink" title="Windows、Linux 双系统"></a>Windows、Linux 双系统</h2><p>此方案网上也有很多教程，但是有些教程说的不清楚，如果想尝试建议做好崩的心理准备，我自己就是装的双系统，也是崩了几次才装好的。因为不同的 Windows 引导方式，单双硬盘安装时都有点区别，不对不仅是 Linux 装不好就连 Windows 也会崩掉，建议做好备份多查阅资料再去尝试。</p>
+<h3 id="Windows、Linux-双系统"><a href="#Windows、Linux-双系统" class="headerlink" title="Windows、Linux 双系统"></a>Windows、Linux 双系统</h3><p>此方案网上也有很多教程，但是有些教程说的不清楚，如果想尝试建议做好崩的心理准备，我自己就是装的双系统，也是崩了几次才装好的。因为不同的 Windows 引导方式，单双硬盘安装时都有点区别，不对不仅是 Linux 装不好就连 Windows 也会崩掉，建议做好备份多查阅资料再去尝试。</p>
 
       
     </div>
@@ -504,9 +532,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Linux/" rel="tag"># Linux</a>
+            <a href="/tags/Linux/" rel="tag"><i class="fa fa-tag"></i> Linux</a>
           
-            <a href="/tags/Hadoop/" rel="tag"># Hadoop</a>
+            <a href="/tags/Hadoop/" rel="tag"><i class="fa fa-tag"></i> Hadoop</a>
           
         </div>
       
@@ -552,6 +580,11 @@
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      <div id="gitalk-container"></div>
+    </div>
 
   
 
@@ -709,7 +742,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows-Subsystem-for-Linux-Windows-Linux-子系统"><span class="nav-number">1.</span> <span class="nav-text">Windows Subsystem for Linux(Windows Linux 子系统)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#虚拟机"><span class="nav-number">2.</span> <span class="nav-text">虚拟机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows、Linux-双系统"><span class="nav-number">3.</span> <span class="nav-text">Windows、Linux 双系统</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Windows-Subsystem-for-Linux-Windows-Linux-子系统"><span class="nav-number">1.</span> <span class="nav-text">Windows Subsystem for Linux(Windows Linux 子系统)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#虚拟机"><span class="nav-number">2.</span> <span class="nav-text">虚拟机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Windows、Linux-双系统"><span class="nav-number">3.</span> <span class="nav-text">Windows、Linux 双系统</span></a></li></ol></div>
             
 
           </div>
@@ -731,12 +764,26 @@
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
+    <i class="fa fa-heartbeat"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">月洒清辉映海棠</span>
 
   
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">27k</span>
+  
 
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">1:07</span>
   
 </div>
 
@@ -772,6 +819,8 @@
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
@@ -876,6 +925,8 @@
 
 
   
+
+
 
 
 
@@ -1299,5 +1350,7 @@
 
   
 
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/haruto.model.json"},"display":{"position":"left","width":120,"height":240,"hOffset":260,"vOffset":20},"mobile":{"show":false},"log":false});</script></body>
 </html>
