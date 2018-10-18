@@ -26,7 +26,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: CNAME
 
 # Writing
 new_post_name: :year-:month-:day-:title.md # File name of new posts
@@ -103,16 +103,25 @@ live2d:
   tagMode: false # 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中
   debug: false # 调试, 是否在控制台输出日志
   model:
-    use: live2d-widget-model-wanko # npm-module package name
+    use: live2d-widget-model-haruto # npm-module package name
     # use: wanko # 博客根目录/live2d_models/ 下的目录名
     # use: ./wives/wanko # 相对于博客根目录的路径
     # use: https://cdn.jsdelivr.net/npm/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json # 你的自定义 url
   display:
-    position: right
-    width: 150
-    height: 300
+    position: left
+    width: 120
+    height: 240
+    hOffset: 260
+    vOffset: 20
   mobile:
-    show: true
+    show: false
+
+#字数及阅读时长统计
+symbols_count_time:
+  symbols: true
+  time: true
+  total_symbols: true
+  total_time: true
 
 theme_config:
 
@@ -131,11 +140,11 @@ theme_config:
     icon:
       # Icon name in fontawesome, see: https://fontawesome.com/v4.7.0/icons
       # `heart` is recommended with animation in red (#ff0000).
-      name: user
+      name: heartbeat
       # If you want to animate the icon, set it to true.
       animated: false
       # Change the color of icon, using Hex Code.
-      color: "#808080"
+      color: "#ff0000"
 
     # If not defined, will be used `author` from Hexo main config.
     copyright:
@@ -179,3 +188,101 @@ theme_config:
   # Local search
   local_search:
     enable: true
+
+  sidebar:
+    # Sidebar Position, available value: left | right (only for Pisces | Gemini).
+    position: left
+    #position: right
+
+    # Manual define the sidebar width.
+    # If commented, will be default for:
+    # Muse | Mist: 320
+    # Pisces | Gemini: 240
+    #width: 300
+
+    # Sidebar Display, available value (only for Muse | Mist):
+    #  - post    expand on posts automatically. Default.
+    #  - always  expand for all pages automatically
+    #  - hide    expand only when click on the sidebar toggle icon.
+    #  - remove  Totally remove sidebar including sidebar toggle.
+    display: post
+    #display: always
+    #display: hide
+    #display: remove
+
+    # Sidebar offset from top menubar in pixels (only for Pisces | Gemini).
+    offset: 12
+
+    # Back to top in sidebar (only for Pisces | Gemini).
+    b2t: false
+
+    # Scroll percent label in b2t button.
+    scrollpercent: true
+
+    # Enable sidebar on narrow view (only for Muse | Mist).
+    onmobile: false
+
+  # ---------------------------------------------------------------
+  # Font Settings
+  # - Find fonts on Google Fonts (https://www.google.com/fonts)
+  # - All fonts set here will have the following styles:
+  #     light, light italic, normal, normal italic, bold, bold italic
+  # - Be aware that setting too much fonts will cause site running slowly
+  # - Introduce in 5.0.1
+  # ---------------------------------------------------------------
+  # CAUTION! Safari Version 10.1.2 bug: https://github.com/iissnan/hexo-theme-next/issues/1844
+  # To avoid space between header and sidebar in Pisces / Gemini themes recommended to use Web Safe fonts for `global` (and `logo`):
+  # Arial | Tahoma | Helvetica | Times New Roman | Courier New | Verdana | Georgia | Palatino | Garamond | Comic Sans MS | Trebuchet MS
+  # ---------------------------------------------------------------
+  font:
+    enable: false
+
+    # Uri of fonts host. E.g. //fonts.googleapis.com (Default).
+    host:
+
+    # Font options:
+    # `external: true` will load this font family from `host` above.
+    # `family: Times New Roman`. Without any quotes.
+    # `size: xx`. Use `px` as unit.
+
+    # Global font settings used for all elements in <body>.
+    global:
+      external: true
+      family: Lato
+      size: 16
+
+    # Font settings for Headlines (H1, H2, H3, H4, H5, H6).
+    # Fallback to `global` font settings.
+    headings:
+      external: true
+      family:
+      size:
+
+    # Font settings for posts.
+    # Fallback to `global` font settings.
+    posts:
+      external: true
+      family:
+
+    # Font settings for Logo.
+    # Fallback to `global` font settings.
+    logo:
+      external: true
+      family:
+      size:
+
+    # Font settings for <code> and code blocks.
+    codes:
+      external: true
+      family: Consolas
+      size: 15
+  
+  symbols_count_time:
+    separated_meta: true
+    item_text_post: true
+    item_text_total: false
+    awl: 2
+    wpm: 200
+  
+  #点击爆炸效果
+  fireworks: false

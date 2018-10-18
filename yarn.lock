@@ -1213,6 +1213,11 @@ hexo-server@^0.3.1:
     opn "^5.3.0"
     serve-static "^1.13.2"
 
+hexo-symbols-count-time@^0.4.4:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/hexo-symbols-count-time/-/hexo-symbols-count-time-0.4.4.tgz#c5bad76d445d7e0a1ee8a46c7ad23349bc162c1d"
+  integrity sha1-xbrXbURdfgoe6KRsetIzSbwWLB0=
+
 hexo-util@^0.6.0, hexo-util@^0.6.2, hexo-util@^0.6.3:
   version "0.6.3"
   resolved "https://registry.yarnpkg.com/hexo-util/-/hexo-util-0.6.3.tgz#16a2ade457bef955af0dfd22a3fe6f0a49a9137c"
