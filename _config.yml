@@ -5,7 +5,7 @@
 # Site
 title: 简记
 subtitle:
-description:
+description: 简于记，记于心
 keywords:
 author: 月洒清辉映海棠
 language: zh-CN
@@ -131,6 +131,78 @@ theme_config:
   #scheme: Pisces
   scheme: Gemini
 
+  #鼠标特效
+  fireworks: false
+
+  # Canvas-nest
+  # Dependencies: https://github.com/theme-next/theme-next-canvas-nest
+  canvas_nest: true
+  # JavaScript 3D library.
+  # Dependencies: https://github.com/theme-next/theme-next-three
+  three_waves: false
+  canvas_lines: false
+  canvas_sphere: false
+
+  # Support for gitalk comments system.
+  gitalk:
+    enable: true
+    clientID: fcdb896a42ee148bcebe
+    clientSecret: 55fa144a2a8c3ce9a7462d16825d94d5914ec59a
+    repo: Gitalk
+    owner: MoonBegonia
+    admin: MoonBegonia
+
+  favicon: 
+    small: /images/favicon.ico
+    medium: /images/favicon.ico
+    apple_touch_icon: /images/favicon.ico
+    safari_pinned_tab: /images/favicon.ico
+    #android_manifest: /images/manifest.json
+    #ms_browserconfig: /images/browserconfig.xml
+
+  font:
+    enable: false
+
+    # Uri of fonts host. E.g. //fonts.googleapis.com (Default).
+    host:
+
+    # Font options:
+    # `external: true` will load this font family from `host` above.
+    # `family: Times New Roman`. Without any quotes.
+    # `size: xx`. Use `px` as unit.
+
+    # Global font settings used for all elements in <body>.
+    global:
+      external: true
+      family: Lato
+      size: 16
+
+    # Font settings for Headlines (H1, H2, H3, H4, H5, H6).
+    # Fallback to `global` font settings.
+    headings:
+      external: true
+      family:
+      size:
+
+    # Font settings for posts.
+    # Fallback to `global` font settings.
+    posts:
+      external: true
+      family:
+
+    # Font settings for Logo.
+    # Fallback to `global` font settings.
+    logo:
+      external: true
+      family:
+      size:
+
+    # Font settings for <code> and code blocks.
+    codes:
+      external: true
+      family: Consolas
+      size: 15
+
   footer:
     # Specify the date when the site was setup.
     # If not defined, current year will be used.
@@ -163,15 +235,6 @@ theme_config:
     # -------------------------------------------------------------
     # Any custom text can be defined here.
     #custom_text: Hosted by <a target="_blank" rel="external nofollow" href="https://pages.coding.me"><b>Coding Pages</b></a>
-
-  # Canvas-nest
-  # Dependencies: https://github.com/theme-next/theme-next-canvas-nest
-  canvas_nest: true
-  # JavaScript 3D library.
-  # Dependencies: https://github.com/theme-next/theme-next-three
-  three_waves: false
-  canvas_lines: false
-  canvas_sphere: false
 
   # Show number of visitors to each article.
   # You can visit https://leancloud.cn get AppID and AppKey.
@@ -221,77 +284,11 @@ theme_config:
 
     # Enable sidebar on narrow view (only for Muse | Mist).
     onmobile: false
-
-  # ---------------------------------------------------------------
-  # Font Settings
-  # - Find fonts on Google Fonts (https://www.google.com/fonts)
-  # - All fonts set here will have the following styles:
-  #     light, light italic, normal, normal italic, bold, bold italic
-  # - Be aware that setting too much fonts will cause site running slowly
-  # - Introduce in 5.0.1
-  # ---------------------------------------------------------------
-  # CAUTION! Safari Version 10.1.2 bug: https://github.com/iissnan/hexo-theme-next/issues/1844
-  # To avoid space between header and sidebar in Pisces / Gemini themes recommended to use Web Safe fonts for `global` (and `logo`):
-  # Arial | Tahoma | Helvetica | Times New Roman | Courier New | Verdana | Georgia | Palatino | Garamond | Comic Sans MS | Trebuchet MS
-  # ---------------------------------------------------------------
-  font:
-    enable: false
-
-    # Uri of fonts host. E.g. //fonts.googleapis.com (Default).
-    host:
-
-    # Font options:
-    # `external: true` will load this font family from `host` above.
-    # `family: Times New Roman`. Without any quotes.
-    # `size: xx`. Use `px` as unit.
-
-    # Global font settings used for all elements in <body>.
-    global:
-      external: true
-      family: Lato
-      size: 16
-
-    # Font settings for Headlines (H1, H2, H3, H4, H5, H6).
-    # Fallback to `global` font settings.
-    headings:
-      external: true
-      family:
-      size:
-
-    # Font settings for posts.
-    # Fallback to `global` font settings.
-    posts:
-      external: true
-      family:
-
-    # Font settings for Logo.
-    # Fallback to `global` font settings.
-    logo:
-      external: true
-      family:
-      size:
-
-    # Font settings for <code> and code blocks.
-    codes:
-      external: true
-      family: Consolas
-      size: 15
   
+  #字数统计及阅读时长
   symbols_count_time:
     separated_meta: true
     item_text_post: true
     item_text_total: false
     awl: 2
     wpm: 200
-  
-  #点击爆炸效果
-  fireworks: false
-
-  # Support for gitalk comments system.
-  gitalk:
-    enable: true
-    clientID: fcdb896a42ee148bcebe
-    clientSecret: 55fa144a2a8c3ce9a7462d16825d94d5914ec59a
-    repo: Gitalk
-    owner: MoonBegonia
-    admin: MoonBegonia
