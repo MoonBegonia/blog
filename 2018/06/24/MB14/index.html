@@ -961,28 +961,27 @@
 
 
 
-<!-- LOCAL: You can save these files to your site and update links -->
-  
-  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-<!-- END LOCAL -->
-    
-      <script type="text/javascript">
-      function renderGitalk(){
-        var gitalk = new Gitalk({
-            owner: '',
-            repo: '',
-            clientID: '',
-            clientSecret: '',
-            id: md5(location.pathname),
-            admin: 'MoonBegonia',
-            
-            });
-        gitalk.render('gitalk-container');
-      }
-      renderGitalk();
-      </script>
-    
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+
+<script type="text/javascript">
+      var gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: '',
+        id: md5(window.location.pathname),
+        labels: ['gitalk'],
+        perPage: 50,
+        language: 'zh-CN',
+        distractionFreeMode: true
+      });
+      gitalk.render('gitalk-container');
+</script>
+
 
   
 
