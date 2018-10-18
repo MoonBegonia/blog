@@ -133,6 +133,7 @@ theme_config:
 
   #鼠标特效
   fireworks: false
+  love: true
 
   # Canvas-nest
   # Dependencies: https://github.com/theme-next/theme-next-canvas-nest
