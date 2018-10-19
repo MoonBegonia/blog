@@ -4,8 +4,8 @@
 
 # Site
 title: 简记
-subtitle:
-description: 简于记，记于心
+subtitle: 简于形，记于心
+description: 凡是过去，皆为序曲
 keywords:
 author: 月洒清辉映海棠
 language: zh-CN
@@ -144,6 +144,19 @@ theme_config:
   three_waves: false
   canvas_lines: false
   canvas_sphere: false
+
+  # Sidebar Avatar
+  avatar:
+    # in theme directory(source/images): /images/avatar.gif
+    # in site  directory(source/uploads): /uploads/avatar.gif
+    # You can also use other linking images.
+    url: https://blog-1253491707.piccd.myqcloud.com/avatar1.jpg #/images/avatar.gif
+    # If true, the avatar would be dispalyed in circle.
+    rounded: true
+    # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
+    opacity: 1
+    # If true, the avatar would be rotated with the cursor.
+    rotated: false
 
   codeblock:
     # Manual define the border radius in codeblock
