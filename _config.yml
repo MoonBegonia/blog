@@ -111,10 +111,11 @@ live2d:
     position: left
     width: 120
     height: 240
-    hOffset: 260
-    vOffset: 20
+    #hOffset: 
+    #vOffset: 
   mobile:
     show: true
+    scale: 0.3
 
 #字数及阅读时长统计
 symbols_count_time:
