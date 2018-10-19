@@ -351,6 +351,16 @@
     {### END POST BODY ###}
     {#####################}
 
+    {## PASSAGE END TAG ##}
+
+    <div>
+      {% if not is_index %}
+        {% include 'passage-end-tag.swig' %}
+      {% endif %}
+    </div>
+    
+    {###### END TAG ######}
+    
     {% if theme.wechat_subscriber.enabled and not is_index %}
       <div>
         {% include 'wechat-subscriber.swig' %}

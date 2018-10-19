@@ -228,6 +228,10 @@ theme_config:
       family: Consolas
       size: 15
 
+  # 文章末尾添加“本文结束”标记
+  passage_end_tag:
+    enabled: true
+
   footer:
     # Specify the date when the site was setup.
     # If not defined, current year will be used.
