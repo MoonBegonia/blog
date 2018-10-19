@@ -187,20 +187,20 @@ theme_config:
     global:
       external: true
       family: Lato
-      size: 16
+      size: 15
 
     # Font settings for Headlines (H1, H2, H3, H4, H5, H6).
     # Fallback to `global` font settings.
     headings:
       external: true
       family:
-      size:
+      size: 
 
     # Font settings for posts.
     # Fallback to `global` font settings.
     posts:
       external: true
-      family:
+      family: 
 
     # Font settings for Logo.
     # Fallback to `global` font settings.
