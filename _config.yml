@@ -478,7 +478,7 @@ theme_config:
 
   # Support for gitalk comments system.
   gitalk:
-    enable: true
+    enable: false
     clientID: fcdb896a42ee148bcebe
     clientSecret: 55fa144a2a8c3ce9a7462d16825d94d5914ec59a
     repo: Gitalk
@@ -488,7 +488,7 @@ theme_config:
   # Show number of visitors to each article.
   # You can visit https://leancloud.cn get AppID and AppKey.
   leancloud_visitors:
-    enable: true
+    enable: false
     app_id: gd0SoNU3oi1VuQnmWS0Jlo8f-gzGzoHsz
     app_key: BslzzEx6GBoQN1vvaR8khtzJ
     # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
@@ -497,20 +497,17 @@ theme_config:
     security: false
     betterPerformance: false
 
-  # Valine.
-  # You can get your appid and appkey from https://leancloud.cn
-  # more info please open https://valine.js.org
   valine:
-    enable: false # When enable is set to be true, leancloud_visitors is recommended to be closed for the re-initialization problem within different leancloud adk version.
-    appid:  # your leancloud application appid
-    appkey:  # your leancloud application appkey
-    notify: false # mail notifier , https://github.com/xCss/Valine/wiki
-    verify: false # Verification code
-    placeholder: Just go go # comment box placeholder
-    avatar: mm # gravatar style
+    enable: true
+    appid:  gd0SoNU3oi1VuQnmWS0Jlo8f-gzGzoHsz
+    appkey:  BslzzEx6GBoQN1vvaR8khtzJ
+    notify: true # mail notifier , https://github.com/xCss/Valine/wiki
+    verify: true # Verification code
+    placeholder: ヾﾉ≧∀≦)o来啊，快活啊!
+    avatar: wavatar # gravatar style
     guest_info: nick,mail,link # custom comment header
     pageSize: 10 # pagination size
-    visitor: false # leancloud-counter-security is not supported for now. When visitor is set to be true, appid and appkey are recommended to be the same as leancloud_visitors' for counter compatibility. Article reading statistic https://valine.js.org/visitor.html
+    visitor: true # leancloud-counter-security is not supported for now. When visitor is set to be true, appid and appkey are recommended to be the same as leancloud_visitors' for counter compatibility. Article reading statistic https://valine.js.org/visitor.html
 
   # ---------------------------------------------------------------
   # Tags Settings
