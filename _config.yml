@@ -309,7 +309,7 @@ theme_config:
     offset: 12
 
     # Back to top in sidebar (only for Pisces | Gemini).
-    b2t: false
+    b2t: true
 
     # Scroll percent label in b2t button.
     scrollpercent: true
