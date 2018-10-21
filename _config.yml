@@ -352,14 +352,13 @@ theme_config:
       another_day: true
     categories: true
 
-  # Post wordcount display settings
-  # Dependencies: https://github.com/theme-next/hexo-symbols-count-time
+  #字数统计及阅读时长
   symbols_count_time:
     separated_meta: true
     item_text_post: true
     item_text_total: false
-    awl: 4
-    wpm: 275
+    awl: 2
+    wpm: 200
 
   codeblock:
     # Manual define the border radius in codeblock
@@ -472,14 +471,6 @@ theme_config:
   three_waves: false
   canvas_lines: false
   canvas_sphere: false
-
-  #字数统计及阅读时长
-  symbols_count_time:
-    separated_meta: true
-    item_text_post: true
-    item_text_total: false
-    awl: 2
-    wpm: 200
 
   # Local search
   local_search:
