@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>简记</title>
+  
+  <subtitle>简于形，记于心</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https:moonbegonia.xyz/"/>
+  <updated>2018-10-21T13:52:33.494Z</updated>
+  <id>https:moonbegonia.xyz/</id>
+  
+  <author>
+    <name>月洒清辉映海棠</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo 折腾小记</title>
+    <link href="https:moonbegonia.xyz/2018/10/19/MB20/"/>
+    <id>https:moonbegonia.xyz/2018/10/19/MB20/</id>
+    <published>2018-10-19T01:10:36.000Z</published>
+    <updated>2018-10-21T13:52:33.494Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://blog-1253491707.piccd.myqcloud.com/imgs/20181019110837.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="博客搭建" scheme="https:moonbegonia.xyz/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+      <category term="Hexo" scheme="https:moonbegonia.xyz/categories/Hexo/"/>
+    
+    
+      <category term="Linux" scheme="https:moonbegonia.xyz/tags/Linux/"/>
+    
+      <category term="博客搭建" scheme="https:moonbegonia.xyz/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+      <category term="Hexo" scheme="https:moonbegonia.xyz/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hadoop 系统安装</title>
+    <link href="https:moonbegonia.xyz/2018/10/16/MB19/"/>
+    <id>https:moonbegonia.xyz/2018/10/16/MB19/</id>
+    <published>2018-10-15T16:00:00.000Z</published>
+    <updated>2018-10-18T08:13:42.357Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前几天讲了 linux 的安装，今天就来讲讲 hadoop 系统的安装。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="https:moonbegonia.xyz/categories/Linux/"/>
+    
+      <category term="Hadoop" scheme="https:moonbegonia.xyz/categories/Hadoop/"/>
+    
+    
+      <category term="Linux" scheme="https:moonbegonia.xyz/tags/Linux/"/>
+    
+      <category term="Hadoop" scheme="https:moonbegonia.xyz/tags/Hadoop/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hadoop 系统安装之 Linux 系统安装</title>
+    <link href="https:moonbegonia.xyz/2018/10/09/MB18/"/>
+    <id>https:moonbegonia.xyz/2018/10/09/MB18/</id>
+    <published>2018-10-08T16:00:00.000Z</published>
+    <updated>2018-10-18T08:14:12.686Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本篇主要讲述安装 Hadoop 系统的前提：Linux 系统的安装，因为大多数人日常都是使用 Windows 系统，但是 Hadoop 只能在 Linux 下安装，今天就来说说几种安装 Linux 的方法，仅供参考。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="https:moonbegonia.xyz/categories/Linux/"/>
+    
+      <category term="Hadoop" scheme="https:moonbegonia.xyz/categories/Hadoop/"/>
+    
+    
+      <category term="Linux" scheme="https:moonbegonia.xyz/tags/Linux/"/>
+    
+      <category term="Hadoop" scheme="https:moonbegonia.xyz/tags/Hadoop/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>shadowsocks 小白使用教程</title>
+    <link href="https:moonbegonia.xyz/2018/08/02/MB17/"/>
+    <id>https:moonbegonia.xyz/2018/08/02/MB17/</id>
+    <published>2018-08-01T16:00:00.000Z</published>
+    <updated>2018-10-18T00:47:41.584Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;shadowsocks 基础的使用教程&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="overthewall" scheme="https:moonbegonia.xyz/categories/overthewall/"/>
+    
+    
+      <category term="over the wall" scheme="https:moonbegonia.xyz/tags/over-the-wall/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用GitHub pages 搭建博客(进阶篇)</title>
+    <link href="https:moonbegonia.xyz/2018/07/01/MB16/"/>
+    <id>https:moonbegonia.xyz/2018/07/01/MB16/</id>
+    <published>2018-06-30T16:00:00.000Z</published>
+    <updated>2018-10-18T05:43:18.640Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;昨天我们讲了用 GitHub pages 搭建博客的基础篇，今天就来讲讲搭建博客还经常用到的两样东西，那就是自己的域名和和图床的选择，今天我们就来说说这两样东西。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="博客搭建" scheme="https:moonbegonia.xyz/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+      <category term="GitHub" scheme="https:moonbegonia.xyz/categories/GitHub/"/>
+    
+    
+      <category term="博客搭建" scheme="https:moonbegonia.xyz/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+      <category term="GitHub" scheme="https:moonbegonia.xyz/tags/GitHub/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用GitHub pages 搭建博客(基础篇)</title>
+    <link href="https:moonbegonia.xyz/2018/06/30/MB15/"/>
+    <id>https:moonbegonia.xyz/2018/06/30/MB15/</id>
+    <published>2018-06-29T16:00:00.000Z</published>
+    <updated>2018-10-18T05:42:55.747Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;从开始用 GitHub pages 搭建博客已经差不多一个月了，昨天买了个域名，才算是步入了正轨，搭建博客算是差不多完工了。一个月来，走了许多坑，虽然网上的教程还是挺多的，但还是把搭建博客的路子写下来，希望后人能有所启发。今天就先来讲讲用 GitHub pages 搭建博客的基础篇。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="博客搭建" scheme="https:moonbegonia.xyz/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+      <category term="GitHub" scheme="https:moonbegonia.xyz/categories/GitHub/"/>
+    
+    
+      <category term="博客搭建" scheme="https:moonbegonia.xyz/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+      <category term="GitHub" scheme="https:moonbegonia.xyz/tags/GitHub/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Telegram 专用代理 MTProxy 搭建</title>
+    <link href="https:moonbegonia.xyz/2018/06/24/MB14/"/>
+    <id>https:moonbegonia.xyz/2018/06/24/MB14/</id>
+    <published>2018-06-23T16:00:00.000Z</published>
+    <updated>2018-06-27T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这几天功夫网使劲折腾，搞得 Telegram 都差点上不去，虽然自己一直 24 小时挂着梯子，但有的人只需要用 Telegram，便想起来 Tg 内置的 MTProxy 代理，但是 GitHub 项目下的安装教程有些麻烦还不完整。便把自己的安装过程记录下来。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="overthewall" scheme="https:moonbegonia.xyz/categories/overthewall/"/>
+    
+    
+      <category term="over the wall" scheme="https:moonbegonia.xyz/tags/over-the-wall/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Debian9+/Ubuntu17+解决/etc/rc.local开机启动问题</title>
+    <link href="https:moonbegonia.xyz/2018/06/23/MB13/"/>
+    <id>https:moonbegonia.xyz/2018/06/23/MB13/</id>
+    <published>2018-06-22T16:00:00.000Z</published>
+    <updated>2018-10-18T05:42:17.802Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;由于某些软件并没有增加开启启动的服务，很多时候需要手工添加，一般我们都是推荐添加命令到 /etc/rc.local 文件，但是 Debian9+/Ubuntu17+ 默认不带 /etc/rc.local 文件，而 rc.local 服务却还是自带的。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Debian" scheme="https:moonbegonia.xyz/categories/Debian/"/>
+    
+      <category term="Linux" scheme="https:moonbegonia.xyz/categories/Linux/"/>
+    
+    
+      <category term="Debian" scheme="https:moonbegonia.xyz/tags/Debian/"/>
+    
+      <category term="Linux" scheme="https:moonbegonia.xyz/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>KCPTun服务端安装及简单配置教程</title>
+    <link href="https:moonbegonia.xyz/2018/06/22/MB12/"/>
+    <id>https:moonbegonia.xyz/2018/06/22/MB12/</id>
+    <published>2018-06-21T16:00:00.000Z</published>
+    <updated>2018-07-07T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;服务器被 TCP 阻断后想起来 KCP 是 UDP 协议，并且逗比网有详细的教程，虽然还是踩了一些坑，但是终于能连上外网啦，便把这些记下来以共备用。本教程来源于逗比根据地，但是教程很久没更新了，便稍加修改。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="overthewall" scheme="https:moonbegonia.xyz/categories/overthewall/"/>
+    
+    
+      <category term="over the wall" scheme="https:moonbegonia.xyz/tags/over-the-wall/"/>
+    
+      <category term="KCPTun" scheme="https:moonbegonia.xyz/tags/KCPTun/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>over the wall 相关链接集合</title>
+    <link href="https:moonbegonia.xyz/2018/06/21/MB11/"/>
+    <id>https:moonbegonia.xyz/2018/06/21/MB11/</id>
+    <published>2018-06-20T16:00:00.000Z</published>
+    <updated>2018-10-18T00:45:57.589Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;昨天下午 GFW 　又开始了新一轮的封锁，不出意外，我的服务器又被墙了，TCP 阻断真的是一点办法没有。真是的，每个月都有那么几天，感觉就像大姨妈一样，到底什么时候才是个头，现在就盼望着啥时候“绝经”就好了。本来是很多有关资源都在 Github 上 Star 了，但是感觉 Star 太多了也不好，就想着放在这里吧&lt;br&gt;。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="overthewall" scheme="https:moonbegonia.xyz/categories/overthewall/"/>
+    
+    
+      <category term="over the wall" scheme="https:moonbegonia.xyz/tags/over-the-wall/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>chrome插件推荐</title>
+    <link href="https:moonbegonia.xyz/2018/06/19/MB10/"/>
+    <id>https:moonbegonia.xyz/2018/06/19/MB10/</id>
+    <published>2018-06-18T16:00:00.000Z</published>
+    <updated>2018-08-02T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;chrome可谓是PC上最强大的浏览器，很多人都在使用chrome作为日常使用，今天就来推荐一些我日常中使用的一些插件，chrome的强大之处就在这里，可以装十分多的插件。打造属于自己的最强浏览器。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="资源分享" scheme="https:moonbegonia.xyz/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+    
+      <category term="资源分享" scheme="https:moonbegonia.xyz/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+      <category term="chrome" scheme="https:moonbegonia.xyz/tags/chrome/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>资源搜集常用网址分享</title>
+    <link href="https:moonbegonia.xyz/2018/06/15/MB9/"/>
+    <id>https:moonbegonia.xyz/2018/06/15/MB9/</id>
+    <published>2018-06-14T16:00:00.000Z</published>
+    <updated>2018-10-18T00:45:21.579Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;玩Windows 离不开Windows 软件，平常百度搜到的都是什么华军软件园，太平洋什么的，运气好点会找到官网，运气不好就不得不去这种全是捆绑的XX软件园下载东西，还不知道安不安全，今天就来分享一下平常可以用来下载软件和分享一些好用资源的网站。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="资源分享" scheme="https:moonbegonia.xyz/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+    
+      <category term="资源分享" scheme="https:moonbegonia.xyz/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows好软分享之下载工具篇</title>
+    <link href="https:moonbegonia.xyz/2018/06/05/MB7/"/>
+    <id>https:moonbegonia.xyz/2018/06/05/MB7/</id>
+    <published>2018-06-04T16:00:00.000Z</published>
+    <updated>2018-10-18T00:45:07.051Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;谈谈 Windows 下载工具那些事儿。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="资源分享" scheme="https:moonbegonia.xyz/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+    
+      <category term="资源分享" scheme="https:moonbegonia.xyz/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+      <category term="Windows" scheme="https:moonbegonia.xyz/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>shadowsocks 一键安装脚本</title>
+    <link href="https:moonbegonia.xyz/2018/06/04/MB6/"/>
+    <id>https:moonbegonia.xyz/2018/06/04/MB6/</id>
+    <published>2018-06-03T16:00:00.000Z</published>
+    <updated>2018-10-18T01:00:11.076Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;GFW 经常会发力，有时候很多教程都被墙了，不方便查看，就想起来把自己使用的秋水逸冰大神的教程写下来以备不时之需。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="overthewall" scheme="https:moonbegonia.xyz/categories/overthewall/"/>
+    
+    
+      <category term="over the wall" scheme="https:moonbegonia.xyz/tags/over-the-wall/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows好软分享之办公生产篇</title>
+    <link href="https:moonbegonia.xyz/2018/06/03/MB5/"/>
+    <id>https:moonbegonia.xyz/2018/06/03/MB5/</id>
+    <published>2018-06-02T16:00:00.000Z</published>
+    <updated>2018-10-18T00:44:39.214Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一个好的工具、插件在办公生产中的作用是十分巨大的今天就来推荐几款我在办公生产中用到的工具。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="资源分享" scheme="https:moonbegonia.xyz/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+    
+      <category term="资源分享" scheme="https:moonbegonia.xyz/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+      <category term="Windows" scheme="https:moonbegonia.xyz/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows好软分享之系统美化篇</title>
+    <link href="https:moonbegonia.xyz/2018/06/02/MB4/"/>
+    <id>https:moonbegonia.xyz/2018/06/02/MB4/</id>
+    <published>2018-06-01T16:00:00.000Z</published>
+    <updated>2018-10-18T00:44:19.694Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一个漂亮的系统会让人赏心悦目，做起事儿来当然是更爽啦，今天就分享一些系统美化比较好用的软件。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="资源分享" scheme="https:moonbegonia.xyz/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+    
+      <category term="资源分享" scheme="https:moonbegonia.xyz/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+      <category term="Windows" scheme="https:moonbegonia.xyz/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows好软分享之系统管理篇</title>
+    <link href="https:moonbegonia.xyz/2018/06/01/MB3/"/>
+    <id>https:moonbegonia.xyz/2018/06/01/MB3/</id>
+    <published>2018-05-31T16:00:00.000Z</published>
+    <updated>2018-10-18T00:44:01.269Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;系统管理软件是 Windows 优化的必选软件，今天我们就来看看我用的那几款软件。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="资源分享" scheme="https:moonbegonia.xyz/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+    
+      <category term="资源分享" scheme="https:moonbegonia.xyz/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+    
+      <category term="Windows" scheme="https:moonbegonia.xyz/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>搜索引擎搜索技巧</title>
+    <link href="https:moonbegonia.xyz/2018/05/20/MB2/"/>
+    <id>https:moonbegonia.xyz/2018/05/20/MB2/</id>
+    <published>2018-05-19T16:00:00.000Z</published>
+    <updated>2018-10-18T00:43:46.817Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;因为受不了百度的广告，转到了 google，用了许久，搜索也是按照以前的方式搜索，却没有感觉他们传的那么厉害，感觉和百度差不多，慢慢的才知道这些高大上的用法，便整理在这里以免日后忘记。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="基本技巧" scheme="https:moonbegonia.xyz/categories/%E5%9F%BA%E6%9C%AC%E6%8A%80%E5%B7%A7/"/>
+    
+    
+      <category term="基本技巧" scheme="https:moonbegonia.xyz/tags/%E5%9F%BA%E6%9C%AC%E6%8A%80%E5%B7%A7/"/>
+    
+      <category term="Google" scheme="https:moonbegonia.xyz/tags/Google/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Dibian 9 下 LAMP 环境的基础配置</title>
+    <link href="https:moonbegonia.xyz/2018/05/03/MB1/"/>
+    <id>https:moonbegonia.xyz/2018/05/03/MB1/</id>
+    <published>2018-05-02T16:00:00.000Z</published>
+    <updated>2018-10-18T05:41:32.473Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;对源进行更新&quot;&gt;&lt;a href=&quot;#对源进行更新&quot; class=&quot;headerlink&quot; title=&quot;对源进行更新&quot;&gt;&lt;/a&gt;对源进行更新&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;sudo apt update
+sudo apt upgrade
+&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+      <category term="全栈" scheme="https:moonbegonia.xyz/categories/%E5%85%A8%E6%A0%88/"/>
+    
+      <category term="Debian" scheme="https:moonbegonia.xyz/categories/Debian/"/>
+    
+      <category term="Linux" scheme="https:moonbegonia.xyz/categories/Linux/"/>
+    
+    
+      <category term="LAMP" scheme="https:moonbegonia.xyz/tags/LAMP/"/>
+    
+      <category term="Debian" scheme="https:moonbegonia.xyz/tags/Debian/"/>
+    
+      <category term="全栈" scheme="https:moonbegonia.xyz/tags/%E5%85%A8%E6%A0%88/"/>
+    
+  </entry>
+  
+</feed>
