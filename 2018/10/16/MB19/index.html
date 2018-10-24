@@ -122,7 +122,7 @@
 <meta property="og:image" content="https://blog-1253491707.piccd.myqcloud.com/imgs/20181016215232.png/style">
 <meta property="og:image" content="https://blog-1253491707.piccd.myqcloud.com/imgs/20181016215558.png/style">
 <meta property="og:image" content="https://blog-1253491707.piccd.myqcloud.com/imgs/20181016215655.png/style">
-<meta property="og:updated_time" content="2018-10-18T08:13:42.357Z">
+<meta property="og:updated_time" content="2018-10-24T03:32:13.792Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hadoop 系统安装">
 <meta name="twitter:description" content="前几天讲了 linux 的安装，今天就来讲讲 hadoop 系统的安装。">
@@ -398,7 +398,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-10-18 16:13:42" itemprop="dateModified" datetime="2018-10-18T16:13:42+08:00">2018-10-18</time>
+                <time title="修改时间：2018-10-24 11:32:13" itemprop="dateModified" datetime="2018-10-24T11:32:13+08:00">2018-10-24</time>
               
             
           </span>
@@ -471,7 +471,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.3k</span>
+                <span title="本文字数">1.5k</span>
               
 
               
@@ -485,7 +485,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">3 分钟</span>
+                <span title="阅读时长">4 分钟</span>
               
             </div>
           
@@ -517,18 +517,18 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">su hadoop</span><br></pre></td></tr></table></figure>
 <p>更新</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo upgrade</span><br></pre></td></tr></table></figure>
-<h3 id="配置-JAVA-环境"><a href="#配置-JAVA-环境" class="headerlink" title="配置 JAVA 环境"></a>配置 JAVA 环境</h3><p>下载 (可以将下面的网址换成<a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener"> JDK 下载界面</a>最新的版本)<br>最新的 java11 已经有 deb 下载，可以选择下载 deb 包，这样可以免去配置环境变量。<br>wget 后面的 -O 为重命名下载文件，不是下载的 deb 包的记得更换。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate --no-cookies --header &quot;Cookie: oraclelicense=accept-securebackup-cookie&quot; -O jdk.tar.gz https://edelivery.oracle.com/otn-pub/java/jdk/11+28/55eed80b163941c8885ad9298e6d786a/jdk-11_linux-x64_bin.tar.gz</span><br></pre></td></tr></table></figure>
+<h3 id="配置-JAVA-环境"><a href="#配置-JAVA-环境" class="headerlink" title="配置 JAVA 环境"></a>配置 JAVA 环境</h3><p>下载 (可以将下面的网址换成<a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener"> JDK 下载界面</a>最新的版本)<br>wget 后面的 -O 为重命名下载文件，不是下载的 .tar.gz 的记得更换。<a href="http://XXXXXXXX" target="_blank" rel="noopener">http://XXXXXXXX</a> 是下载链接 建议进官网自己获取一下，有可能这个会失效。<br>最新的 java11 已经有 deb/rpm 包下载，可以选择下载 deb/rpm 包，这样可以免去配置环境变量。ubuntu 选择 deb 包下载。<br>ubuntu deb 包安装就是 <code>sudo dpkg -i jdk.deb</code> 注意路径和文件名。选择的 deb 包安装的可以直接查看是否安装成功，然后进行下一步。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate --no-cookies --header &quot;Cookie: oraclelicense=accept-securebackup-cookie&quot; -O jdk.tar.gz http://download.oracle.com/otn-pub/java/jdk/11.0.1+13/90cf5d8f270a4347a95050320eef3fb7/jdk-11.0.1_linux-x64_bin.tar.gz</span><br></pre></td></tr></table></figure>
 <p>解压</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo tar -zxf ./jdk.tar.gz -C /usr</span><br></pre></td></tr></table></figure>
 <p>查看解压后情况</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr &amp;&amp; ls</span><br></pre></td></tr></table></figure>
 <p>重命名目录 具体名称自己注意下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv jdk-11 jdk</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mv jdk-11 jdk</span><br></pre></td></tr></table></figure>
 <p><img src="https://blog-1253491707.piccd.myqcloud.com/imgs/20181016212800.png/style" alt=""></p>
 <p>配置环境变量</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /etc/environment</span><br></pre></td></tr></table></figure>
-<p>要添加的已经在图中标出来了，注意路径，跟本文一样的就不用注意了。</p>
+<p>要添加的环境变量已经标注出来了。<strong>注意冒号和路径。</strong><br><strong>PS：这里已经将 hadoop 的环境变量加进去了，注意看一下。JAVA_HOME是另起一行</strong></p>
 <p><img src="https://blog-1253491707.piccd.myqcloud.com/imgs/20181016213627.png/style" alt=""></p>
 <p>使配置生效</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/environment</span><br></pre></td></tr></table></figure>
@@ -543,7 +543,7 @@
 <p>查看解压情况</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr &amp;&amp; ls</span><br></pre></td></tr></table></figure>
 <p>重命名目录 文件夹名称自行替换</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv hadoop-3.1.1 hadoop</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mv hadoop-3.1.1 hadoop</span><br></pre></td></tr></table></figure>
 <p><img src="https://blog-1253491707.piccd.myqcloud.com/imgs/20181016215232.png/style" alt=""></p>
 <p>配置 hadoop 环境</p>
 <p>打开 hadoop-env.sh 文件(文件的位置根据版本的不同可能会有差异，找不到可以搜索一下)</p>
@@ -582,6 +582,20 @@
 
     
 
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>月洒清辉映海棠</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https:moonbegonia.xyz/2018/10/16/MB19/" title="Hadoop 系统安装">https:moonbegonia.xyz/2018/10/16/MB19/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
     
 
     <footer class="post-footer">
@@ -857,7 +871,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">28k</span>
+    <span title="站点总字数">29k</span>
   
 
   
@@ -866,7 +880,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">1:11</span>
+    <span title="站点阅读时长">1:12</span>
   
 </div>
 
