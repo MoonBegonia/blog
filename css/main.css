@@ -1074,17 +1074,14 @@ pre .javascript .function {
   margin: 10px;
 }
 .back-to-top {
-  display: none;
-  margin: 20px -10px -20px;
+  visibility: hidden;
+  margin: 8px -10px -20px;
   background: #eee;
   font-size: 12px;
   opacity: 0.6;
   cursor: pointer;
   text-align: center;
   -webkit-transform: translateZ(0);
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 0s;
 }
 .back-to-top:hover {
   opacity: 0.8;
@@ -1100,7 +1097,10 @@ pre .javascript .function {
   }
 }
 .back-to-top.back-to-top-on {
-  display: block;
+  visibility: visible;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
 }
 .header {
   background: transparent;
@@ -1859,7 +1859,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #5dcff0;
+  background: #b0b505;
 }
 .links-of-blogroll {
   font-size: 13px;
