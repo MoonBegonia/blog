@@ -11,9 +11,15 @@ author: 月洒清辉映海棠
 language: zh-CN
 timezone:
 
+# sitemap
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
+
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https:moonbegonia.xyz
+url: https://moonbegonia.xyz
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -190,6 +196,22 @@ theme_config:
     #custom_text: Hosted by <a target="_blank" rel="external nofollow" href="https://pages.coding.me"><b>Coding Pages</b></a>
 
   # ---------------------------------------------------------------
+  # SEO Settings
+  # ---------------------------------------------------------------
+
+  # Canonical, set a canonical link tag in your hexo, you could use it for your SEO of blog.
+  # See: https://support.google.com/webmasters/answer/139066
+  # Tips: Before you open this tag, remember set up your URL in hexo _config.yml ( ex. url: http://yourdomain.com )
+  canonical: true
+
+  # Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
+  seo: false
+
+  # If true, will add site-subtitle to index page, added in main hexo config.
+  # subtitle: Subtitle
+  index_with_subtitle: false
+
+  # ---------------------------------------------------------------
   # Menu Settings
   # ---------------------------------------------------------------
 
@@ -200,7 +222,7 @@ theme_config:
     categories: /categories/ || th
     archives: /archives/ || archive
     #schedule: /schedule/ || calendar
-    sitemap: /sitemap.xml || sitemap
+    #sitemap: /sitemap.xml || sitemap
     #commonweal: /404/ || heartbeat
 
   # Enable/Disable menu icons / item badges.
