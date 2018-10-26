@@ -253,7 +253,7 @@ theme_config:
   # Value before `||` delimeter is the target permalink.
   # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
   social:
-    GitHub: https://github.com/MoonBegonia || github-alt
+    GitHub: https://github.com/MoonBegonia || github
     #E-Mail: mailto:yourname@gmail.com || envelope
     #Google: https://plus.google.com/yourname || google
     #Twitter: https://twitter.com/yourname || twitter
@@ -263,6 +263,7 @@ theme_config:
     #YouTube: https://youtube.com/yourname || youtube
     #Instagram: https://instagram.com/yourname || instagram
     #Skype: skype:yourname?call|chat || skype
+    Telegram: https://t.me/MoonBegonia || telegram
 
   social_icons:
     enable: true
