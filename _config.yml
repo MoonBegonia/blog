@@ -237,8 +237,8 @@ theme_config:
   # Schemes
   #scheme: Muse
   #scheme: Mist
-  #scheme: Pisces
-  scheme: Gemini
+  scheme: Pisces
+  #scheme: Gemini
 
   # ---------------------------------------------------------------
   # Sidebar Settings
@@ -498,12 +498,32 @@ theme_config:
   #动态背景
   # Canvas-nest
   # Dependencies: https://github.com/theme-next/theme-next-canvas-nest
-  canvas_nest: true
+  canvas_nest:
+    enable: true
+    onmobile: true # display on mobile or not
+    color: '0,0,255' # RGB values, use ',' to separate
+    opacity: 0.6 # the opacity of line: 0~1
+    zIndex: -1 # z-index property of the background
+    count: 128 # the number of lines
+
   # JavaScript 3D library.
   # Dependencies: https://github.com/theme-next/theme-next-three
+  # three_waves
   three_waves: false
   canvas_lines: false
   canvas_sphere: false
+
+  # Only fit scheme Pisces
+  # Dependencies: https://github.com/theme-next/theme-next-canvas-ribbon
+  # Canvas-ribbon
+  # size: The width of the ribbon.
+  # alpha: The transparency of the ribbon.
+  # zIndex: The display level of the ribbon.
+  canvas_ribbon:
+    enable: false
+    size: 300
+    alpha: 0.6
+    zIndex: -1
 
   local_search:
     enable: true
