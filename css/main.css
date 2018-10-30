@@ -1663,7 +1663,7 @@ pre .javascript .function {
   margin: 2em 0 0;
   padding: 0.5em 1em;
   border-left: 3px solid #ff1700;
-  background-color: #f9f9f9;
+  background-color: rgba(255,255,255,0);
   list-style: none;
 }
 .rtl.post-body p,
@@ -1866,7 +1866,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #36ff38;
+  background: #2255a4;
 }
 .links-of-blogroll {
   font-size: 13px;
