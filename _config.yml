@@ -393,6 +393,14 @@ theme_config:
     awl: 2
     wpm: 200
 
+  # Code Highlight theme
+  # Available values: normal | night | night eighties | night blue | night bright
+  # https://github.com/chriskempson/tomorrow-theme
+  highlight_theme: normal
+
+  # Enable "cheers" for archive page.
+  cheers_enabled: true
+
   codeblock:
     # Manual define the border radius in codeblock
     # Leave it empty for the default 1
@@ -504,7 +512,7 @@ theme_config:
     color: '0,0,255' # RGB values, use ',' to separate
     opacity: 0.6 # the opacity of line: 0~1
     zIndex: -1 # z-index property of the background
-    count: 128 # the number of lines
+    count: 150 # the number of lines
 
   # JavaScript 3D library.
   # Dependencies: https://github.com/theme-next/theme-next-three
