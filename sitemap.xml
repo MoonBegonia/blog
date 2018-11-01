@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://moonbegonia.xyz/2018/06/01/MB3/</loc>
+    
+    <lastmod>2018-11-01T00:44:48.291Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://moonbegonia.xyz/2018/10/29/MB21/</loc>
     
     <lastmod>2018-10-29T03:27:36.803Z</lastmod>
@@ -121,13 +128,6 @@
   </url>
   
   <url>
-    <loc>https://moonbegonia.xyz/2018/06/01/MB3/</loc>
-    
-    <lastmod>2018-10-18T00:44:01.269Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://moonbegonia.xyz/2018/05/20/MB2/</loc>
     
     <lastmod>2018-10-18T00:43:46.817Z</lastmod>
@@ -142,14 +142,14 @@
   </url>
   
   <url>
-    <loc>https://moonbegonia.xyz/archives/index.html</loc>
+    <loc>https://moonbegonia.xyz/tags/index.html</loc>
     
     <lastmod>2018-10-18T00:35:34.934Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://moonbegonia.xyz/commonweal/index.html</loc>
+    <loc>https://moonbegonia.xyz/archives/index.html</loc>
     
     <lastmod>2018-10-18T00:35:34.934Z</lastmod>
     
@@ -163,7 +163,7 @@
   </url>
   
   <url>
-    <loc>https://moonbegonia.xyz/tags/index.html</loc>
+    <loc>https://moonbegonia.xyz/commonweal/index.html</loc>
     
     <lastmod>2018-10-18T00:35:34.934Z</lastmod>
     
