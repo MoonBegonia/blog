@@ -191,9 +191,11 @@ theme_config:
       enable: true
       # Version info of NexT after scheme info (vX.X.X).
       version: true
-    # -------------------------------------------------------------
-    # Any custom text can be defined here.
-    #custom_text: Hosted by <a target="_blank" rel="external nofollow" href="https://pages.coding.me"><b>Coding Pages</b></a>
+
+  creative_commons:
+    license: by-nc-sa
+    sidebar: true
+    post: true
 
   # ---------------------------------------------------------------
   # SEO Settings
@@ -210,6 +212,9 @@ theme_config:
   # If true, will add site-subtitle to index page, added in main hexo config.
   # subtitle: Subtitle
   index_with_subtitle: false
+
+  # Automatically add external URL with BASE64 encrypt & decrypt.
+  exturl: false
 
   # ---------------------------------------------------------------
   # Menu Settings
@@ -310,12 +315,6 @@ theme_config:
 
     # If true, all words will placed on next lines if header width longer then sidebar width.
     wrap: false
-
-  # Creative Commons 4.0 International License.
-  # http://creativecommons.org/
-  # Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
-  #creative_commons: by-nc-sa
-  #creative_commons:
 
   sidebar:
     # Sidebar Position, available value: left | right (only for Pisces | Gemini).
@@ -435,11 +434,6 @@ theme_config:
       #isDate: false
       #isImage: false
       #isExcerpt: false
-
-  # Declare license on posts
-  post_copyright:
-    enable: true
-    license: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a>
 
   # Post edit
   # Dependencies: https://github.com/hexojs/hexo-deployer-git
@@ -579,11 +573,6 @@ theme_config:
   # ---------------------------------------------------------------
   # Tags Settings
   # ---------------------------------------------------------------
-
-  # External URL with BASE64 encrypt & decrypt.
-  # Usage: {% exturl text url "title" %}
-  # Alias: {% extlink text url "title" %}
-  exturl: false
 
   # Note tag (bs-callout).
   note:
