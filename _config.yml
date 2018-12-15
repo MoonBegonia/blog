@@ -527,6 +527,15 @@ theme_config:
     alpha: 0.6
     zIndex: -1
 
+  # Han Support
+  # Dependencies: https://github.com/theme-next/theme-next-han
+  han: false
+
+  # Pangu Support
+  # Dependencies: https://github.com/theme-next/theme-next-pangu
+  # For more information: https://github.com/vinta/pangu.js
+  pangu: true
+
   local_search:
     enable: true
     # if auto, trigger search by changing input
