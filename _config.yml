@@ -153,8 +153,8 @@ theme_config:
   # ---------------------------------------------------------------
 
   favicon: 
-    small: /images/favicon.ico/none
-    medium: /images/favicon.ico/none
+    small: /images/favicon.ico
+    medium: /images/favicon.ico
     apple_touch_icon: /images/favicon.ico
     safari_pinned_tab: /images/favicon.ico
     #android_manifest: /images/manifest.json
@@ -298,7 +298,7 @@ theme_config:
     # in theme directory(source/images): /images/avatar.gif
     # in site  directory(source/uploads): /uploads/avatar.gif
     # You can also use other linking images.
-    url: https://blog-1253491707.piccd.myqcloud.com/avatar1.jpg #/images/avatar.gif
+    url: https://blog-1253491707.piccd.myqcloud.com/avatar1.jpg/none #/images/avatar.gif
     # If true, the avatar would be dispalyed in circle.
     rounded: true
     # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
