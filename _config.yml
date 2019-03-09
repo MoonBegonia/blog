@@ -293,7 +293,7 @@ theme_config:
   #links:
     #Title: http://example.com/
 
-    # Sidebar Avatar
+  # Sidebar Avatar
   avatar:
     # in theme directory(source/images): /images/avatar.gif
     # in site  directory(source/uploads): /uploads/avatar.gif
@@ -340,14 +340,12 @@ theme_config:
     # Sidebar offset from top menubar in pixels (only for Pisces | Gemini).
     offset: 12
 
-    # Back to top in sidebar (only for Pisces | Gemini).
-    b2t: true
-
+  back2top:
+    enable: true
+    # Back to top in sidebar.
+    sidebar: true
     # Scroll percent label in b2t button.
     scrollpercent: true
-
-    # Enable sidebar on narrow view (only for Muse | Mist).
-    onmobile: false
 
   # ---------------------------------------------------------------
   # Post Settings
