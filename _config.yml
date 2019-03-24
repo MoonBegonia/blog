@@ -4,7 +4,7 @@
 
 # Site
 title: 简记
-subtitle: 简于形，记于心
+subtitle: 
 description: 凡是过去，皆为序曲
 keywords:
 author: 月洒清辉映海棠
@@ -502,9 +502,9 @@ theme_config:
     enable: true
     onmobile: false # display on mobile or not
     color: '0,0,255' # RGB values, use ',' to separate
-    opacity: 0.6 # the opacity of line: 0~1
+    opacity: 0.8 # the opacity of line: 0~1
     zIndex: -1 # z-index property of the background
-    count: 120 # the number of lines
+    count: 130 # the number of lines
 
   # JavaScript 3D library.
   # Dependencies: https://github.com/theme-next/theme-next-three
