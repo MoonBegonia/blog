@@ -133,10 +133,11 @@ live2d:
     show: false
     scale: 0.3
 
-#字数及阅读时长统计
 symbols_count_time:
+  #文章内是否显示
   symbols: true
   time: true
+  # 网页底部是否显示
   total_symbols: true
   total_time: true
 
@@ -366,25 +367,25 @@ theme_config:
     enable: false
     length: 150
 
-
-
   # Post meta display settings
   post_meta:
     item_text: true
     created_at: true
     updated_at:
-      enabled: true
-      # If true, show updated date label only if `updated date` different from 'created date' (post edited in another day than was created).
-      # And if post will edited in same day as created, edited time will show in popup title under created time label.
+      enable: true
+      # If true, show updated date label only if `updated date` is different from `created date` (post edited in another day than was created).
+      # And if post was edited in same day as created, edited time will show in popup title under created time label.
       # If false show anyway, but if post edited in same day, show only edited time.
       another_day: true
     categories: true
 
   #字数统计及阅读时长
+  # Post wordcount display settings
+  # Dependencies: https://github.com/theme-next/hexo-symbols-count-time
   symbols_count_time:
     separated_meta: true
     item_text_post: true
-    item_text_total: false
+    item_text_total: true
     awl: 2
     wpm: 200
 
