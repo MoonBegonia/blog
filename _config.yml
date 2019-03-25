@@ -173,7 +173,7 @@ theme_config:
       # `heart` is recommended with animation in red (#ff0000).
       name: heartbeat
       # If you want to animate the icon, set it to true.
-      animated: false
+      animated: true
       # Change the color of icon, using Hex Code.
       color: "#ff0000"
 
@@ -352,7 +352,7 @@ theme_config:
   # ---------------------------------------------------------------
 
   # Automatically scroll page to section which is under <!-- more --> mark.
-  scroll_to_more: true
+  scroll_to_more: false
 
   # Automatically saving scroll position on each post/page in cookies.
   save_scroll: false
@@ -366,9 +366,7 @@ theme_config:
     enable: false
     length: 150
 
-  # 文章末尾添加“本文结束”标记
-  passage_end_tag:
-    enabled: true
+
 
   # Post meta display settings
   post_meta:
@@ -609,7 +607,7 @@ theme_config:
   # Reading progress bar
   # Dependencies: https://github.com/theme-next/theme-next-reading-progress
   reading_progress:
-    enable: false
+    enable: true
     color: "#37c6c0"
     height: 2px
 
