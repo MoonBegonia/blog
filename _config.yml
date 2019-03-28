@@ -281,10 +281,11 @@ theme_config:
 
   # Blog rolls
   links_icon: link
-  links_title: Links
+  links_title: 友链
   links_layout: block
   #links_layout: inline
-  #links:
+  links:
+    张旭虎: https://www.zhangxuhu.com/
     #Title: http://example.com/
 
   # Sidebar Avatar
