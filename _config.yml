@@ -224,8 +224,8 @@ theme_config:
   menu:
     home: / || home
     #about: /about/ || user
-    tags: /tags/ || tags
     categories: /categories/ || th
+    tags: /tags/ || tags
     archives: /archives/ || archive
     #schedule: /schedule/ || calendar
     #sitemap: /sitemap.xml || sitemap
