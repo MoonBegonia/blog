@@ -1,9 +1,5 @@
 User-agent: *
 Allow: /
-Allow: /archives/
-Allow: /categories/
-Allow: /tags/
-Allow: /about/
 Allow: /js/
 Allow: /css/
 
@@ -11,6 +7,10 @@ Disallow: /vendors/
 Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
+Disallow: /archives/
+Disallow: /categories/
+Disallow: /tags/
+Disallow: /about/
 
 Sitemap: https://moonbegonia.xyz/sitemap.xml
 Sitemap: https://moonbegonia.xyz/baidusitemap.xml
