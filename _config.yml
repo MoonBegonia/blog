@@ -76,6 +76,7 @@ time_format: HH:mm:ss
 per_page: 0
 pagination_dir: page
 
+# rss feed
 feed:
   type: atom
   path: atom.xml
@@ -133,6 +134,8 @@ live2d:
     show: false
     scale: 0.3
 
+# 文章字数和阅读时长统计
+## https://github.com/theme-next/hexo-symbols-count-time
 symbols_count_time:
   #文章内是否显示
   symbols: true
@@ -153,6 +156,7 @@ theme_config:
   # Site Information Settings
   # ---------------------------------------------------------------
 
+  # 网站图标
   favicon: 
     small: /images/favicon.ico
     medium: /images/favicon.ico
@@ -160,9 +164,11 @@ theme_config:
     safari_pinned_tab: /images/favicon.ico
     #android_manifest: /images/manifest.json
     #ms_browserconfig: /images/browserconfig.xml
-
+  
+  # rss feed
   rss: atom.xml
 
+  # 页脚
   footer:
     # Specify the date when the site was setup.
     # If not defined, current year will be used.
@@ -377,16 +383,6 @@ theme_config:
       another_day: true
     categories: true
 
-  #字数统计及阅读时长
-  # Post wordcount display settings
-  # Dependencies: https://github.com/theme-next/hexo-symbols-count-time
-  symbols_count_time:
-    separated_meta: true
-    item_text_post: true
-    item_text_total: true
-    awl: 2
-    wpm: 200
-
   # Code Highlight theme
   # Available values: normal | night | night eighties | night blue | night bright
   # https://github.com/chriskempson/tomorrow-theme
@@ -522,14 +518,43 @@ theme_config:
     alpha: 0.6
     zIndex: -1
 
+  #字数统计及阅读时长
+  # Post wordcount display settings
+  # Dependencies: https://github.com/theme-next/hexo-symbols-count-time
+  symbols_count_time:
+    separated_meta: true
+    item_text_post: true
+    item_text_total: true
+    awl: 2
+    wpm: 200
+
+  # Reading progress bar
+  # Dependencies: https://github.com/theme-next/theme-next-reading-progress
+  reading_progress:
+    enable: true
+    color: "#37c6c0"
+    height: 2px
+
+  # Load bar at the top
+  # Dependencies: https://github.com/theme-next/theme-next-pace
+  pace: true
+
   # Han Support
   # Dependencies: https://github.com/theme-next/theme-next-han
-  han: false
+  han: true
 
   # Pangu Support
   # Dependencies: https://github.com/theme-next/theme-next-pangu
   # For more information: https://github.com/vinta/pangu.js
   pangu: true
+
+  # Lazy Load Remastered
+  # Dependencies: https://github.com/theme-next/theme-next-jquery-lazyload
+  lazyload: true
+
+  # fancyBox 3
+  # Dependencies: https://github.com/theme-next/theme-next-fancybox3
+  fancybox: true
 
   local_search:
     enable: true
@@ -540,15 +565,6 @@ theme_config:
     top_n_per_article: 1
     # unescape html strings to the readable one
     unescape: false
-
-  # Support for gitalk comments system.
-  gitalk:
-    enable: false
-    clientID: fcdb896a42ee148bcebe
-    clientSecret: 55fa144a2a8c3ce9a7462d16825d94d5914ec59a
-    repo: Gitalk
-    owner: MoonBegonia
-    admin: MoonBegonia
 
   valine:
     enable: true
@@ -590,13 +606,6 @@ theme_config:
       tabs: false
       labels: true
     border_radius: 0
-
-  # Reading progress bar
-  # Dependencies: https://github.com/theme-next/theme-next-reading-progress
-  reading_progress:
-    enable: true
-    color: "#37c6c0"
-    height: 2px
 
   # Google Webmaster tools verification setting
   # See: https://www.google.com/webmasters/
