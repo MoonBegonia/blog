@@ -144,32 +144,27 @@ symbols_count_time:
   total_symbols: true
   total_time: true
 
-# 优化页面加载速度
-filter_optimize:
-  enable: false
-  # remove static resource query string
-  #   - like `?v=1.0.0`
-  remove_query_string: true
-  # remove the surrounding comments in each of the bundled files
-  remove_comments: false
-  css:
-    enable: true
-    # bundle loaded css file into the one
-    bundle: true
-    # use a script block to load css elements dynamically
-    delivery: true
-    # make specific css content inline into the html page
-    #   - only support the full path
-    #   - default is ['css/main.css']
-    inlines:
-    excludes:
-  js:
-    # bundle loaded js file into the one
-    bundle: true
-    excludes:
-  # set the priority of this plugin,
-  # lower means it will be executed first, default is 10
-  priority: 12
+# hexo-neat
+# 博文压缩
+neat_enable: true
+# 压缩html
+neat_html:
+  enable: true
+  exclude:
+# 压缩css  
+neat_css:
+  enable: true
+  exclude:
+    - '**/*.min.css'
+# 压缩js
+neat_js:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude:
+    - '**/*.min.js'
+    - '**/index.js'
 
 # ----------------------------------------------------------------
 #
@@ -706,7 +701,7 @@ theme_config:
   reading_progress:
     enable: true
     color: "#37c6c0"
-    height: 2px
+    height: 3px
 
   # Google Calendar
   # Share your recent schedule to others via calendar page.
@@ -783,21 +778,21 @@ theme_config:
   # Weibo,Wechat,Douban,QQZone,Twitter,Facebook,Linkedin,Mailto,Reddit,Delicious,StumbleUpon,Pinterest,
   # GooglePlus,Tumblr,GoogleBookmarks,Newsvine,Evernote,Friendfeed,Vkontakte,Odnoklassniki,Mailru
   needmoreshare2:
-    enable: false
+    enable: flase
     postbottom:
       enable: false
       options:
         iconStyle: box
         boxForm: horizontal
         position: bottomCenter
-        networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
+        networks: Weibo,Wechat,QQZone,Douban,Evernote,Twitter,Facebook
     float:
       enable: false
       options:
         iconStyle: box
         boxForm: horizontal
-        position: middleRight
-        networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
+        position: middle
+        networks: Weibo,Wechat,QQZone,Douban,Evernote,Twitter,Facebook
 
   # ---------------------------------------------------------------
   # Statistics and Analytics
