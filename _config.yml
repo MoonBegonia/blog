@@ -272,7 +272,7 @@ theme_config:
   baidu_site_verification: WOmbfKoQ7x
 
   # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO.
-  baidu_push: true
+  baidu_push: false
 
   # ---------------------------------------------------------------
   # Menu Settings
@@ -367,7 +367,7 @@ theme_config:
     # If true, all words will placed on next lines if header width longer then sidebar width.
     wrap: false
     # If true, all level of TOC in a post will be displayed, rather than the activated part of it.
-    expand_all: true
+    expand_all: false
     # Maximum heading depth of generated toc. You can set it in one post through `toc_max_depth` in Front Matter.
     max_depth: 6
 
@@ -807,7 +807,7 @@ theme_config:
   #growingio_analytics: #your projectId
 
   # Google Analytics
-  google_analytics: UA-119354100-2
+  # google_analytics: UA-119354100-2
   #  tracking_id:
   #  localhost_ignored: true
 
