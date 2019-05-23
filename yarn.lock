@@ -1342,10 +1342,10 @@ hexo-server@^0.3.1:
     opn "^5.3.0"
     serve-static "^1.13.2"
 
-hexo-symbols-count-time@^0.4.4:
-  version "0.4.4"
-  resolved "https://registry.yarnpkg.com/hexo-symbols-count-time/-/hexo-symbols-count-time-0.4.4.tgz#c5bad76d445d7e0a1ee8a46c7ad23349bc162c1d"
-  integrity sha1-xbrXbURdfgoe6KRsetIzSbwWLB0=
+hexo-symbols-count-time@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/hexo-symbols-count-time/-/hexo-symbols-count-time-0.6.0.tgz#100c1d26e8299b364a96cb91f8642a4896804dd4"
+  integrity sha512-Q4scQaED3STHOxKthdhXJn/e6dtXQ3apFxK0Zj0v1Y1TAn596kWOEoo0oAOAyDmmWVyHUMA2xUKpXLdvpMPOww==
 
 hexo-util@^0.6.0, hexo-util@^0.6.2, hexo-util@^0.6.3:
   version "0.6.3"
