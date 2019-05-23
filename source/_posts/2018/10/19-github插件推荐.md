@@ -1,5 +1,5 @@
 ---
-title: github 插件
+title: github 插件推荐
 categories: 
  - [GitHub 插件]
  - [如何让你的 Chrome 更好用]
