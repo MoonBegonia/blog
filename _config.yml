@@ -547,7 +547,7 @@ theme_config:
   # TagCloud settings for tags page.
   tagcloud:
     # If true, font size, font color and amount of tags can be customized
-    enable: false
+    enable: true
     # All values below are same as default, change them by yourself
     min: 12 # min font size in px
     max: 30 # max font size in px
