@@ -1,10 +1,10 @@
 ---
-title: Windows好软分享之办公生产篇
+title: Windows 好软分享之办公生产篇
 categories: 如何让你的 Windows 更好用
 tags:
  - Windows 软件
  - 办公生产工具
-keywords: [软件, 资源分享, Windows软件, 办公软件]
+keywords: [软件,资源分享,Windows软件,办公软件]
 ---
 
 一个好的工具、插件在办公生产中的作用是十分巨大的今天就来推荐几款我在办公生产中用到的工具。
@@ -21,7 +21,7 @@ keywords: [软件, 资源分享, Windows软件, 办公软件]
 
 ## Bandzip &nbsp; 压缩/解压缩软件
 
-压缩软件是电脑上不可或缺的软件，Bandizip 是一款来自韩国的开发商 Bandisoft 开发的 Windows 平台压缩软件,相比 WinRAR、好压、快压等软件来说免费、简洁就足够让人心动了，更何况它在细节处理的十分出色，自动解压、内置快速预览等功能是十分方便。
+压缩软件是电脑上不可或缺的软件，Bandizip 是一款来自韩国的开发商 Bandisoft 开发的 Windows 平台压缩软件，相比 WinRAR、好压、快压等软件来说免费、简洁就足够让人心动了，更何况它在细节处理的十分出色，自动解压、内置快速预览等功能是十分方便。
 
 [官网](https://www.bandisoft.com/bandizip/)
 
@@ -34,13 +34,13 @@ Everything 是一个私有的 Windows 桌面文件搜索引擎，可以快速在
 
 ![Everything](https://blog-1253491707.piccd.myqcloud.com/images/Everything.png/style)
 
-## Listary Everything的对手
+## Listary Everything 的对手
 
-Listary跟everything一直都是放在一起说，两者各有千秋。listary多出了搜索辅助等功能。双击Ctrl键唤出也显得十分方便。[官网](https://www.listary.com/)
+Listary 跟 everything 一直都是放在一起说，两者各有千秋。listary 多出了搜索辅助等功能。双击 Ctrl 键唤出也显得十分方便。[官网](https://www.listary.com/)
 
-## Xshell &nbsp; SSH登录工具
+## Xshell &nbsp; SSH 登录工具
 
-Xshell是一款功能强大的终端模拟器，支持SSH1，SSH2，SFTP，TELNET，RLOGIN和SERIAL。通过提供业界领先的性能，Xshell包含了其他SSH客户端无法发现的功能和优势。Xshell 免费提供给个人和非营利组织使用，需要注册才能获得下载链接。[去官网看看](https://www.netsarang.com/download/down_form.html?code=622&downloadType=0&licenseType=1)。
+Xshell 是一款功能强大的终端模拟器，支持 SSH1，SSH2，SFTP，TELNET，RLOGIN 和 SERIAL。通过提供业界领先的性能，Xshell 包含了其他 SSH 客户端无法发现的功能和优势。Xshell 免费提供给个人和非营利组织使用，需要注册才能获得下载链接。[去官网看看](https://www.netsarang.com/download/down_form.html?code=622&downloadType=0&licenseType=1)。
 
 ![Xshell](https://blog-1253491707.piccd.myqcloud.com/images/Xshell.png/style)
 
@@ -52,17 +52,17 @@ Notepad++ 是一个纯文本编辑器，不仅有语法高亮，还有语法折�
 
 ## Snipaste &nbsp; 截图神器
 
-Snipaste 是一款简单但强大的截图神器，还可以将截图贴到屏幕上，有一些高级的用法将进一步提高工作效率。此软件有 uwp 版，windows 便携版以及 MAC 版本，Linux 版本也即将发行。更多的信息可以[去官网看看](https://zh.snipaste.com/index.html)。或者直接[下载体验](https://zh.snipaste.com/download.html)。
+Snipaste 是一款简单但强大的截图神器，还可以将截图贴到屏幕上，有一些高级的用法将进一步提高工作效率。此软件有 uwp 版，windows 便携版以及 MAC 版本，Linux 版本也即将发行。更多的信息可以 [去官网看看](https://zh.snipaste.com/index.html)。或者直接 [下载体验](https://zh.snipaste.com/download.html)。
 
 ![Snipaste](https://blog-1253491707.piccd.myqcloud.com/images/Snipaste.png/style)
 
-## iSlide &nbsp;PPT插件
+## iSlide &nbsp;PPT 插件
 
-iSlide是一个 Power Point 插件，它针对 PPT 设计的难处设计了很多功能，官网的介绍语就是让设计简单起来。网友对它的评价也十分好。有设计排版、主题库、图片、图标等功能，可谓是十分强大。可以去[官网](https://www.islide.cc/)查看详细介绍及下载。
+iSlide 是一个 Power Point 插件，它针对 PPT 设计的难处设计了很多功能，官网的介绍语就是让设计简单起来。网友对它的评价也十分好。有设计排版、主题库、图片、图标等功能，可谓是十分强大。可以去 [官网](https://www.islide.cc/) 查看详细介绍及下载。
 
 ![iSlide](https://blog-1253491707.piccd.myqcloud.com/images/islide.png/style)
 
-## GifCam &nbsp; gif录制编辑软件
+## GifCam &nbsp; gif 录制编辑软件
 
 录制过程可调整窗口大小/位置，可以暂停/继续，录制范围内无变化则不增加新帧而只增加延时，有效较小文件尺寸，可手动录制单帧。编辑状态可查看每一帧，下可以删除帧、增加当前帧延时。
 
@@ -70,14 +70,14 @@ iSlide是一个 Power Point 插件，它针对 PPT 设计的难处设计了很�
 
 ## Inpaint 水印去除工具
 
-有时候遇到一张喜欢的图片却有水印，这个时候第一个想到的东西肯定是PS，但是PS太大，杀鸡焉用牛刀？这时候这款软件就可以派上用场了，便携小巧的水印去除工具，你值得拥有！
+有时候遇到一张喜欢的图片却有水印，这个时候第一个想到的东西肯定是 PS，但是 PS 太大，杀鸡焉用牛刀？这时候这款软件就可以派上用场了，便携小巧的水印去除工具，你值得拥有！
 
 ## 万彩办公大师 办公工具箱
 
-万彩办公大师是一款办公工具的集合工具箱，功能众多，包罗万象。办公党、学生党的必备利器。中方多功能以插件的形式用哪个下载哪个，不占用过多的资源。同时官网也提供了离线便携版本。去[官网](http://www.wofficebox.com/)查看更多。
+万彩办公大师是一款办公工具的集合工具箱，功能众多，包罗万象。办公党、学生党的必备利器。中方多功能以插件的形式用哪个下载哪个，不占用过多的资源。同时官网也提供了离线便携版本。去 [官网](http://www.wofficebox.com/) 查看更多。
 
 ![万彩办公大师](https://blog-1253491707.piccd.myqcloud.com/imgs/20190112163153.png/style)
 
 <details><summary>更新日志</summary>
-2019-01-12：添加listary、inpaint、万彩办公大师
+2019-01-12：添加 listary、inpaint、万彩办公大师
 </details>

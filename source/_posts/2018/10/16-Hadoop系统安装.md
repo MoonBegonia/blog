@@ -14,7 +14,7 @@ updated:
 
 <!-- more -->
 
-### 创建 Hadoop 用户 (此步骤非必须，创建新用户一般为了安全起见，但这里本来就是实验环境，所以我就没创建)
+### 创建 Hadoop 用户（此步骤非必须，创建新用户一般为了安全起见，但这里本来就是实验环境，所以我就没创建）
 
 添加新用户
 
@@ -49,7 +49,7 @@ sudo upgrade
 
 ### 配置 JAVA 环境
 
-下载 (可以将下面的网址换成 [JDK 下载界面](https://www.oracle.com/technetwork/java/javase/downloads/index.html) 最新的版本)  
+下载 （可以将下面的网址换成 [JDK 下载界面](https://www.oracle.com/technetwork/java/javase/downloads/index.html) 最新的版本）  
 wget 后面的 -O 为重命名下载文件，不是下载的 .tar.gz 的记得更换。<http://XXXXXXXX> 是下载链接 建议进官网自己获取一下，有可能这个会失效。  
 最新的 java11 已经有 deb/rpm 包下载，可以选择下载 deb/rpm 包，这样可以免去配置环境变量。ubuntu 选择 deb 包下载。  
 ubuntu deb 包安装就是 `sudo dpkg -i jdk.deb` 注意路径和文件名。选择的 deb 包安装的可以直接查看是否安装成功，然后进行下一步。
@@ -85,7 +85,7 @@ sudo nano /etc/environment
 ```
 
 要添加的环境变量已经标注出来了。**注意冒号和路径。**  
-**PS：这里已经将 hadoop 的环境变量加进去了，注意看一下。JAVA_HOME是另起一行**
+**PS：这里已经将 hadoop 的环境变量加进去了，注意看一下。JAVA_HOME 是另起一行**
 
 ![添加环境变量](https://blog-1253491707.piccd.myqcloud.com/imgs/20181016213627.png/style)
 
@@ -105,9 +105,9 @@ java -version
 
 ### 安装 Hadoop
 
-可以从这个[网址](http://mirrors.hust.edu.cn/apache/hadoop/common/)找到下载链接
+可以从这个 [网址](http://mirrors.hust.edu.cn/apache/hadoop/common/) 找到下载链接
 
-下载(自行替换链接为最新版或者你想要下载的版本)
+下载（自行替换链接为最新版或者你想要下载的版本）
 
 ```shell
 wget -O hadoop.tar.gz http://mirrors.hust.edu.cn/apache/hadoop/common/hadoop-3.1.1/hadoop-3.1.1.tar.gz
@@ -135,7 +135,7 @@ sudo mv hadoop-3.1.1 hadoop
 
 配置 hadoop 环境
 
-打开 hadoop-env.sh 文件(文件的位置根据版本的不同可能会有差异，找不到可以搜索一下)
+打开 hadoop-env.sh 文件（文件的位置根据版本的不同可能会有差异，找不到可以搜索一下）
 
 ```shell
 nano /usr/hadoop/etc/hadoop/hadoop-env.sh

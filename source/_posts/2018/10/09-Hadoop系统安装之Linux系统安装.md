@@ -14,7 +14,7 @@ updated:
 
 <!-- more -->
 
-### Windows Subsystem for Linux(Windows Linux 子系统)
+### Windows Subsystem for Linux(Windows Linux 子系统）
 
 **安装的 Linux 默认没有图形界面，如果需要图形界面的话可以去搜索教程，各种各样的都有，没几步，很简单**
 
@@ -22,15 +22,15 @@ updated:
 
 ![开启 WSL](https://blog-1253491707.piccd.myqcloud.com/images/20181009193626.png/style)
 
-重启后打开 Microsoft store 搜索Linux ，会发现有许多的 Linux 系统可供选择，在这里我选择 Ubuntu 安装
+重启后打开 Microsoft store 搜索 Linux ，会发现有许多的 Linux 系统可供选择，在这里我选择 Ubuntu 安装
 
 ![linux](https://blog-1253491707.piccd.myqcloud.com/images/20181009194708.png/style)
 
-安装之后就可以启动 Ubuntu 了，打开之后会进行初始化，等一会儿就好了。初始化之后会提示新建账户，用户名不与 Windows 用户名互通。密码输入是非明文的，不会显示*号，不要以为是键盘坏了...(当然此时是可以直接关掉重开的，重开时会默认以 root 账户登录)
+安装之后就可以启动 Ubuntu 了，打开之后会进行初始化，等一会儿就好了。初始化之后会提示新建账户，用户名不与 Windows 用户名互通。密码输入是非明文的，不会显示*号，不要以为是键盘坏了。..（当然此时是可以直接关掉重开的，重开时会默认以 root 账户登录）
 
 新建个普通用户的话每次敏感操作都需要带个 `sudo` 当然可以在命令行输入 `sudo -i` 提权。
 
-子系统搞好的第一件事就是更换apt源，因为吗，默认的源是国外的，访问肯定没有国内的源快。
+子系统搞好的第一件事就是更换 apt 源，因为吗，默认的源是国外的，访问肯定没有国内的源快。
 
 ```shell 阿里源
 deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
@@ -65,21 +65,21 @@ deb-src http://mirrors.163.com/ubuntu/ wily-proposed main restricted universe mu
 deb-src http://mirrors.163.com/ubuntu/ wily-backports main restricted universe multiverse
 ```
 
-apt源的路径是 `/etc/apt/sources.list` ，先打开此文件夹
+apt 源的路径是 `/etc/apt/sources.list` ，先打开此文件夹
 
 ```shell
 nano /etc/apt/sources.list
 ```
 
-然后将上面的一个源复制粘贴到文件的最前面(右击鼠标粘贴)
+然后将上面的一个源复制粘贴到文件的最前面（右击鼠标粘贴）
 
 保存后在命令行输入 `apt update` 更新配置
 
-如果你想愉快地使用 WSL 的话，建议替换一下 Windows 自带的 cmd，不仅不好用还丑，cmder、gitbash等都还不错，想替换的可以搜索`Windows cmd 替换工具`自行选择，这里不多做赘述。当然选择 SSH 登录也是一种不错的方案。这种方式等下再讲。
+如果你想愉快地使用 WSL 的话，建议替换一下 Windows 自带的 cmd，不仅不好用还丑，cmder、gitbash 等都还不错，想替换的可以搜索`Windows cmd 替换工具`自行选择，这里不多做赘述。当然选择 SSH 登录也是一种不错的方案。这种方式等下再讲。
 
 ### 虚拟机
 
-虚拟机方案有两种，下载软件或者是开启 Windows 自带的 hyper-V虚拟机组件，hyper-V在 Windows 功能中启用就好，虚拟机软件的话我这里放两个出来，其他的一些就不说了，软件都大同小异，重点还是学习 Linux。
+虚拟机方案有两种，下载软件或者是开启 Windows 自带的 hyper-V 虚拟机组件，hyper-V 在 Windows 功能中启用就好，虚拟机软件的话我这里放两个出来，其他的一些就不说了，软件都大同小异，重点还是学习 Linux。
 
 [VMware Workstation Pro](http://www.dayanzai.me/vmware-workstation.html) ：VMware Workstation 是虚拟机中的佼佼者，大名鼎鼎
 

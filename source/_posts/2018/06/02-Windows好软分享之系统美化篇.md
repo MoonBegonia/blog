@@ -1,10 +1,10 @@
 ---
-title: Windows好软分享之系统美化篇
+title: Windows 好软分享之系统美化篇
 categories: 如何让你的 Windows 更好用
 tags:
  - Windows 软件
  - 系统美化
-keywords: [软件, 资源分享, Windows软件, 系统美化, windows美化]
+keywords: [软件,资源分享,Windows软件,系统美化,windows美化]
 ---
 
 一个漂亮的系统会让人赏心悦目，做起事儿来当然是更爽啦，今天就分享一些系统美化比较好用的软件。
@@ -22,13 +22,13 @@ Win10 版 StartIsBack++ 2.6.4 破解版：[点击下载](https://blog-1253491707
 Win8.1 版 StartIsBack+ 1.7.6 破解版：[点击下载](https://blog-1253491707.cos.ap-chengdu.myqcloud.com/files/%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96/StartIsBack%2B%2B1.7.6.exe)
 已知部分 Win8.1 系统不兼容此程序，开机会黑屏，酌情使用！
 
-Win8 版 StartIsBack 2.1.2 破解版: [点击下载](https://blog-1253491707.cos.ap-chengdu.myqcloud.com/files/%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96/StartIsBack%202.1.2%20PO.exe)
+Win8 版 StartIsBack 2.1.2 破解版：[点击下载](https://blog-1253491707.cos.ap-chengdu.myqcloud.com/files/%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96/StartIsBack%202.1.2%20PO.exe)
 
 [漫锋网详细介绍及下载](http://zhutix.com/tools/startisback-plus-pojie/)
 
 ## Aero Glass &nbsp; 窗口边框透明软件
 
-可以 Win8/Win10 使用毛玻璃的小软件，效果不错，设置简单，十分灵活。Windows应用商店也可以搜到。
+可以 Win8/Win10 使用毛玻璃的小软件，效果不错，设置简单，十分灵活。Windows 应用商店也可以搜到。
 
 [漫锋网介绍及下载](http://zhutix.com/tools/aero-glass-10/)
 
@@ -41,7 +41,7 @@ GitHub 仓库地址：[仓库](https://github.com/TranslucentTB/TranslucentTB)
 
 ## Rainmeter &nbsp; 雨滴桌面
 
-雨滴桌面是一款能够使'皮肤'(skin)运行在桌面上的软件，可以显示时间、天气、电池、内存等信息的软件。
+雨滴桌面是一款能够使'皮肤'(skin) 运行在桌面上的软件，可以显示时间、天气、电池、内存等信息的软件。
 
 ![雨滴桌面](https://blog-1253491707.piccd.myqcloud.com/images/RainMeter%20.png/style)
 
@@ -60,7 +60,7 @@ GitHub 仓库地址：[仓库](https://github.com/TranslucentTB/TranslucentTB)
 
 ## Fences &nbsp; 桌面整理软件
 
-fences是一款出众的桌面整理软件，可以将不同的文件自动分类整理，桌面分区有不同的透明度，双击可以隐藏桌面，还可以像手机一样设置多个页面来回切换，桌面再也不会一团糟啦。官方售价9.99$。当然也有破解版。
+fences 是一款出众的桌面整理软件，可以将不同的文件自动分类整理，桌面分区有不同的透明度，双击可以隐藏桌面，还可以像手机一样设置多个页面来回切换，桌面再也不会一团糟啦。官方售价 9.99$。当然也有破解版。
 
 [去官网购买](https://www.stardock.com/products/fences/?)  
 [中文破解版](https://blog-1253491707.cos.ap-chengdu.myqcloud.com/files/%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96/Fences%2Bv3.0.9%2B%E4%B8%AD%E6%96%87%E7%A0%B4%E8%A7%A3%E7%89%88.zip)
@@ -70,7 +70,7 @@ fences是一款出众的桌面整理软件，可以将不同的文件自动分�
 
 ## 腾讯桌面整理
 
-腾讯系中几款好用的软件之一，官网提供独立版下载，使用下来感觉还可以，虽然比不上Fences但也是一款不错的桌面整理软件。
+腾讯系中几款好用的软件之一，官网提供独立版下载，使用下来感觉还可以，虽然比不上 Fences 但也是一款不错的桌面整理软件。
 
 ![腾讯桌面整理](https://blog-1253491707.piccd.myqcloud.com/imgs/20190112154658.png/style)
 

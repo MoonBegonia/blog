@@ -1,12 +1,12 @@
 ---
-title: 用GitHub pages 搭建博客(进阶篇)
+title: 用 GitHub pages 搭建博客（进阶篇）
 categories:
  - [博客搭建折腾记]
  - [GitHub]
 tags: 
  - 博客搭建折腾记
  - GitHub
-keywords: [博客, github pages]
+keywords: [博客,github pages]
 ---
 
 昨天我们讲了用 GitHub pages 搭建博客的基础篇，今天就来讲讲搭建博客还经常用到的两样东西，那就是自己的域名和和图床的选择，今天我们就来说说这两样东西。
@@ -35,18 +35,17 @@ keywords: [博客, github pages]
 
 ![配置域名](https://blog-1253491707.piccd.myqcloud.com/images/gitpagesblog13.png/style)
 
-付费有其他的可以自行选择，这里我们选择支付宝，然后输入支付宝绑定的邮箱，点击GO支付
+付费有其他的可以自行选择，这里我们选择支付宝，然后输入支付宝绑定的邮箱，点击 GO 支付
 
 ![支付](https://blog-1253491707.piccd.myqcloud.com/images/gitpagesblog14.png/style)
 
-付费完毕后，点击右上方的我的账户(My Account),然后点击 domain manager 进入域名管理
+付费完毕后，点击右上方的我的账户 (My Account), 然后点击 domain manager 进入域名管理
 
 ![域名管理](https://blog-1253491707.piccd.myqcloud.com/images/gitpagesblog15.png/style)
 
 然后进入 DNS 管理
 
-![DNS管理](https://blog-1253491707.piccd.myqcloud.com/images/gjitpagesblog15.png/style)
-
+![DNS 管理](https://blog-1253491707.piccd.myqcloud.com/images/gjitpagesblog15.png/style)
 
 将域名的 DNS 解析到博客以前的地址，也就是 GitHub 预留的域名
 
@@ -72,7 +71,7 @@ keywords: [博客, github pages]
 
 ![进入万象优图](https://blog-1253491707.piccd.myqcloud.com/images/wxyt1.png/style)
 
-然后然后点击左侧的 Bucket管理，新建，保存
+然后然后点击左侧的 Bucket 管理，新建，保存
 
 ![bucket 管理](https://blog-1253491707.piccd.myqcloud.com/images/wxyt2.png/style)
 
@@ -80,9 +79,9 @@ keywords: [博客, github pages]
 
 ![防盗链设置](https://blog-1253491707.piccd.myqcloud.com/images/wxyt3.png/style)
 
-还可以在样式设置中设置图片水印，bucket配置中还有原图保护，这些东西就按需使用，不多做说明。
+还可以在样式设置中设置图片水印，bucket 配置中还有原图保护，这些东西就按需使用，不多做说明。
 
-#### PicGo使用教程
+#### PicGo 使用教程
 
 PicGo 是一款十分好用的图床工具，支持的图床很丰富
 
@@ -92,6 +91,6 @@ PicGo 是一款十分好用的图床工具，支持的图床很丰富
 
 ![PicGo 主界面介绍](https://blog-1253491707.piccd.myqcloud.com/images/picgo2.png/style)
 
-不仅如此，PicGo 还支持一键复制设置好的链接，可以自定义格式，免去了打很多代码，还可以搭配万象优图的样式生成水印。更多的信息可以去[官网](https://molunerfinn.com/PicGo/)查看，此软件还在 [GitHub](https://github.com/Molunerfinn/picgo) 上开源。
+不仅如此，PicGo 还支持一键复制设置好的链接，可以自定义格式，免去了打很多代码，还可以搭配万象优图的样式生成水印。更多的信息可以去 [官网](https://molunerfinn.com/PicGo/) 查看，此软件还在 [GitHub](https://github.com/Molunerfinn/picgo) 上开源。
 
 关于软件的使用教程就不在这里介绍了，作者对软件的使用有十分详细的教程，大家可以前往 GitHub 仓库的 Wiki 界面查看。

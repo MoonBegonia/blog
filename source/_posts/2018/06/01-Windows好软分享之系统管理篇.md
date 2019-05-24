@@ -1,30 +1,30 @@
 ---
-title: Windows好软分享之系统管理篇
+title: Windows 好软分享之系统管理篇
 categories: 如何让你的 Windows 更好用
 tags:
  - Windows 软件
  - 系统管理
-keywords: [软件, 资源分享, Windows软件, 系统管理]
+keywords: [软件,资源分享,Windows软件,系统管理]
 ---
 
 系统管理软件是 Windows 优化的必选软件，今天我们就来看看我用的那几款软件。
 
 <!-- more -->
 
-## 微PE &nbsp; 纯净的装机工具
+## 微 PE &nbsp; 纯净的装机工具
 
-Windows 系统的恢复其实是非常简单的，找一个 PE 工具制作一个启动盘差不多就行了。Windows PE 装机工具有很多，比较出名的有大白菜、老毛桃等，但是都是有捆绑的，一些不知名的甚至有可能有病毒。用这些装机工具装的系统并不纯净，微PE 就是一款比较好的装机工具，无捆绑，可以直接去 [官网](http://www.wepe.com.cn/download.html) 下载。决定系统是否纯净的另外一个因素是 Windows 系统镜像的来源，我的系统的镜像都是来自于 [MSDN我告诉你](https://msdn.itellyou.cn/) 网站(此网站提供很多微软的原版镜像下载，名誉很好，可以放心下载)。
+Windows 系统的恢复其实是非常简单的，找一个 PE 工具制作一个启动盘差不多就行了。Windows PE 装机工具有很多，比较出名的有大白菜、老毛桃等，但是都是有捆绑的，一些不知名的甚至有可能有病毒。用这些装机工具装的系统并不纯净，微 PE 就是一款比较好的装机工具，无捆绑，可以直接去 [官网](http://www.wepe.com.cn/download.html) 下载。决定系统是否纯净的另外一个因素是 Windows 系统镜像的来源，我的系统的镜像都是来自于 [MSDN 我告诉你](https://msdn.itellyou.cn/) 网站（此网站提供很多微软的原版镜像下载，名誉很好，可以放心下载）。
 
-![微PE](https://blog-1253491707.piccd.myqcloud.com/images/%E5%BE%AEPE-1.png/style)
+![微 PE](https://blog-1253491707.piccd.myqcloud.com/images/%E5%BE%AEPE-1.png/style)
 
-![微PE](https://blog-1253491707.piccd.myqcloud.com/images/%E5%BE%AEPE-2.png/style)
+![微 PE](https://blog-1253491707.piccd.myqcloud.com/images/%E5%BE%AEPE-2.png/style)
 
 ## HWIDGEN Windows10 &nbsp; 数字权利获取工具
 
-不久前在国外科技论坛有大神发布名为 HWIDGEN 激活工具，该激活工具几乎秒杀所有版本的 Win10 系统，我们知道现在 Win10 激活后会带有数字权利，数字权利可以在我们重装系统后自动激活无需再次激活。而 HWIDGEN 激活工具正是直接获取数字激活权利进行永久激活，此方法激活后用户同样无需再次激活。不像KMS那样需要180天激活一次。
+不久前在国外科技论坛有大神发布名为 HWIDGEN 激活工具，该激活工具几乎秒杀所有版本的 Win10 系统，我们知道现在 Win10 激活后会带有数字权利，数字权利可以在我们重装系统后自动激活无需再次激活。而 HWIDGEN 激活工具正是直接获取数字激活权利进行永久激活，此方法激活后用户同样无需再次激活。不像 KMS 那样需要 180 天激活一次。
 
 激活步骤：  
-首先 [下载](https://blog-1253491707.cos.ap-chengdu.myqcloud.com/files/%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/HWIDGEN.zip) 压缩包，然后解压缩；双击Activation.cmd,以管理员身份运行；接着根据提示操作就好。
+首先 [下载](https://blog-1253491707.cos.ap-chengdu.myqcloud.com/files/%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/HWIDGEN.zip) 压缩包，然后解压缩；双击 Activation.cmd, 以管理员身份运行；接着根据提示操作就好。
 
 因为我已经激活过，所以有一点不一样。
 ![HWIDGEN](https://blog-1253491707.piccd.myqcloud.com/images/HWIDGEN.gif/style)
@@ -61,7 +61,7 @@ CCleaner 是由英国软件公司 Piriform 开发的一款免费软件，可从 
 
 >geek uninstall ——the best FREE uninstaller
 
-绿色便捷，免费却又强大，确实担得起最好的免费卸载工具的称号。这是你不应该错过的一款软件。同样软件还有更为强大的 PRO 版本，PRO 版本添加了安装监视、启动项管理等功能。跟多信息及安装可以去[官网](https://geekuninstaller.com/)查看。
+绿色便捷，免费却又强大，确实担得起最好的免费卸载工具的称号。这是你不应该错过的一款软件。同样软件还有更为强大的 PRO 版本，PRO 版本添加了安装监视、启动项管理等功能。跟多信息及安装可以去 [官网](https://geekuninstaller.com/) 查看。
 
 ## Driver Booster &nbsp; 驱动更新备份软件
 

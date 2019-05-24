@@ -4,7 +4,7 @@ categories: Over The Wall
 tags: 
  - Over The Wall
  - MTProxy
-keywords: [mtproto, mtproxy]
+keywords: [mtproto,mtproxy]
 ---
 
 这几天功夫网使劲折腾，搞得 Telegram 都差点上不去，虽然自己一直 24 小时挂着梯子，但有的人只需要用 Telegram，便想起来 Tg 内置的 MTProxy 代理，但是 GitHub 项目下的安装教程有些麻烦还不完整。便把自己的安装过程记录下来。
@@ -87,7 +87,7 @@ head -c 16 /dev/urandom | xxd -ps
 
 - `443`是客户端用来连接代理的端口。
 - `8888`是本地端口。您可以使用它从`mtproto-proxy`获取统计信息。像 `wget localhost:8888/stats`。
-- `<密钥>`是在步骤 3 生成的。还可以设置多个密钥：`-S <密钥1> -S <密钥2>`。
+- `<密钥>`是在步骤 3 生成的。还可以设置多个密钥：`-S <密钥 1> -S <密钥 2>`。
 - `proxy-secret`和`proxy-multi.conf`在第 1 步和第 2 步获得。
 
 运行成功后按`Ctrl+C`退出运行，接下来创建一个系统服务方便以后管理
@@ -135,7 +135,7 @@ systemctl daemon-reload
 systemctl restart MTProxy.service
 ```
 
-### 查看状态,`Active`为`active(running)`则表示运行正常。
+### 查看状态，`Active`为`active(running)`则表示运行正常。
 
 ```shell
 systemctl status MTProxy.service
@@ -145,15 +145,15 @@ systemctl status MTProxy.service
 
 ### 随机填充
 
-由于某些ISP通过数据包大小检测 MTProxy，因此如果启用此模式，则会向数据包随机填充。
+由于某些 ISP 通过数据包大小检测 MTProxy，因此如果启用此模式，则会向数据包随机填充。
 仅对启用它的客户端使用！！！
-启用方式：在客户端代理的密钥最前面加上dd即可（xxxxxx => ddxxxxxx）
+启用方式：在客户端代理的密钥最前面加上 dd 即可（xxxxxx => ddxxxxxx）
 
 ### 手动设置
 
 **不同的客户端有不同的位置这里就简单的说一下**
 
-找到设置中的代理/proxy 选项 》 添加代理/Add proxy 》 MTPROTO proxy 》 server 填写服务器地址，，密钥就是前面步骤中获得的密钥。
+找到设置中的代理/proxy 选项 》 添加代理/Add proxy 》 MTPROTO proxy 》 server 填写服务器地址，密钥就是前面步骤中获得的密钥。
 
 ### 服务器注册及分享
 

@@ -75,7 +75,7 @@ Enjoy it!
 以 root 用户登录运行以下命令  
  ./shadowsocks-all.sh uninstall
 
-### 5.启动脚本位置
+### 5. 启动脚本位置
 
 Shadowsocks-Python 版：  
 /etc/init.d/shadowsocks-python start | stop | restart | status
@@ -132,5 +132,5 @@ Shadowsocks-libev 版：
 
 - 秋水逸冰博客：<https://teddysun.com/>
 - 秋水逸冰 github 地址：<https://github.com/teddysun>
-- shadowsocks 非官方网站(被墙)：<https://shadowsocks.be/>
-- 逗比根据地(被墙)：<https://doub.io/>
+- shadowsocks 非官方网站（被墙）：<https://shadowsocks.be/>
+- 逗比根据地（被墙）：<https://doub.io/>

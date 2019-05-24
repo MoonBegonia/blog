@@ -42,7 +42,7 @@ tags:
 - [GitHub 项目地址](https://github.com/xtaci/kcptun)
 - [KCPTun - GitHub 下载地址](https://github.com/xtaci/kcptun/releases)
 - [KCPTun - Android](https://github.com/shadowsocks/kcptun-android/releases)
-- [KCPTun服务端配置](https://moonbegonia.github.io/blog/overthewall/2018/06/22/kcptun_server_install/)
+- [KCPTun 服务端配置](https://moonbegonia.github.io/blog/overthewall/2018/06/22/kcptun_server_install/)
 
 ## 相关博客
 
@@ -54,7 +54,7 @@ tags:
 
   - 逗比根据地直连方法：通过修改 hosts 文件的方式来直连逗比根据地，Windows、MAC、Linux 都支持，安卓则需要 ROOT。
 
-  - 例：Windows 打开：&nbsp;`C:\Windows\System32\drivers\etc\hosts`&nbsp;文件，添加一句：
+  - 例：Windows 打开：&nbsp;`C:\Windows\System32\drivers\etc\hosts`&nbsp; 文件，添加一句：
 
     ```shell
     104.28.2.6    doub.io

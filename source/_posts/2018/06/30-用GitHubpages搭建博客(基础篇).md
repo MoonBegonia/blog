@@ -1,19 +1,19 @@
 ---
-title: 用 GitHub pages 搭建博客(基础篇)
+title: 用 GitHub pages 搭建博客（基础篇）
 categories:
  - [博客搭建折腾记]
  - [GitHub]
 tags: 
  - 博客搭建折腾记
  - GitHub
-keywords: [博客, github, pages]
+keywords: [博客,github,pages]
 ---
 
 从开始用 GitHub pages 搭建博客已经差不多一个月了，昨天买了个域名，才算是步入了正轨，搭建博客算是差不多完工了。一个月来，走了许多坑，虽然网上的教程还是挺多的，但还是把搭建博客的路子写下来，希望后人能有所启发。今天就先来讲讲用 GitHub pages 搭建博客的基础篇。
 
 <!-- more -->
 
-既然是用 GitHub pages 搭建博客，首先需要的当然是 GitHub 账号啦，去[GitHub 官网](https://github.com/) 直接注册一个就好啦。然后我们新建一个仓库(New repository)，仓库名必须为`用户名.github.io`，因为我们注册 GitHub 账号之后会为我们预留一个 https://username.github.io 的域名给我们。如果不自定义域名的话就可以用这个域名访问我们的博客。
+既然是用 GitHub pages 搭建博客，首先需要的当然是 GitHub 账号啦，去 [GitHub 官网](https://github.com/) 直接注册一个就好啦。然后我们新建一个仓库 (New repository)，仓库名必须为`用户名。github.io`，因为我们注册 GitHub 账号之后会为我们预留一个 https://username.github.io 的域名给我们。如果不自定义域名的话就可以用这个域名访问我们的博客。
 
 注册之后的第一步就是新建一个代码仓库啦。
 
@@ -23,7 +23,7 @@ keywords: [博客, github, pages]
 
 ![创建成功界面](https://blog-1253491707.piccd.myqcloud.com/images/gitpageblog2.png/style)
 
-然后进入设置(settings)，下滑找到 GitHub pages，随便选择一个主题，保存之后就可以通过给出的那个网址访问我们的博客啦。
+然后进入设置 (settings)，下滑找到 GitHub pages，随便选择一个主题，保存之后就可以通过给出的那个网址访问我们的博客啦。
 
 ![github pages](https://blog-1253491707.piccd.myqcloud.com/images/gitpageblog3.png/style)
 

@@ -26,7 +26,7 @@ keywords: LAMP
 
 ``` shell
 sudo apt install masql-server
-//MySQL初始设置
+//MySQL 初始设置
 mysql_secure_installatio
 ```
 
@@ -38,7 +38,7 @@ mysql_secure_installatio
 
 ```shell
 sudo vi /var/www/info.php
-//填入:
+//填入：
 <?php
 phpinfo();
 ?>
@@ -46,4 +46,4 @@ phpinfo();
 
 ## 查看是否安装成功
 
-在浏览器地址栏输入 <http://localhost/info.php> 版本信息输出界面就是成功了（服务器端就是ip+/info.php)
+在浏览器地址栏输入 <http://localhost/info.php> 版本信息输出界面就是成功了（服务器端就是 ip+/info.php)

@@ -5,7 +5,7 @@ tags:
  - Powerline
  - linux
  - 反正好用就对了
-keywords: [powerline, vscode 插件, vscode, 终端美化]
+keywords: [powerline,vscode插件,vscode,终端美化]
 ---
 
 前几天在网上偶然看到有人的 vscode 终端是彩色的，感觉比自带的好多了，本来以为是扩展，搜了一下又没找到，后来才知道这是一种字体。再后来知道了 powerline 这个东西，powerline 是针对 vim、bash 等的一个状态栏插件。他给程序提供了状态栏并使程序更加好看。它用 Python 写成。今天就来讲讲如何在 Ubuntu 上安装使用它。
@@ -53,6 +53,7 @@ Requires:
 ```
 
 ###　在 shell 中启用 powerline
+
 添加下面的行到 .bashrc 中，它会默认在基础 shell 中启用 powerline。
 
 ``` vim
@@ -94,7 +95,7 @@ wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.ot
 wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
 ```
 
-列出有效的 X 字体路径, 查看下图可知应该将字体移到 `/usr/share/fonts/X11` 目录下
+列出有效的 X 字体路径，查看下图可知应该将字体移到 `/usr/share/fonts/X11` 目录下
 
 ``` bash
 xset q

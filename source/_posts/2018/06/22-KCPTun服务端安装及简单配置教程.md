@@ -1,5 +1,5 @@
 ---
-title: KCPTun服务端安装及简单配置教程
+title: KCPTun 服务端安装及简单配置教程
 categories: 
  - [Over The Wall]
 tags: 
@@ -26,7 +26,7 @@ Kcptun 是一个非常简单和快速的，基于 KCP 协议的 UDP 隧道，它
 
 - 下载 KCPTun 及解压
 
-  **注意：KCPtun 不分系统版本，只分 64 位（下载 kcptun-linux-amd64.xxx.tar.gz 的）和 32 位（下载带 kcptun-linux-386.xxx.tar.gz 的）先去[GitHub](https://github.com/xtaci/kcptun/releases)下载最新的版本然后复制到下面的 wget 后面即可。**
+  **注意：KCPtun 不分系统版本，只分 64 位（下载 kcptun-linux-amd64.xxx.tar.gz 的）和 32 位（下载带 kcptun-linux-386.xxx.tar.gz 的）先去 [GitHub](https://github.com/xtaci/kcptun/releases) 下载最新的版本然后复制到下面的 wget 后面即可。**
 
   ```shell
   # 新建一个文件夹
@@ -91,7 +91,7 @@ nano /root/kcptun/server-config.json
  `mode` 为加速模式，默认 `fast2` ；  
  `crypt` 为加密方式，默认 `aes-192` ；  
  `nocomp` 为压缩传输，默认 `false` 表示开启压缩传输。  
- 其他参数可以参考[项目主页](https://github.com/xtaci/kcptun)的介绍。
+ 其他参数可以参考 [项目主页](https://github.com/xtaci/kcptun) 的介绍。
 
 > 注意：客户端和服务端的参数 -sndwnd 2048 -rcvwnd 2048 这两个值不要大于你的本地宽带，否则流>量消耗会浪费好几倍，100M 就是 2048，50M 就是 1024。这两个值可以逐渐调小，但是不能比本地的实际宽带大！
 >
@@ -181,7 +181,7 @@ nano /root/kcptun/server-config.json
 
   *这里的命令有些问题，执行后会添加到末尾但是会在`exit 0`后面，造成开机并不能自启，此时需要手动修改文件。*
 
-  >注意Debian9+/Ubuntu17+ 默认不带有 `/etc/rc.local` 文件，但是`rc.local`还在，转到[创建教程](https://moonbegonia.github.io/blog/linux/debian/2018/06/23/Debain9&Ubuntu17%E8%A7%A3%E5%86%B3%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E9%97%AE%E9%A2%98/)。
+  >注意 Debian9+/Ubuntu17+ 默认不带有 `/etc/rc.local` 文件，但是`rc.local`还在，转到 [创建教程](https://moonbegonia.github.io/blog/linux/debian/2018/06/23/Debain9&Ubuntu17%E8%A7%A3%E5%86%B3%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E9%97%AE%E9%A2%98/)。
 
 - 升级服务端
 

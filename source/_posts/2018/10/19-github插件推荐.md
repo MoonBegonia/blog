@@ -7,7 +7,7 @@ tags:
  - GitHub 插件
  - 如何让你的 Chrome 更好用
  - Chrome 插件
-keywords: [github插件, github拓展]
+keywords: [github插件,github拓展]
 ---
 
 ![](https://blog-1253491707.piccd.myqcloud.com/imgs/20181029094632.png/none)
@@ -45,7 +45,7 @@ keywords: [github插件, github拓展]
 
 ### Sourcegraph
 
-Sourcegraph 插件就像一个在线IDE，代码搜索，查看引用，自动跳转，项目目录导航，这些 IDE 上常用的功能操作，Sourcegraph 插件都能做到。  
+Sourcegraph 插件就像一个在线 IDE，代码搜索，查看引用，自动跳转，项目目录导航，这些 IDE 上常用的功能操作，Sourcegraph 插件都能做到。  
 [官网](https://sourcegraph.com)&nbsp;[chrome 插件下载地址](https://chrome.google.com/webstore/detail/sourcegraph/dgjhfomjieaadpoljlnidmbgkdffpack)
 
 ### Awesome Autocomplete for GitHub
@@ -55,14 +55,14 @@ github 智能搜索插件
 
 ### The Fucking GitHub
 
-这是一款用来很方便的查看、整理、搜索已经star的项目和搜索GitHub上的项目的chrome插件。妈妈再也不怕我star的项目太多找不到啦。  
+这是一款用来很方便的查看、整理、搜索已经 star 的项目和搜索 GitHub 上的项目的 chrome 插件。妈妈再也不怕我 star 的项目太多找不到啦。  
 [GitHub 地址](https://github.com/lvxianchao/the-fucking-github)&nbsp;[chrome 插件下载地址](https://chrome.google.com/webstore/detail/the-fucking-github/agajobpbaphiohkbkjigcalebbfmofdo)&nbsp;[中文教程](https://coderlxc.com/2019/04/14/The-Fucking-Github/)
 
 ![预览图](https://blog-1253491707.piccd.myqcloud.com/imgs/20190501224403.png/style)
 
 ### GITHUBER
 
-这是一款chrome主页插件，除了多种搜索引擎、分类搜索、书签这些常用的功能外，还加入了GitHub的热门repo，支持中英文、备份数据和基本视图设置。  
+这是一款 chrome 主页插件，除了多种搜索引擎、分类搜索、书签这些常用的功能外，还加入了 GitHub 的热门 repo，支持中英文、备份数据和基本视图设置。  
 [GitHub 地址](https://github.com/zhuowenli/githuber)&nbsp;[chrome 下载地址](https://chrome.google.com/webstore/detail/githuber-%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84%E6%96%B0%E6%A0%87%E7%AD%BE%E9%A1%B5/janmcneaglgklfljjcpihkkomeghljnf)
 
 ![预览图](https://blog-1253491707.piccd.myqcloud.com/imgs/20190501231234.png/style)
