@@ -272,7 +272,7 @@ theme_config:
   baidu_site_verification: WOmbfKoQ7x
 
   # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO.
-  baidu_push: true
+  baidu_push: false
 
   # ---------------------------------------------------------------
   # Menu Settings
