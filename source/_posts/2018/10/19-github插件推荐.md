@@ -8,13 +8,12 @@ tags:
  - 如何让你的 Chrome 更好用
  - Chrome 插件
 keywords: [github插件,github拓展]
+photo: https://blog-1253491707.piccd.myqcloud.com/imgs/20181029094632.png/none
 ---
 
-![](https://blog-1253491707.piccd.myqcloud.com/imgs/20181029094632.png/none)
+最近使用 github 是越来越多了，但是 github 有些功能感觉还有点缺憾，就去找了一些插件，把感觉还不错的插件分享给大家。
 
 <!-- more -->
-
-最近使用 github 是越来越多了，但是 github 有些功能感觉还有点缺憾，就去找了一些插件，把感觉还不错的插件分享给大家。
 
 ### Octotree
 

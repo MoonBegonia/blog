@@ -7,11 +7,8 @@ tags:
  - 博客搭建折腾记
  - Hexo
 keywords: [hexo,博客]
+photo: https://blog-1253491707.piccd.myqcloud.com/imgs/20181019110837.png/none
 ---
-
-![](https://blog-1253491707.piccd.myqcloud.com/imgs/20181019110837.png/none)
-
-<!-- more -->
 
 ### Hexo && Jekyll 前世今生
 
