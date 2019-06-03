@@ -108,8 +108,8 @@ search:
 # Live2D
 ## https://github.com/EYHN/hexo-helper-live2d
 live2d:
-  enable: true
-  # enable: false
+  # enable: true
+  enable: false
   scriptFrom: local # 默认
   pluginRootPath: live2dw/ # 插件在站点上的根目录(相对路径)
   pluginJsPath: lib/ # 脚本文件相对与插件根目录路径
@@ -124,15 +124,25 @@ live2d:
     # use: wanko # 博客根目录/live2d_models/ 下的目录名
     # use: ./wives/wanko # 相对于博客根目录的路径
     # use: https://cdn.jsdelivr.net/npm/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json # 你的自定义 url
+    scale: 1
+    hHeadPos: 0.5
+    vHeadPos: 0.618
   display:
+    superSample: 2
     position: left
-    width: 100
-    height: 200
-    #hOffset: 
-    #vOffset: 
+    width: 150
+    height: 300
+    hOffset: 50
+    vOffset: -20
   mobile:
     show: false
     scale: 0.3
+  react:
+    opacityDefault: 0.7
+    opacityOnHover: 0.2
+  dialog: 
+    enable: true
+    hitokoto: true
 
 # 文章字数和阅读时长统计
 ## https://github.com/theme-next/hexo-symbols-count-time
