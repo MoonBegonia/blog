@@ -1,5 +1,5 @@
 [[redirects]]
   from = "https://mb-blog.netlify.com"
   to = "https://moonbegonia.xyz"
-  status = 200
+  status = 301
   force = true
