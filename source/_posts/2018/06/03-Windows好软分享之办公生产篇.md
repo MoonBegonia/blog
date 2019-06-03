@@ -48,7 +48,7 @@ Xshell 是一款功能强大的终端模拟器，支持 SSH1，SSH2，SFTP，TEL
 
 Notepad++ 是一个纯文本编辑器，不仅有语法高亮，还有语法折叠，宏，插件等功能。[去官网下载](https://notepad-plus-plus.org/)。Notepad2 也是一款不错的文本编辑器软件。
 
-![Notepad++](http://blog-1253491707.piccd.myqcloud.com/images/notepad%2B%2B.png/style)
+![Notepad++](https://blog-1253491707.piccd.myqcloud.com/images/notepad%2B%2B.png/style)
 
 ## Snipaste &nbsp; 截图神器
 
