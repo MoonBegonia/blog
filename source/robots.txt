@@ -7,10 +7,6 @@ Disallow: /vendors/
 Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
-Disallow: /archives/
-Disallow: /categories/
-Disallow: /tags/
-Disallow: /about/
 
 Sitemap: https://moonbegonia.xyz/sitemap.xml
 Sitemap: https://moonbegonia.xyz/baidusitemap.xml
