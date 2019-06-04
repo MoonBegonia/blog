@@ -7,7 +7,7 @@ categories:
 tags: 
  - Hadoop
  - Linux
-updated:
+keywords: [hadop, hadoop安装]
 ---
 
 前几天讲了 linux 的安装，今天就来讲讲 hadoop 系统的安装。

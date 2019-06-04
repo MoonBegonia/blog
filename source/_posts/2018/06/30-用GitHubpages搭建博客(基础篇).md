@@ -1,12 +1,10 @@
 ---
 title: 用 GitHub pages 搭建博客（基础篇）
-categories:
- - [博客搭建折腾记]
- - [GitHub]
+categories: 博客搭建
 tags: 
- - 博客搭建折腾记
+ - 博客搭建
  - GitHub
-keywords: [博客,github,pages]
+keywords: [博客,github pages]
 ---
 
 从开始用 GitHub pages 搭建博客已经差不多一个月了，昨天买了个域名，才算是步入了正轨，搭建博客算是差不多完工了。一个月来，走了许多坑，虽然网上的教程还是挺多的，但还是把搭建博客的路子写下来，希望后人能有所启发。今天就先来讲讲用 GitHub pages 搭建博客的基础篇。

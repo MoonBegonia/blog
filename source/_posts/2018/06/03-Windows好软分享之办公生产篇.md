@@ -1,6 +1,6 @@
 ---
 title: Windows 好软分享之办公生产篇
-categories: 如何让你的 Windows 更好用
+categories: Windows
 tags:
  - Windows 软件
  - 办公生产工具

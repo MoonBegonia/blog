@@ -1,8 +1,6 @@
 ---
 title: Debian 9 下 LAMP 环境的基础配置
-categories:
- - [全栈修炼手册]
- - [Linux]
+categories: Linux
 tags: 
  - LAMP
  - Debian

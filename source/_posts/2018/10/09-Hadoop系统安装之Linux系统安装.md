@@ -7,7 +7,7 @@ categories:
 tags: 
  - Hadoop
  - Linux
-updated:
+keywords: [hadoop, linux安装]
 ---
 
 本篇主要讲述安装 Hadoop 系统的前提：Linux 系统的安装，因为大多数人日常都是使用 Windows 系统，但是 Hadoop 只能在 Linux 下安装，今天就来说说几种安装 Linux 的方法，仅供参考。

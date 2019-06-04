@@ -1,10 +1,9 @@
 ---
 title: Ubuntu & VSCode Powerline 使用记录
-categories: 反正好用就对了
+categories: 杂谈
 tags:
  - Powerline
  - linux
- - 反正好用就对了
 keywords: [powerline,vscode插件,vscode,终端美化]
 ---
 

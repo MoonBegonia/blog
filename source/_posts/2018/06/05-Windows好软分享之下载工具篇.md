@@ -1,6 +1,6 @@
 ---
 title: Windows 好软分享之下载工具篇
-categories: 如何让你的 Windows 更好用
+categories: Windows
 tags:
  - Windows 软件
  - 下载工具
