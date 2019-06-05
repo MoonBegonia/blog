@@ -51,7 +51,7 @@ Location: /usr/local/lib/python3.6/dist-packages
 Requires:
 ```
 
-###　在 shell 中启用 powerline
+### 在 shell 中启用 powerline
 
 添加下面的行到 .bashrc 中，它会默认在基础 shell 中启用 powerline。
 

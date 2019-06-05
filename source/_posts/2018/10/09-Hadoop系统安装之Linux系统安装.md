@@ -32,7 +32,9 @@ keywords: [hadoop, linux安装]
 
 子系统搞好的第一件事就是更换 apt 源，因为吗，默认的源是国外的，访问肯定没有国内的源快。
 
-```shell 阿里源
+{% tabs apt源, 1 %}
+<!-- tab 阿里源 -->
+{% codeblock /etc/apt/sources.list lang:bash %}
 deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
@@ -43,16 +45,20 @@ deb-src http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted univer
 deb-src http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
 deb-src http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
 deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
-```
+{% endcodeblock %}
+<!-- endtab -->
 
-```shell 科大源
+<!-- tab 科大源 -->
+{% codeblock /etc/apt/sources.list lang:bash %}
 deb https://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
 deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
 deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
 deb https://mirrors.ustc.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
-```
+{% endcodeblock %}
+<!-- endtab -->
 
-```shell 网易源
+<!-- tab 网易源 -->
+{% codeblock /etc/apt/sources.list lang:bash %}
 deb http://mirrors.163.com/ubuntu/ wily main restricted universe multiverse
 deb http://mirrors.163.com/ubuntu/ wily-security main restricted universe multiverse
 deb http://mirrors.163.com/ubuntu/ wily-updates main restricted universe multiverse
@@ -63,7 +69,10 @@ deb-src http://mirrors.163.com/ubuntu/ wily-security main restricted universe mu
 deb-src http://mirrors.163.com/ubuntu/ wily-updates main restricted universe multiverse
 deb-src http://mirrors.163.com/ubuntu/ wily-proposed main restricted universe multiverse
 deb-src http://mirrors.163.com/ubuntu/ wily-backports main restricted universe multiverse
-```
+{% endcodeblock %}
+<!-- endtab -->
+
+{% endtabs %}
 
 apt 源的路径是 `/etc/apt/sources.list` ，先打开此文件夹
 
