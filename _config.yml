@@ -46,9 +46,9 @@ relative_link: false
 future: true
 highlight:
   enable: true
-  line_number: true
-  auto_detect: false
-  tab_replace:
+  line_number: false
+  auto_detect: true
+  tab_replace: true
   
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -96,7 +96,7 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:MoonBegonia/MoonBegonia.github.io.git
+  repo: git@github.com:MoonBegonia/blog.git
   branch: master
 
 search:
@@ -153,6 +153,7 @@ symbols_count_time:
   # 网页底部是否显示
   total_symbols: true
   total_time: true
+  exclude_codeblock: false
 
 # hexo-neat
 # 博文压缩
@@ -474,16 +475,21 @@ theme_config:
     item_text_total: true
     awl: 2
     wpm: 200
+    suffix: mins.
+
 
   codeblock:
     # Manual define the border radius in codeblock
     # Leave it empty for the default 1
-    border_radius: 5px
+    border_radius: 8
     # Add copy button on codeblock
     copy_button:
       enable: true
       # Show text copy result
       show_result: true
+
+  # Use icon instead of the symblo # to indicate the tag at the bottom of the post
+  tag_icon: true
 
   # Wechat Subscriber
   wechat_subscriber:
@@ -559,7 +565,7 @@ theme_config:
     # If true, font size, font color and amount of tags can be customized
     enable: true
     # All values below are same as default, change them by yourself
-    min: 12 # min font size in px
+    min: 14 # min font size in px
     max: 30 # max font size in px
     start: "#ccc" # start color (hex, rgba, hsla or color keywords)
     end: "#111" # end color (hex, rgba, hsla or color keywords)
@@ -889,7 +895,7 @@ theme_config:
     #  - disabled  disable all CSS styles import of note tag.
     style: modern
     icons: true
-    border_radius: 5
+    border_radius: 8
     # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
     # Offset also applied to label tag variables. This option can work with disabled note tag.
     light_bg_offset: 0
@@ -898,9 +904,9 @@ theme_config:
   tabs:
     enable: true
     transition:
-      tabs: true
+      tabs: false
       labels: true
-    border_radius: 0
+    border_radius: 8
 
   # PDF tag, requires two plugins: pdfObject and pdf.js
   # pdfObject will try to load pdf files natively, if failed, pdf.js will be used.
