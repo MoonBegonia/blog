@@ -1036,7 +1036,7 @@ theme_config:
   # Canvas-nest
   # Dependencies: https://github.com/theme-next/theme-next-canvas-nest
   canvas_nest:
-    enable: true
+    enable: false
     onmobile: false # display on mobile or not
     color: '0,0,255' # RGB values, use ',' to separate
     opacity: 0.8 # the opacity of line: 0~1
