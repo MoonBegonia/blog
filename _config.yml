@@ -745,15 +745,15 @@ theme_config:
     enable: true
     appid: p6gOnsegYK36h26DNy8uYj6C-MdYXbMMI
     appkey: zYk2ys95TV41Vyv6WgbFLICv
-    notify: true # mail notifier , https://github.com/xCss/Valine/wiki
-    verify: true # Verification code
+    notify: false # mail notifier , https://github.com/xCss/Valine/wiki
+    verify: false # Verification code
     placeholder: ヾﾉ≧∀≦)o来啊，快活啊!
-    avatar: wavatar # gravatar style
+    avatar: monsterid # gravatar style
     guest_info: nick,mail,link # custom comment header
     pageSize: 10 # pagination size
     language: # language, available values: en, zh-cn
-    visitor: true # leancloud-counter-security is not supported for now. When visitor is set to be true, appid and appkey are recommended to be the same as leancloud_visitors' for counter compatibility. Article reading statistic https://valine.js.org/visitor.html
-    comment_count: true # if false, comment count will only be displayed in post page, not in home page
+    visitor: false # leancloud-counter-security is not supported for now. When visitor is set to be true, appid and appkey are recommended to be the same as leancloud_visitors' for counter compatibility. Article reading statistic https://valine.js.org/visitor.html
+    comment_count: false # if false, comment count will only be displayed in post page, not in home page
 
   # ---------------------------------------------------------------
   # Content Sharing Services
@@ -877,14 +877,14 @@ theme_config:
   # Show number of visitors to each article.
   # You can visit https://leancloud.cn to get AppID and AppKey.
   leancloud_visitors:
-    enable: false
-    app_id: #<app_id>
-    app_key: #<app_key>
+    enable: true
+    app_id: p6gOnsegYK36h26DNy8uYj6C-MdYXbMMI
+    app_key: zYk2ys95TV41Vyv6WgbFLICv
     # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
     # If you don't care about security in leancloud counter and just want to use it directly
     # (without hexo-leancloud-counter-security plugin), set `security` to `false`.
-    security: true
-    betterPerformance: false
+    security: false
+    betterPerformance: true
 
   # Another tool to show number of visitors to each article.
   # Visit https://console.firebase.google.com/u/0/ to get apiKey and projectId.
