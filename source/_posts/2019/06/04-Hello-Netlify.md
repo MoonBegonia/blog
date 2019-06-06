@@ -15,9 +15,8 @@ photos: https://blog-1253491707.piccd.myqcloud.com/imgs/20190604124713.png/none
 ## 说明
 
 1. 博客原仓库名`username.github.io`建议更改为`blog`等名字，毕竟咱已经要换到 Netlify 了，占着那个二级域名也没啥用对不对。
-  {% label danger@**友情提醒：换之后其他项目使用的 GitHub Pages 链接有可能也需要替换，酌情处理。** %}
+   **友情提醒：换之后其他项目使用的 GitHub Pages 链接有可能也需要替换，酌情处理。**
 2. 我的博客写作是在`hexo`分支下完成，部署到`master`分支，这些就不改动了，网上有些教程是选择`source`或者`public`文件夹，建议使用我这种两个分支的方式来完成。
-
 {% endnote %}
 
 ## 部署到 Netlify
@@ -130,4 +129,4 @@ www CNAME xxxx.netlify.com
 
 写入后部署到 Netlify，然后就发现使用 sitename.netlify.com 访问就会自动重定向到自定义域名了。
 
-完结，撒花！
+结束，撒花！
