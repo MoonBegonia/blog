@@ -115,7 +115,7 @@ www CNAME xxxx.netlify.com
 
 ![redirects](https://blog-1253491707.piccd.myqcloud.com/imgs/20190605144519.png/style)
 
-虽然官方在域名管理中给出了域名重定向的教程，但是我实测是没有用的。按照官方教程将`_redirects`文件放到 hexo 分支`source/`文件夹下发现并不会自动生成到`public/`文件夹下，在`_config.yml`中设置`skip_render`也没有用，官方只提到使用 jekyll 需要注意额外设置以避免跳过`_`开头的文件。既然如此，就使用`netlify.toml`好了，用 toml 还强大一点。`ntlify.toml`详细教程可以去官网查看。重定向实现过程如下：
+虽然官方在域名管理中给出了域名重定向的教程，但是我实测是没有用的。按照官方教程将`_redirects`文件放到 hexo 分支`source/`文件夹下发现并不会自动生成到`public/`文件夹下，在`_config.yml`中设置`skip_render`也没有用，官方只提到使用 jekyll 需要注意额外设置以避免跳过`_`开头的文件。既然如此，就使用`netlify.toml`好了，用 toml 还强大一点。`ntlify.toml`详细教程可以去 [官网](https://www.netlify.com/docs/netlify-toml-reference/) 查看。重定向实现过程如下：
 
 首先在 hexo 分支`source/`下新建`netlify.toml`文件，然后写入以下内容(需将域名替换为自己的)：
 
