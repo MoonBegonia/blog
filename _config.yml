@@ -244,7 +244,7 @@ theme_config:
 
     # If not defined, will be used `author` from Hexo main config.
     copyright:
-    # -------------------------------------------------------------
+
     powered:
       # Hexo link (Powered by Hexo).
       enable: true
@@ -257,10 +257,21 @@ theme_config:
       # Version info of NexT after scheme info (vX.X.X).
       version: true
 
+    # Beian ICP information for Chinese users. See: http://www.beian.miit.gov.cn
+    beian:
+      enable: false
+      icp:
+
+  # Creative Commons 4.0 International License.
+  # See: https://creativecommons.org/share-your-work/licensing-types-examples
+  # Available values of license: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
+  # You can set a language value if you prefer a translated version of CC license, e.g. deed.zh
+  # CC licenses are available in 39 languages, you can find the specific and correct abbreviation you need on https://creativecommons.org
   creative_commons:
     license: by-nc-sa
     sidebar: true
     post: true
+    language: zh
 
   # `Follow me on GitHub` banner in the top-right corner.
   github_banner:
@@ -296,11 +307,11 @@ theme_config:
 
   # Bing Webmaster tools verification.
   # See: https://www.bing.com/webmaster
-  #bing_site_verification:
+  bing_site_verification:
 
   # Yandex Webmaster tools verification.
   # See: https://webmaster.yandex.ru
-  #yandex_site_verification:
+  yandex_site_verification:
 
   # Baidu Webmaster tools verification.
   # See: https://ziyuan.baidu.com/site
@@ -368,9 +379,6 @@ theme_config:
     enable: true
     icons_only: false
     transition: false
-    # Dependencies: exturl: true in Tags Settings section below.
-    # To encrypt links above use https://www.base64encode.org
-    # Example encoded link: `GitHub: aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQ= || github`
 
   # Blog rolls
   links_icon: link
@@ -423,17 +431,12 @@ theme_config:
     #  - hide    expand only when click on the sidebar toggle icon.
     #  - remove  Totally remove sidebar including sidebar toggle.
     display: post
-    #display: always
-    #display: hide
-    #display: remove
 
     # Sidebar offset from top menubar in pixels (only for Pisces | Gemini).
     offset: 12
 
     # Enable sidebar on narrow view (only for Muse | Mist).
     onmobile: false
-    # Click any blank part of the page to close sidebar (only for Muse | Mist).
-    dimmer: false
 
   back2top:
     enable: true
@@ -510,7 +513,7 @@ theme_config:
       enable: true
       # Show text copy result
       show_result: true
-      # Style: only 'flat' is currently available, leave it blank if you prefer default theme
+      # Available values: default | flat | mac
       style:
 
   # Use icon instead of the symblo # to indicate the tag at the bottom of the post
@@ -519,16 +522,16 @@ theme_config:
   # Wechat Subscriber
   wechat_subscriber:
     enable: false
-    #qcode: /path/to/your/wechatqcode e.g. /uploads/wechat-qcode.jpg
-    #description: e.g. subscribe to my blog by scanning my public wechat account
+    qcode: #/uploads/wechat-qcode.jpg
+    #description: Subscribe to my blog by scanning my public wechat account.
 
   # Reward (Donate)
   reward_settings:
     # If true, reward would be displayed in every article by default.
-    # You can show or hide reward in a specific article throuth `reward: true | false` in Front Matter.
+    # You can show or hide reward in a specific article throuth `reward: true | false` in Front-matter.
     enable: false
     animation: false
-    #comment: Donate comment here
+    #comment: Donate comment here.
 
   reward:
     #wechatpay: /images/wechatpay.png
@@ -539,7 +542,7 @@ theme_config:
   # Dependencies: https://github.com/tea3/hexo-related-popular-posts
   related_posts:
     enable: false
-    title: # custom header, leave empty to use the default one
+    title: # Custom header, leave empty to use the default one
     display_in_home: false
     params:
       maxCount: 5
@@ -552,8 +555,8 @@ theme_config:
   # Dependencies: https://github.com/hexojs/hexo-deployer-git
   post_edit:
     enable: false
-    url: https://github.com/theme-next/theme-next.org/_posts/tree/master/ # Link for view source.
-  # url: https://github.com/theme-next/theme-next.org/_posts/edit/master/ # Link for fork & edit.
+    url: https://github.com/user-name/repo-name/tree/branch-name/subdirectory-name # Link for view source
+    #url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name # Link for fork & edit
 
   # ---------------------------------------------------------------
   # Misc Theme Settings
@@ -691,10 +694,6 @@ theme_config:
         copy_tex_js: //cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.js
         copy_tex_css: //cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.css
 
-  # Han Support
-  # Dependencies: https://github.com/theme-next/theme-next-han
-  han: false
-
   # Pangu Support
   # Dependencies: https://github.com/theme-next/theme-next-pangu
   # For more information: https://github.com/vinta/pangu.js
@@ -784,12 +783,6 @@ theme_config:
   # See: https://theme-next.org/docs/third-party-services/content-sharing-services
   # ---------------------------------------------------------------
 
-  # Baidu Share
-  # Available values: button | slide
-  # Warning: Baidu Share does not support https.
-  #baidushare:
-  ##  type: button
-
   # AddThis Share, See: https://www.addthis.com
   # Go to https://www.addthis.com/dashboard to customize your tools.
   #add_this_id:
@@ -842,49 +835,49 @@ theme_config:
   # See: https://theme-next.org/docs/third-party-services/statistics-and-analytics
   # ---------------------------------------------------------------
 
-  # Baidu Analytics ID
-  #baidu_analytics:
+  # Baidu Analytics
+  baidu_analytics: # <app_id>
 
-  # Growingio Analytics ID
+  # Growingio Analytics
   # Copyright 2015-2018 GrowingIO, Inc. More info available at https://www.growingio.com
-  #growingio_analytics: #your projectId
+  growingio_analytics: # <project_id>
 
   # Google Analytics
-  #google_analytics:
-  #  tracking_id:
-  #  localhost_ignored: true
+  google_analytics:
+    #tracking_id:
+    #localhost_ignored: true
 
   # CNZZ count
-  #cnzz_siteid:
+  cnzz_siteid:
 
   # Application Insights
   # See: https://azure.microsoft.com/en-us/services/application-insights
-  #application_insights:
+  application_insights:
 
   # Post widgets & FB/VK comments settings.
   # ---------------------------------------------------------------
   # Facebook SDK Support
   facebook_sdk:
     enable:       false
-    app_id:       #<app_id>
-    fb_admin:     #<user_id>
-    like_button:  #true
-    webmaster:    #true
+    app_id:       # <app_id>
+    fb_admin:     # <user_id>
+    like_button:  # true
+    webmaster:    # true
 
   # Facebook comments plugin
   # This plugin depends on Facebook SDK.
   # If facebook_sdk.enable is false, Facebook comments plugin is unavailable.
   facebook_comments_plugin:
     enable:       false
-    num_of_posts: 10    # min posts num is 1
-    width:        100%  # default width is 550px
-    scheme:       light # default scheme is light (light or dark)
+    num_of_posts: 10    # Minimum posts num is 1
+    width:        100%  # Default width is 550px
+    scheme:       light # Default scheme is light (light or dark)
 
   # VKontakte API Support
   # To get your AppID visit https://vk.com/editapp?act=create
   vkontakte_api:
     enable:       false
-    app_id:       #<app_id>
+    app_id:       # <app_id>
     like:         true
     comments:     true
     num_of_posts: 10
@@ -893,9 +886,8 @@ theme_config:
   # To get your ID visit https://widgetpack.com
   rating:
     enable: false
-    id:     #<app_id>
+    id:     # <app_id>
     color:  fc6423
-
   # ---------------------------------------------------------------
 
   # Show number of visitors to each article.
@@ -931,11 +923,11 @@ theme_config:
     post_views: true
     post_views_icon: eye
 
-  # Tencent analytics ID
-  #tencent_analytics:
+  # Tencent analytics
+  tencent_analytics: # <app_id>
 
-  # Tencent MTA ID
-  #tencent_mta:
+  # Tencent MTA
+  tencent_mta: # <app_id>
 
   # ---------------------------------------------------------------
   # Search Services
@@ -1053,7 +1045,7 @@ theme_config:
   # pace-theme-big-counter | pace-theme-bounce | pace-theme-barber-shop | pace-theme-center-atom
   # pace-theme-center-circle | pace-theme-center-radar | pace-theme-center-simple | pace-theme-corner-indicator
   # pace-theme-fill-left | pace-theme-flash | pace-theme-loading-bar | pace-theme-mac-osx | pace-theme-minimal
-  pace_theme: pace-theme-center-simple
+  pace_theme: pace-theme-minimal
 
   #动态背景
   # Canvas-nest
@@ -1068,10 +1060,12 @@ theme_config:
 
   # JavaScript 3D library.
   # Dependencies: https://github.com/theme-next/theme-next-three
-  # three_waves
-  three_waves: false
-  canvas_lines: false
-  canvas_sphere: false
+  three:
+    enable: false
+    delay: false # Set true to further delay loading
+    three_waves: false
+    canvas_lines: false
+    canvas_sphere: false
 
   # Only fit scheme Pisces
   # Dependencies: https://github.com/theme-next/theme-next-canvas-ribbon
@@ -1092,8 +1086,6 @@ theme_config:
   #! ---------------------------------------------------------------
 
   # Script Vendors. Set a CDN address for the vendor you want to customize.
-  # For example
-  #   jquery: https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
   # Be aware that you would better use the same version as internal ones to avoid potential problems.
   # Please use the https protocol of CDN files when you enable https on your site.
   vendors:
@@ -1110,9 +1102,9 @@ theme_config:
     # See: https://fancyapps.com/fancybox
     # Example:
     # fancybox: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js
-    # fancybox: //cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.6/jquery.fancybox.min.js
+    # fancybox: //cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js
     # fancybox_css: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css
-    # fancybox_css: //cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.6/jquery.fancybox.min.css
+    # fancybox_css: //cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css
     fancybox:
     fancybox_css:
 
