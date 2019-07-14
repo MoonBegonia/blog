@@ -205,7 +205,7 @@ theme_config:
     #postBodyEnd: source/_data/post-body-end.swig
     #footer: source/_data/footer.swig
     #bodyEnd: source/_data/body-end.swig
-    #variable: source/_data/variables.styl
+    variable: source/_data/variables.styl
     #mixin: source/_data/mixins.styl
     style: source/_data/styles.styl
 
@@ -216,10 +216,10 @@ theme_config:
 
   # 网站图标
   favicon: 
-    small: /images/favicon.ico
-    medium: /images/favicon.ico
-    apple_touch_icon: /images/favicon.ico
-    safari_pinned_tab: /images/favicon.ico
+    small: https://blog-1253491707.cos.ap-chengdu.myqcloud.com/favicon.ico
+    medium: https://blog-1253491707.cos.ap-chengdu.myqcloud.com/favicon.ico
+    apple_touch_icon: 
+    safari_pinned_tab: 
     #android_manifest: /images/manifest.json
     #ms_browserconfig: /images/browserconfig.xml
   
@@ -397,8 +397,6 @@ theme_config:
     url: https://blog-1253491707.piccd.myqcloud.com/avatar1.jpg/none #/images/avatar.gif
     # If true, the avatar would be dispalyed in circle.
     rounded: true
-    # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
-    opacity: 1
     # If true, the avatar would be rotated with the cursor.
     rotated: false
 
@@ -459,12 +457,6 @@ theme_config:
   # See: https://theme-next.org/docs/theme-settings/posts
   # ---------------------------------------------------------------
 
-  # Set the text alignment in the posts.
-  text_align:
-    # Available values: start | end | left | right | center | justify | justify-all | match-parent
-    desktop: justify
-    mobile: justify
-
   # Automatically scroll page to section which is under <!-- more --> mark.
   scroll_to_more: false
 
@@ -486,7 +478,7 @@ theme_config:
 
   # Post meta display settings
   post_meta:
-    item_text: true
+    item_text: false
     created_at: true
     updated_at:
       enable: true
@@ -503,18 +495,6 @@ theme_config:
     awl: 2
     wpm: 200
     suffix: mins.
-
-
-  codeblock:
-    # Manual define the border radius in codeblock, leave it blank for the default value: 1
-    border_radius: 8
-    # Add copy button on codeblock
-    copy_button:
-      enable: true
-      # Show text copy result
-      show_result: true
-      # Available values: default | flat | mac
-      style:
 
   # Use icon instead of the symblo # to indicate the tag at the bottom of the post
   tag_icon: true
@@ -562,6 +542,12 @@ theme_config:
   # Misc Theme Settings
   # ---------------------------------------------------------------
 
+  # Set the text alignment in posts / pages.
+  text_align:
+    # Available values: start | end | left | right | center | justify | justify-all | match-parent
+    desktop: justify
+    mobile: justify
+
   # Reduce padding / margin indents on devices with narrow width.
   mobile_layout_economy: false
 
@@ -574,16 +560,21 @@ theme_config:
   # Optimize the display of scrollbars on webkit based browsers.
   custom_scrollbar: false
 
-  # Custom Logo
-  # Do not support Scheme Mist currently.
-  custom_logo:
-    enable: false
-    image: #/uploads/custom-logo.jpg
+  # Custom Logo (Do not support scheme Mist)
+  custom_logo: #/uploads/custom-logo.jpg
 
-  # Code Highlight theme
-  # Available values: normal | night | night eighties | night blue | night bright
-  # https://github.com/chriskempson/tomorrow-theme
-  highlight_theme: normal
+  codeblock:
+    # Code Highlight theme
+    # Available values: normal | night | night eighties | night blue | night bright
+    # See: https://github.com/chriskempson/tomorrow-theme
+    highlight_theme: normal
+    # Add copy button on codeblock
+    copy_button:
+      enable: true
+      # Show text copy result
+      show_result: true
+      # Available values: default | flat | mac
+      style: mac
 
   # Enable "cheers" for archive page.
   cheers: true
@@ -593,8 +584,8 @@ theme_config:
     # If true, font size, font color and amount of tags can be customized
     enable: true
     # All values below are same as default, change them by yourself
-    min: 14 # min font size in px
-    max: 30 # max font size in px
+    min: 18 # min font size in px
+    max: 36 # max font size in px
     start: "#ccc" # start color (hex, rgba, hsla or color keywords)
     end: "#111" # end color (hex, rgba, hsla or color keywords)
     amount: 200 # amount of tags, change it if you have more than 200 tags
@@ -694,6 +685,20 @@ theme_config:
         copy_tex_js: //cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.js
         copy_tex_css: //cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.css
 
+  # Fancybox. There is support for old version 2 and new version 3.
+  # Choose only one variant, do not need to install both.
+  # To install 2.x: https://github.com/theme-next/theme-next-fancybox
+  # To install 3.x: https://github.com/theme-next/theme-next-fancybox3
+  fancybox: true
+
+  # Polyfill to remove click delays on browsers with touch UIs.
+  # Dependencies: https://github.com/theme-next/theme-next-fastclick
+  fastclick: false
+
+  # Vanilla JavaScript plugin for lazyloading images.
+  # Dependencies: https://github.com/theme-next/theme-next-lazyload
+  lazyload: true
+
   # Pangu Support
   # Dependencies: https://github.com/theme-next/theme-next-pangu
   # For more information: https://github.com/vinta/pangu.js
@@ -701,31 +706,25 @@ theme_config:
 
   # Quicklink Support
   # Dependencies: https://github.com/theme-next/theme-next-quicklink
-  # Visit https://github.com/GoogleChromeLabs/quicklink for details
+  # Visit https://github.com/GoogleChromeLabs/quicklink for details.
   quicklink:
     enable: false
 
-    # Quicklink (quicklink.umd.js script) is loaded on demand
-    # Add `quicklink: true` in Front Matter of the page or post you need
-    # Home page and archive page can be controlled through home and archive options below
+    # Quicklink (quicklink.umd.js script) is loaded on demand.
+    # Add `quicklink: true` in Front-matter of the page or post you need.
+    # Home page and archive page can be controlled through home and archive options below.
     home: true
     archive: true
 
-    # Default (true) will initialize quicklink after the load event fires
+    # Default (true) will initialize quicklink after the load event fires.
     delay: true
-    # Custom a time in milliseconds by which the browser must execute prefetching
+    # Custom a time in milliseconds by which the browser must execute prefetching.
     timeout: 3000
-    # Default (true) will enable fetch() or falls back to XHR
+    # Default (true) will enable fetch() or falls back to XHR.
     priority: true
 
-    # For more flexibility you can add some patterns (RegExp, Function, or Array) to ignores
+    # For more flexibility you can add some patterns (RegExp, Function, or Array) to ignores.
     # See: https://github.com/GoogleChromeLabs/quicklink#custom-ignore-patterns
-    # Leave ignores as empty if you don't understand what it means
-    # Example:
-    # ignores:
-    #   - /\/api\/?/
-    #   - uri => uri.includes('.xml')
-    #   - (uri, el) => el.hasAttribute('noopener')
     ignores:
 
   # Bookmark Support
@@ -785,7 +784,7 @@ theme_config:
 
   # AddThis Share, See: https://www.addthis.com
   # Go to https://www.addthis.com/dashboard to customize your tools.
-  #add_this_id:
+  add_this_id:
 
   # Likely Share
   # See: https://ilyabirman.net/projects/likely/
@@ -963,7 +962,7 @@ theme_config:
     #  - disabled  disable all CSS styles import of note tag.
     style: modern
     icons: true
-    border_radius: 8
+    border_radius: 5
     # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
     # Offset also applied to label tag variables. This option can work with disabled note tag.
     light_bg_offset: 0
@@ -974,7 +973,7 @@ theme_config:
     transition:
       tabs: false
       labels: true
-    border_radius: 8
+    border_radius: 0
 
   # PDF tag, requires two plugins: pdfObject and pdf.js
   # pdfObject will try to load pdf files natively, if failed, pdf.js will be used.
@@ -1024,28 +1023,14 @@ theme_config:
       # Only for Pisces | Gemini.
       sidebar: slideUpIn
 
-  # Fancybox. There is support for old version 2 and new version 3.
-  # Choose only one variant, do not need to install both.
-  # To install 2.x: https://github.com/theme-next/theme-next-fancybox
-  # To install 3.x: https://github.com/theme-next/theme-next-fancybox3
-  fancybox: true
-
-  # Polyfill to remove click delays on browsers with touch UIs.
-  # Dependencies: https://github.com/theme-next/theme-next-fastclick
-  fastclick: false
-
-  # Vanilla JavaScript plugin for lazyloading images.
-  # Dependencies: https://github.com/theme-next/theme-next-jquery-lazyload
-  lazyload: true
-
   # Progress bar in the top during page loading.
   # Dependencies: https://github.com/theme-next/theme-next-pace
-  pace: false
-  # Themes list:
-  # pace-theme-big-counter | pace-theme-bounce | pace-theme-barber-shop | pace-theme-center-atom
-  # pace-theme-center-circle | pace-theme-center-radar | pace-theme-center-simple | pace-theme-corner-indicator
-  # pace-theme-fill-left | pace-theme-flash | pace-theme-loading-bar | pace-theme-mac-osx | pace-theme-minimal
-  pace_theme: pace-theme-minimal
+  pace:
+    enable: false
+    # Themes list:
+    # big-counter | bounce | barber-shop | center-atom | center-circle | center-radar | center-simple
+    # corner-indicator | fill-left | flat-top | flash | loading-bar | mac-osx | material | minimal
+    theme: minimal
 
   #动态背景
   # Canvas-nest
@@ -1105,8 +1090,8 @@ theme_config:
     # fancybox: //cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js
     # fancybox_css: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css
     # fancybox_css: //cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css
-    fancybox:
-    fancybox_css:
+    fancybox: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js
+    fancybox_css: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css
 
     # Internal version: 1.0.6
     # See: https://github.com/ftlabs/fastclick
@@ -1214,7 +1199,7 @@ theme_config:
     # See: https://github.com/theme-next/theme-next-reading-progress
     # Example:
     # reading_progress: //cdn.jsdelivr.net/gh/theme-next/theme-next-reading-progress@1/reading_progress.min.js
-    reading_progress:
+    reading_progress: //cdn.jsdelivr.net/gh/theme-next/theme-next-reading-progress@1/reading_progress.min.js
 
     # valine
     # See: https://github.com/xCss/Valine
