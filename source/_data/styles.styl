@@ -68,20 +68,14 @@ body {
 }
 
 .post-body p a, .post-body span.exturl {
-  color: $post-link-color;
+  color: $custom-link-color;
   border-bottom: none;
+  // border-bottom: 1px solid $custom-link-color;
 
-  // border-bottom: 1px solid $post-link-color;
-
-  // &:visited {
-  // color: $post-link-hover-color;
-  // border-bottom: none;
-  // // border-bottom: 1px solid $post-link-hover-color;
-  // }
   &:hover {
-    color: $post-link-hover-color;
+    color: $custom-link-hover-color;
     border-bottom: none;
-    // border-bottom: 1px solid $post-link-hover-color;
+    // border-bottom: 1px solid $custom-link-hover-color;
   }
 }
 
@@ -95,12 +89,12 @@ code {
 }
 
 .footer a, .footer span.exturl {
-  color: $post-link-color;
-  border-bottom: 1px solid $post-link-color;
+  color: $custom-link-color;
+  border-bottom: 1px solid $custom-link-color;
 
   &:hover {
-    color: $post-link-hover-color;
-    border-bottom: 1px solid $post-link-hover-color;
+    color: $custom-link-hover-color;
+    border-bottom: 1px solid $custom-link-hover-color;
   }
 }
 
