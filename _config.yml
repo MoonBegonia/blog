@@ -1081,7 +1081,7 @@ theme_config:
     # Example:
     # jquery: //cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js
     # jquery: //cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js
-    jquery:
+    jquery: https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js
 
     # Internal version: 2.1.5 & 3.5.7
     # See: https://fancyapps.com/fancybox
@@ -1090,8 +1090,8 @@ theme_config:
     # fancybox: //cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js
     # fancybox_css: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css
     # fancybox_css: //cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css
-    fancybox: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js
-    fancybox_css: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css
+    fancybox: https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js
+    fancybox_css: https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css
 
     # Internal version: 1.0.6
     # See: https://github.com/ftlabs/fastclick
@@ -1105,7 +1105,7 @@ theme_config:
     # Example:
     # lazyload: //cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js
     # lazyload: //cdnjs.cloudflare.com/ajax/libs/lozad.js/1.9.0/lozad.min.js
-    lazyload: //cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js
+    lazyload: https://cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js
 
     # Internal version: 1.2.1
     # See: http://velocityjs.org
@@ -1114,15 +1114,15 @@ theme_config:
     # velocity: //cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.min.js
     # velocity_ui: //cdn.jsdelivr.net/npm/velocity-animate@1/velocity.ui.min.js
     # velocity_ui: //cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.ui.min.js
-    velocity:
-    velocity_ui:
+    velocity: https://cdn.jsdelivr.net/npm/velocity-animate@1/velocity.min.js
+    velocity_ui: https://cdn.jsdelivr.net/npm/velocity-animate@1/velocity.ui.min.js
 
     # Internal version: 4.7.0
     # See: https://fontawesome.com
     # Example:
     # fontawesome: //cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css
     # fontawesome: //cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
-    fontawesome:
+    fontawesome: https://cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css
 
     # Internal version: 2.10.4
     # See: https://www.algolia.com
@@ -1199,14 +1199,14 @@ theme_config:
     # See: https://github.com/theme-next/theme-next-reading-progress
     # Example:
     # reading_progress: //cdn.jsdelivr.net/gh/theme-next/theme-next-reading-progress@1/reading_progress.min.js
-    reading_progress: //cdn.jsdelivr.net/gh/theme-next/theme-next-reading-progress@1/reading_progress.min.js
+    reading_progress: https://cdn.jsdelivr.net/gh/theme-next/theme-next-reading-progress@1/reading_progress.min.js
 
     # valine
     # See: https://github.com/xCss/Valine
     # Example:
     # valine: //cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js
     # valine: //cdnjs.cloudflare.com/ajax/libs/valine/1.3.4/Valine.min.js
-    valine:
+    valine: https://cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js
 
     # gitalk & js-md5
     # See: https://github.com/gitalk/gitalk, https://github.com/emn178/js-md5
