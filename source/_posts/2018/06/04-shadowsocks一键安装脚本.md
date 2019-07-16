@@ -52,7 +52,7 @@ chmod +x shadowsocks-all.sh
 
 ### 2. 根据提示操作
 
-### 3. 安装完成后提示如下：
+### 3. 安装完成后提示如下
 
 ```shell
 Congratulations, your_shadowsocks_version install completed!

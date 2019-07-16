@@ -15,7 +15,7 @@ keywords: [mtproto,mtproxy]
 
 感觉这些步骤太麻烦了，就学了一点 shell 根据别人的脚本尝试性写了一个一键脚本出来，肯定有很多不足之处，再说吧。下面放出来，肯定是能用的。
 
-```
+``` shell
 wget --no-check-certificate -O mtproxy.sh https://raw.githubusercontent.com/MoonBegonia/shell/master/MTproxy/mtproxy.sh
 chmod +x mtproxy.sh
 ./mtproxy.sh
@@ -57,7 +57,7 @@ make && cd objs/bin
 
 ## 运行
 
-### 获取一个密钥，用于连接到 Tg 服务器。
+### 获取一个密钥，用于连接到 Tg 服务器
 
 ```shell
 curl -s https://core.telegram.org/getProxySecret -o proxy-secret
@@ -69,7 +69,7 @@ curl -s https://core.telegram.org/getProxySecret -o proxy-secret
 curl -s https://core.telegram.org/getProxyConfig -o proxy-multi.conf
 ```
 
-### 生成一个密钥供用户连接到您的代理使用。
+### 生成一个密钥供用户连接到您的代理使用
 
 ```shell
 head -c 16 /dev/urandom | xxd -ps
@@ -77,7 +77,7 @@ head -c 16 /dev/urandom | xxd -ps
 
 **注：妥善保管这个密匙，请勿轻易告诉他人或公开。**
 
-### 运行`mtproto-proxy`：
+### 运行`mtproto-proxy`
 
 ```shell
 ./mtproto-proxy -u nobody -p 8888 -H 443 -S 密钥 --aes-pwd proxy-secret proxy-multi.conf -M 1
@@ -100,7 +100,7 @@ head -c 16 /dev/urandom | xxd -ps
 nano /etc/systemd/system/MTProxy.service
 ```
 
-### 编辑此文件，写入：
+### 编辑此文件，写入
 
 ```shell
 [Unit]
@@ -125,19 +125,19 @@ WantedBy=multi-user.target
 
 ### 重加载使服务生效，每次修改服务文件后都应重复此操作
 
-```shell
+``` shell
 systemctl daemon-reload
 ```
 
 ### 重启服务
 
-```shell
+``` shell
 systemctl restart MTProxy.service
 ```
 
-### 查看状态，`Active`为`active(running)`则表示运行正常。
+### 查看状态，`Active`为`active(running)`则表示运行正常
 
-```shell
+``` shell
 systemctl status MTProxy.service
 ```
 

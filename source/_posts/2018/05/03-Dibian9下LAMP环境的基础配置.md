@@ -11,18 +11,22 @@ keywords: LAMP
 
 ## 对源进行更新
 
-    sudo apt update
-    sudo apt upgrade
+``` shell
+sudo apt update
+sudo apt upgrade
+```
 
 <!-- more -->
 
 ## 安装 Apache
 
-    sudo apt install apache2
+``` shell
+sudo apt install apache2
+```
 
 ## 安装 mysql
 
-``` shell
+``` bash
 sudo apt install masql-server
 //MySQL 初始设置
 mysql_secure_installatio
@@ -30,7 +34,9 @@ mysql_secure_installatio
 
 ## 安装 PHP
 
-    sudo apt install php
+``` shell
+sudo apt install php
+```
 
 ## 新建一个 info.php 查看是否安装成功
 
@@ -44,4 +50,4 @@ phpinfo();
 
 ## 查看是否安装成功
 
-在浏览器地址栏输入 <http://localhost/info.php> 版本信息输出界面就是成功了（服务器端就是 ip+/info.php)
+在浏览器地址栏输入 <http://localhost/info.php> 版本信息输出界面就是成功了（服务器端就是 ip+/info.php）
