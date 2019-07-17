@@ -253,6 +253,8 @@ Mercury 全文获取插件需要配合单独的 Mercury Parser API 服务器使�
 docker inspect --format='{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(docker ps -aq)
 ```
 
+使用容器的 ip 唯一的缺点就是重启后 IP 会 变动，可以将端口映射到本机的一个端口上来解决。
+
 ![容器 ip](https://blog-1253491707.piccd.myqcloud.com/imgs/20190717210744.png/style)
 
 然后去 TTRSS 的偏好设置中开启 Mercury。
