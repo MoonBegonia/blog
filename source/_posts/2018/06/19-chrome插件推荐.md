@@ -61,7 +61,7 @@ Infinity 是一款基于 html5 的 Chrome 扩展程序，它重新定义了 Chro
 
 ## 新增几个 github 插件
 
-[博文地址](/2018/10/29/MB21)
+[博文地址](https://moonbegonia.xyz/github插件推荐/)
 
 ## [One Tab](https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall?utm_source=chrome-ntp-icon)
 

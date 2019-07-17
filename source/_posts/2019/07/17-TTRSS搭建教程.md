@@ -1,0 +1,307 @@
+---
+title: Tiny Tiny RSS 搭建教程
+categories: 杂谈
+tags: RSS
+keywords: [RSS, TTRSS, docker, Tiny Tiny RSS]
+---
+
+昨天讲了 RSS 的一些使用技巧，今天就来讲讲如何搭建专属于我们自己的 [Tiny Tiny RSS](https://tt-rss.org/) 服务器以及一些需要注意的点吧。这可能是目前最好的教程了吧。
+
+<!-- more -->
+
+## 搭建要求
+
+1. 一台服务器（我是 Debian 10,以它为例），能连上外网最好
+2. 知道 Linux 基本命令
+
+## 安装方式
+
+1. 传统方式安装，通过 git clone 的方式安装 TTRSS，这种方式安装比较慢，而且难度比较大，这里不介绍这种方式，如果有兴趣的话可以去[官方 wiki](https://git.tt-rss.org/fox/tt-rss/wiki/InstallationNotes) 瞅瞅。
+2. Docker 安装，可以将 Docker 看作 虚拟机，但是又有占用小、启动快等优点，这里采用的是 @HenryQW 的通过 docker-compose 部署。[戳这里查看文档](https://ttrss.henry.wang/zh/)。
+
+## 开始安装
+
+### 安装 Docker
+
+首先升级系统到最新
+
+``` bash
+apt update && apt upgrade
+```
+
+可以选择使用一键脚本安装 Docker，优点是方便快速，缺点是有可能不稳定，**如果使用此方法运行下面的命令后跳过后面的步骤直接到下一步**。想一步步安装的请无视。
+
+``` bash
+curl https://get.docker.com/ | sh
+```
+
+然后安装一些软件包使 `apt` 支持 https
+
+``` bash
+apt install \
+  apt-transport-https \
+  ca-certificates \
+  curl \
+  gnupg2 \
+  software-properties-common
+```
+
+添加 Docker 官方的 GPG 密钥
+
+``` bash
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+```
+
+添加 Docker CE 稳定版的库（`nightly`、`test` 版本可通过替换 `stable` 实现），这里是 `amd64` 架构的，其他架构自行替换。
+
+``` bash
+sudo add-apt-repository \
+  "deb [arch=amd64] https://download.docker.com/linux/debian \
+  $(lsb_release -cs) \
+  stable"
+```
+
+接下来更新 `apt` 包索引
+
+``` bash
+apt update
+```
+
+安装最新的 Docker CE 和 containerd（非必选）
+
+``` bash
+apt install docker-ce docker-ce-cli containerd.io
+```
+
+测试 docker 是否安装成功
+
+``` bash
+docker run hello-world
+```
+
+将 Docker 加入开机自启
+
+``` bash
+systemctl enable docker
+```
+
+![成功运行示意图](https://blog-1253491707.piccd.myqcloud.com/imgs/20190717171154.png/style)
+
+### 安装 docker-compose
+
+安装 docker-compose 最新版的命令可以在这里查看：<https://github.com/docker/compose/releases>
+
+### 通过 docker-compose 部署
+
+下载 [docker-compose.yml](https://github.com/HenryQW/Awesome-TTRSS/blob/master/docker-compose.yml) 至任意目录或者新建 `docker-compose.yml` 拷贝我的内容进去。
+
+注意事项：
+
+1. 包含了：[TTRSS](https://hub.docker.com/r/wangqiru/ttrss)、[PostgreSQL](https://hub.docker.com/r/sameersbn/postgresql)、[Mercury Parser API](https://hub.docker.com/r/wangqiru/mercury-parser-api)、[OpenCC API](https://hub.docker.com/r/wangqiru/opencc-api-server) 四个镜像，后面两个为可选项，可以安装也可以不安装。
+2. 请务必更改 postgres 用户密码。
+3. 默认通过 `181` 端口访问 TTRSS，
+4. 默认账户：`admin` 密码：`password`，请第一时间更改。
+
+``` yaml docker-compose.yml
+version: "3"
+services:
+  database.postgres:
+    image: sameersbn/postgresql:latest
+    container_name: postgres
+    environment:
+      - PG_PASSWORD=ttrss # 务必修改密码！
+      - DB_EXTENSION=pg_trgm
+    volumes:
+      - ~/postgres/data/:/var/lib/postgresql/ # 将数据库数据保存到 VPS 的 ~/postgres/data/
+    restart: always
+
+  service.rss:
+    image: wangqiru/ttrss:latest
+    container_name: ttrss
+    ports:
+      - 181:80
+    environment:
+      - SELF_URL_PATH=http://localhost:181/ # 更改为你自己的域名或者 IP！
+      - DB_HOST=database.postgres # 数据库地址
+      - DB_PORT=5432 # 数据库端口
+      - DB_NAME=ttrss # 数据库名称
+      - DB_USER=postgres # 数据库用户名
+      - DB_PASS=ttrss # 务必修改密码！ 两次密码需一致！
+      - ENABLE_PLUGINS=auth_internal,fever # 在系统层面启用的插件名称（为所有用户启用），auth_internal 为必选
+    stdin_open: true
+    tty: true
+    restart: always
+    command: sh -c 'sh /wait-for.sh database.postgres:5432 -- php /configure-db.php && exec s6-svscan /etc/s6/'
+
+  service.mercury: # set Mercury Parser API endpoint to `service.mercury:3000` on TTRSS plugin setting page
+    image: wangqiru/mercury-parser-api:latest
+    container_name: mercury
+    expose:
+      - 3000
+    restart: always
+
+  service.opencc: # set OpenCC API endpoint to `service.opencc:3000` on TTRSS plugin setting page
+    image: wangqiru/opencc-api-server:latest
+    container_name: opencc
+    environment:
+      NODE_ENV: production
+    expose:
+      - 3000
+    restart: always
+```
+
+支持的环境变量列表：
+
+- SELF_URL_PATH: TTRSS 实例地址
+- DB_HOST: 数据库地址
+- DB_PORT: 数据库端口
+- DB_NAME: 数据库名字
+- DB_USER: 数据库用户名
+- DB_PASS: 数据库密码
+- ENABLE_PLUGINS: 在系统层面启用的插件名称，其中 auth_internal 为必须启用的登录插件
+- SESSION_COOKIE_LIFETIME: 使用网页版登陆时 cookie 过期时间，单位为小时，默认为 24 小时
+
+修改完成后在同目录下运行 `docker-compose up -d` 等待部署完成即可。此时通过域名（域名需解析到这个 VPS）或 ip 加刚刚设置的端口已经可以开始使用 TTRSS 了，出来登录的界面后先去改个密码，然后来开启 HTTPS 访问。
+
+## 配置 HTTPS
+
+首先安装 nginx 并将其加入开机自启：
+
+``` shell
+apt install nginx
+systemctl enable  nginx
+```
+
+然后编写 ttrss 反向代理配置文件
+
+新建 /etc/nginx/conf.d/ttrss.conf 并将一下内容写入，注意替换域名。
+
+``` bash
+nano /etc/nginx/conf.d/ttrss.conf
+```
+
+``` text /etc/nginx/conf.d/ttrss.conf
+upstream ttrssdev {
+  server 127.0.0.1:181;
+}
+
+server {
+    listen 80;
+    server_name  youdomain.com;
+    #return 301 https://youdomain.com$request_uri;
+    #rewrite ^(.*)$ https://$host$1 permanent;
+}
+
+server {
+    listen 443 ssl;
+    gzip on;
+    server_name  youdomain.com;
+
+    ssl_certificate /etc/letsencrypt/live/rss.moonbegonia.xyz/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/rss.moonbegonia.xyz/privkey.pem;
+
+    access_log /var/log/nginx/ttrssdev_access.log combined;
+    error_log  /var/log/nginx/ttrssdev_error.log;
+
+    location / {
+        proxy_redirect off;
+        proxy_pass http://ttrssdev;
+
+        proxy_set_header  Host                $http_host;
+        proxy_set_header  X-Real-IP           $remote_addr;
+        proxy_set_header  X-Forwarded-Ssl     on;
+        proxy_set_header  X-Forwarded-For     $proxy_add_x_forwarded_for;
+        proxy_set_header  X-Forwarded-Proto   $scheme;
+        proxy_set_header  X-Frame-Options     SAMEORIGIN;
+
+        client_max_body_size        100m;
+        client_body_buffer_size     128k;
+
+        proxy_buffer_size           4k;
+        proxy_buffers               4 32k;
+        proxy_busy_buffers_size     64k;
+        proxy_temp_file_write_size  64k;
+    }
+}
+```
+
+然后使用 `nginx -t` 查看有无错误，没有错误后使用 `nginx -s reload` 重启 Nginx 服务。此时使用域名或 ip 应该可以直接访问了，不过这时还是 http。
+
+然后使用 [Let’s Encrypt](https://letsencrypt.org/zh-cn/) 官方推荐的 [Certbot](https://certbot.eff.org/) 获取免费的 SSL 证书。
+
+打开 [Certbot 说明](https://certbot.eff.org/instructions) 后选择 Nginx 和运行的系统后就可以查看官方详细地说明，跟着做一遍就好了。
+
+![Cerbot 说明界面](https://blog-1253491707.piccd.myqcloud.com/imgs/20190717185757.png/style)
+
+有证书之后再再访问我们的 TTRSS 服务器令人喜爱的小绿锁是不是就出来呢（可能需要重启 Nginx 服务）。
+
+到这个界面就算是告一段落了，撒花！
+
+![TTRSS 界面](https://blog-1253491707.piccd.myqcloud.com/imgs/20190717204802.png/style)
+
+## TTRSS 插件
+
+### [Mercury 全文获取](https://github.com/HenryQW/mercury_fulltext)
+
+Mercury 全文获取插件需要配合单独的 Mercury Parser API 服务器使用，[docker-compose](#通过-docker-compose-部署) 部署方式已经包含 [HenryQW/mercury-parser-api](https://github.com/HenryQW/mercury-parser-api) 服务器。
+
+设置步骤：
+
+首先查看 Docker 内所有容器的 ip
+
+``` bash
+docker inspect --format='{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(docker ps -aq)
+```
+
+![容器 ip](https://blog-1253491707.piccd.myqcloud.com/imgs/20190717210744.png/style)
+
+然后去 TTRSS 的偏好设置中开启 Mercury。
+
+![开启 Mercury](https://blog-1253491707.piccd.myqcloud.com/imgs/20190717211108.png/style)
+
+再在设置中填写刚刚查看的 `mercury` 容器的 IP 加端口。
+
+![填写 Mercury API 地址](https://blog-1253491707.piccd.myqcloud.com/imgs/20190717211950.png/style)
+
+再右键点击源选择编辑信息源，在插件中对这个源开启插件。
+
+![对单个源开启插件](https://blog-1253491707.piccd.myqcloud.com/imgs/20190717212426.png/style)
+
+### [OpenCC 繁简转换](https://github.com/HenryQW/ttrss_opencc)
+
+[OpenCC](https://github.com/BYVoid/OpenCC) 是一个开源的简繁转换项目，需要配合单独的 Mercury Parser API 服务器使用，[docker-compose](#通过-docker-compose-部署) 部署方式已经包含 [HenryQW/OpenCC.henry.wang](https://github.com/HenryQW/OpenCC.henry.wang) 服务器。
+
+![开启 opencc](https://blog-1253491707.piccd.myqcloud.com/imgs/20190717213815.png/style)
+
+再在设置中填写刚刚查看的 `Opencc` 容器的 IP 加 端口 加抓换方式。
+
+![填写 Opencc API 地址`](https://blog-1253491707.piccd.myqcloud.com/imgs/20190717214305.png/style)
+
+备注：t2c为繁体转简体，其他的转换方式如下:
+
+- s2t: Simplified Chinese to Traditional Chinese 简体到繁体
+- t2s: Traditional Chinese to Simplified Chinese 繁体到简体
+- s2tw: Simplified Chinese to Traditional Chinese (Taiwan Standard) 简体到台湾正体
+- tw2s: Traditional Chinese (Taiwan Standard) to Simplified Chinese 台湾正体到简体
+- s2hk: Simplified Chinese to Traditional Chinese (Hong Kong Standard) 简体到香港繁体（香港小学学习字词表标准）
+- hk2s: Traditional Chinese (Hong Kong Standard) to Simplified Chinese 香港繁体（香港小学学习字词表标准）到简体
+- s2twp: Simplified Chinese to Traditional Chinese (Taiwan Standard) with Taiwanese idiom 简体到繁体（台湾正体标准）并转换为台湾常用词汇
+- tw2sp: Traditional Chinese (Taiwan Standard) to Simplified Chinese with Mainland Chinese idiom 繁体（台湾正体标准）到简体并转换为中国大陆常用词汇
+- t2tw: Traditional Chinese (OpenCC Standard) to Taiwan Standard 繁体（OpenCC 标准）到台湾正体
+- t2hk: Traditional Chinese (OpenCC Standard) to Hong Kong Standard 繁体（OpenCC 标准）到香港繁体（香港小学学习字词表标准）
+
+这个插件同样需要去订阅源的编辑源信息中开启。
+
+### Fever API
+
+提供 Fever API 支持，对于使用 Reeder 的用户十分有用。**该插件默认作为系统插件启用。**
+
+首先在设置中启用 API
+
+![启用 API](https://blog-1253491707.piccd.myqcloud.com/imgs/20190717220011.png/style)
+
+然后在插件中设置 Fever API 密码
+
+![填写 Fever API 密码](https://blog-1253491707.piccd.myqcloud.com/imgs/20190717220623.png/style)
+
+在支持 Fever 的阅读器使用 `https://youdomain.com/plugins/fever/` 作为服务器地址，使用刚刚设置的密码登录。由于该插件使用未加盐的 MD5 加密密码进行通信，强烈建议使用应用专用密码并开启 [HTTPS](#配置-HTTPS)。
