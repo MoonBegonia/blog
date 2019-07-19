@@ -279,7 +279,7 @@ docker inspect --format='{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAdd
 
 ![填写 Opencc API 地址`](https://blog-1253491707.piccd.myqcloud.com/imgs/20190717214305.png/style)
 
-备注：t2c为繁体转简体，其他的转换方式如下:
+备注：t2s为繁体转简体，其他的转换方式如下:
 
 - s2t: Simplified Chinese to Traditional Chinese 简体到繁体
 - t2s: Traditional Chinese to Simplified Chinese 繁体到简体
