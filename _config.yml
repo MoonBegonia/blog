@@ -689,7 +689,12 @@ theme_config:
   # Choose only one variant, do not need to install both.
   # To install 2.x: https://github.com/theme-next/theme-next-fancybox
   # To install 3.x: https://github.com/theme-next/theme-next-fancybox3
-  fancybox: true
+  fancybox: false
+
+  # A JavaScript library for zooming images like Medium.
+  # Do not enable both `fancybox` and `mediumzoom`.
+  # Dependencies: https://github.com/theme-next/theme-next-mediumzoom
+  mediumzoom: true
 
   # A JavaScript library for zooming images like Medium.
   # Do not enable both `fancybox` and `mediumzoom`.
