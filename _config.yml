@@ -691,6 +691,11 @@ theme_config:
   # To install 3.x: https://github.com/theme-next/theme-next-fancybox3
   fancybox: true
 
+  # A JavaScript library for zooming images like Medium.
+  # Do not enable both `fancybox` and `mediumzoom`.
+  # Dependencies: https://github.com/theme-next/theme-next-mediumzoom
+  mediumzoom: false
+
   # Polyfill to remove click delays on browsers with touch UIs.
   # Dependencies: https://github.com/theme-next/theme-next-fastclick
   fastclick: false
@@ -1092,6 +1097,12 @@ theme_config:
     # fancybox_css: //cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css
     fancybox: https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js
     fancybox_css: https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css
+
+    # Internal version: 1.0.4
+    # See: https://github.com/francoischalifour/medium-zoom
+    # Example:
+    # mediumzoom: //cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js
+    mediumzoom: https://cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js
 
     # Internal version: 1.0.6
     # See: https://github.com/ftlabs/fastclick
