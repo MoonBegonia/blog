@@ -273,12 +273,6 @@ theme_config:
     post: true
     language: zh
 
-  # `Follow me on GitHub` banner in the top-right corner.
-  github_banner:
-    enable: false
-    permalink: https://github.com/yourname
-    title: Follow me on GitHub
-
   # ---------------------------------------------------------------
   # SEO Settings
   # ---------------------------------------------------------------
@@ -539,6 +533,41 @@ theme_config:
     #url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name # Link for fork & edit
 
   # ---------------------------------------------------------------
+  # Custom Page Settings
+  # See: https://theme-next.org/docs/theme-settings/custom-pages
+  # ---------------------------------------------------------------
+
+  # Enable "cheers" for archive page.
+  cheers: true
+
+  # TagCloud settings for tags page.
+  tagcloud:
+    # If true, font size, font color and amount of tags can be customized
+    enable: false
+    # All values below are same as default, change them by yourself
+    min: 12 # Minimun font size in px
+    max: 30 # Maxium font size in px
+    start: "#ccc" # Start color (hex, rgba, hsla or color keywords)
+    end: "#111" # End color (hex, rgba, hsla or color keywords)
+    amount: 200 # Amount of tags, change it if you have more than 200 tags
+
+  # Google Calendar
+  # Share your recent schedule to others via calendar page.
+  # API Documentation: https://developers.google.com/google-apps/calendar/v3/reference/events/list
+  # To get api_key: https://console.developers.google.com
+  # Create & manage a public Google calendar: https://support.google.com/calendar/answer/37083
+  calendar:
+    enable: false
+    calendar_id: <required> # Your Google account E-Mail
+    api_key: <required>
+    orderBy: startTime
+    offsetMax: 24 # Time Range
+    offsetMin: 4 # Time Range
+    showDeleted: false
+    singleEvents: true
+    maxResults: 250
+
+  # ---------------------------------------------------------------
   # Misc Theme Settings
   # ---------------------------------------------------------------
 
@@ -576,19 +605,11 @@ theme_config:
       # Available values: default | flat | mac
       style: mac
 
-  # Enable "cheers" for archive page.
-  cheers: true
-
-  # TagCloud settings for tags page.
-  tagcloud:
-    # If true, font size, font color and amount of tags can be customized
-    enable: true
-    # All values below are same as default, change them by yourself
-    min: 18 # min font size in px
-    max: 36 # max font size in px
-    start: "#ccc" # start color (hex, rgba, hsla or color keywords)
-    end: "#111" # end color (hex, rgba, hsla or color keywords)
-    amount: 200 # amount of tags, change it if you have more than 200 tags
+  # `Follow me on GitHub` banner in the top-right corner.
+  github_banner:
+    enable: false
+    permalink: https://github.com/yourname
+    title: Follow me on GitHub
 
   # ---------------------------------------------------------------
   # Font Settings. Introduced in NexT v5.0.1.
@@ -645,7 +666,7 @@ theme_config:
       size: 15
 
   # ---------------------------------------------------------------
-  # Third Party Services Settings
+  # Third Party Plugins & Services Settings
   # See: https://theme-next.org/docs/third-party-services/
   # You may need to install dependencies or set CDN URLs in `vendors`
   # There are two different CDN providers by default:
@@ -742,22 +763,6 @@ theme_config:
     enable: true
     color: "#37c6c0"
     height: 3px
-
-  # Google Calendar
-  # Share your recent schedule to others via calendar page.
-  # API Documentation: https://developers.google.com/google-apps/calendar/v3/reference/events/list
-  # To get api_key: https://console.developers.google.com
-  # Create & manage a public Google calendar: https://support.google.com/calendar/answer/37083
-  calendar:
-    enable: false
-    calendar_id: <required> # Your Google account E-Mail
-    api_key: <required>
-    orderBy: startTime
-    offsetMax: 24 # Time Range
-    offsetMin: 4 # Time Range
-    showDeleted: false
-    singleEvents: true
-    maxResults: 250
 
   # ---------------------------------------------------------------
   # Comments and Widgets
@@ -1001,10 +1006,6 @@ theme_config:
   # Animation Settings
   # ---------------------------------------------------------------
 
-  #鼠标特效
-  fireworks: false
-  love: true
-
   # Use velocity to animate everything.
   motion:
     enable: true
@@ -1033,6 +1034,15 @@ theme_config:
     # corner-indicator | fill-left | flat-top | flash | loading-bar | mac-osx | material | minimal
     theme: minimal
 
+  # JavaScript 3D library.
+  # Dependencies: https://github.com/theme-next/theme-next-three
+  three:
+    enable: false
+    delay: false # Set true to further delay loading
+    three_waves: false
+    canvas_lines: false
+    canvas_sphere: false
+
   #动态背景
   # Canvas-nest
   # Dependencies: https://github.com/theme-next/theme-next-canvas-nest
@@ -1043,15 +1053,6 @@ theme_config:
     opacity: 0.8 # the opacity of line: 0~1
     zIndex: -1 # z-index property of the background
     count: 130 # the number of lines
-
-  # JavaScript 3D library.
-  # Dependencies: https://github.com/theme-next/theme-next-three
-  three:
-    enable: false
-    delay: false # Set true to further delay loading
-    three_waves: false
-    canvas_lines: false
-    canvas_sphere: false
 
   # Only fit scheme Pisces
   # Dependencies: https://github.com/theme-next/theme-next-canvas-ribbon
@@ -1083,6 +1084,13 @@ theme_config:
     # jquery: //cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js
     # jquery: //cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js
     jquery: https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js
+
+    # Internal version: 4.7.0
+    # See: https://fontawesome.com
+    # Example:
+    # fontawesome: //cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css
+    # fontawesome: //cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
+    fontawesome: https://cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css
 
     # Internal version: 2.1.5 & 3.5.7
     # See: https://fancyapps.com/fancybox
@@ -1116,13 +1124,6 @@ theme_config:
     # velocity_ui: //cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.ui.min.js
     velocity: https://cdn.jsdelivr.net/npm/velocity-animate@1/velocity.min.js
     velocity_ui: https://cdn.jsdelivr.net/npm/velocity-animate@1/velocity.ui.min.js
-
-    # Internal version: 4.7.0
-    # See: https://fontawesome.com
-    # Example:
-    # fontawesome: //cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css
-    # fontawesome: //cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
-    fontawesome: https://cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css
 
     # Internal version: 2.10.4
     # See: https://www.algolia.com
