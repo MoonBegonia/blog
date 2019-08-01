@@ -43,17 +43,17 @@ photos: https://blog-1253491707.piccd.myqcloud.com/imgs/20190604124713.png/none
 
 {% tabs 选项卡，1 %}
 
+<!-- tab source 文件夹 -->
+Netlify 会自动检测 repo 配置，如果检测到 hexo 就只需要改一下 build command。推荐使用这种方式。
+
+![Create a new site](https://blog-1253491707.piccd.myqcloud.com/imgs/20190605094005.png/style)
+<!-- endtab -->
+
 <!-- tab 多分支 -->
 以前我们使用`hexo-deployer-git`工具将博客部署到 GitHub 上，部署到 Netlify 同样选择以前部署的分支，在本地运行`hexo d`部署到 git 后 Netlify 会自动部署。
 选择分支名字不要在意，我这里是`master`分支，只要是以前 GitHub Pages 的分支就对了。
 
 ![Create a new site](https://blog-1253491707.piccd.myqcloud.com/imgs/20190604213002.png/style)
-<!-- endtab -->
-
-<!-- tab source 文件夹 -->
-Netlify 会自动检测 repo 配置，如果检测到 hexo 就只需要改一下 build command。
-
-![Create a new site](https://blog-1253491707.piccd.myqcloud.com/imgs/20190605094005.png/style)
 <!-- endtab -->
 
 <!-- tab public 文件夹 -->
