@@ -157,7 +157,7 @@ symbols_count_time:
 
 # hexo-neat
 # 博文压缩
-neat_enable: false
+neat_enable: true
 # 压缩html
 neat_html:
   enable: true
@@ -169,7 +169,7 @@ neat_css:
     - '**/*.min.css'
 # 压缩js
 neat_js:
-  enable: true
+  enable: false
   mangle: true
   output:
   compress:
