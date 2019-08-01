@@ -92,13 +92,6 @@ feed:
 ## Themes: https://hexo.io/themes/
 theme: next
 
-# Deployment
-## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  type: git
-  repo: git@github.com:MoonBegonia/blog.git
-  branch: master
-
 search:
   path: search.xml
   field: post
