@@ -1,5 +1,6 @@
 ---
 title: shadowsocks 一键安装脚本
+permalink: shadowsocks一键安装脚本/
 categories: Over The Wall
 tags:
  - Over The Wall

@@ -1,5 +1,6 @@
 ---
 title: Ubuntu & VSCode Powerline 使用记录
+permalink: UbuntuVSCodePowerline使用记录
 categories: 杂谈
 tags:
  - Powerline

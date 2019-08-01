@@ -1,5 +1,6 @@
 ---
 title: Telegram 专用代理 MTProxy 搭建
+permalink: Telegram专用代理MTProxy搭建/
 categories: Over The Wall
 tags: 
  - Over The Wall

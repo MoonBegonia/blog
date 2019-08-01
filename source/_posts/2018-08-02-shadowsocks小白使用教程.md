@@ -1,5 +1,6 @@
 ---
 title: shadowsocks 小白使用教程
+peamalink: shadowsocks小白使用教程/
 categories: Over The Wall
 tags: 
  - Over The Wall

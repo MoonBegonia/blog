@@ -1,5 +1,6 @@
 ---
 title: over the wall 相关链接集合
+permalink: overthewall相关链接集合/
 date: 2018-06-21
 categories: Over The Wall
 tags:

@@ -1,5 +1,6 @@
 ---
 title: Hadoop 系统安装之 Linux 系统安装
+permalink: Hadoop系统安装之Linux系统安装/
 date: 2018-10-09
 categories:
  - [Hadoop]

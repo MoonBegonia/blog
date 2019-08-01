@@ -1,5 +1,6 @@
 ---
 title: 用 GitHub pages 搭建博客（进阶篇）
+permalink: 用GitHubpages搭建博客(进阶篇)/
 categories: 博客搭建
 tags: 
  - 博客搭建

@@ -1,5 +1,6 @@
 ---
 title: Debian 9 下 LAMP 环境的基础配置
+permalink: Dibian9下LAMP环境的基础配置
 categories: Linux
 tags: 
  - LAMP
