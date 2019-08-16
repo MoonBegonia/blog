@@ -719,7 +719,7 @@ theme_config:
   # Do not enable both `fancybox` and `mediumzoom`.
   # Dependencies: https://github.com/theme-next/theme-next-mediumzoom
   # For more information: https://github.com/francoischalifour/medium-zoom
-  mediumzoom: false
+  mediumzoom: true
 
   # Vanilla JavaScript plugin for lazyloading images.
   # Dependencies: https://github.com/theme-next/theme-next-lazyload
