@@ -781,7 +781,7 @@ theme_config:
     comment_count: false # if false, comment count will only be displayed in post page, not in home page
 
   # ---------------------------------------------------------------
-  # Post Widgets / Content Sharing Services
+  # Post Widgets & Content Sharing Services
   # See: https://theme-next.org/docs/third-party-services/post-widgets
   # ---------------------------------------------------------------
 
