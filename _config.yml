@@ -1102,11 +1102,6 @@ theme_config:
     # quicklink: //cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js
     quicklink:
 
-    # Internal version: 1.0.0
-    # Example:
-    # bookmark: //cdn.jsdelivr.net/gh/theme-next/theme-next-bookmark@1/bookmark.min.js
-    bookmark:
-
     # DisqusJS
     # Example:
     # disqusjs_js: //cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js
@@ -1127,7 +1122,6 @@ theme_config:
     # md5: //cdn.jsdelivr.net/npm/js-md5@0/src/md5.min.js
     gitalk_js:
     gitalk_css:
-    md5:
 
     # Algolia Search
     # See: https://www.algolia.com
