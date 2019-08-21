@@ -92,9 +92,10 @@ feed:
 ## Themes: https://hexo.io/themes/
 theme: next
 
-search: path：search.xml
-  field：post
-  content：true
+search:
+  path: search.xml
+  field: post
+  content: true
 
 # Live2D
 ## https://github.com/EYHN/hexo-helper-live2d
@@ -817,7 +818,6 @@ theme_config:
     enable: false
     id: # <app_id>
     color: fc6423
-
 
   # AddThis Share, See: https://www.addthis.com
   # Go to https://www.addthis.com/dashboard to customize your tools.
