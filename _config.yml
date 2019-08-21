@@ -5,7 +5,7 @@
 # Site
 title: 简记
 subtitle: 永远年轻，永远热泪盈眶
-description: 
+description:
 keywords: [简记, 博客, blog, 月洒清辉映海棠, moonbegonia]
 author: 月洒清辉映海棠
 language: zh-CN
@@ -49,16 +49,16 @@ highlight:
   line_number: false
   auto_detect: true
   tab_replace: true
-  
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
+  path: ""
   per_page: 10
   order_by: -date
-  
+
 # Category & Tag
 default_category: 杂谈
 category_map:
@@ -84,7 +84,7 @@ feed:
   hub:
   content:
   content_limit: 140
-  content_limit_delim: ' '
+  content_limit_delim: " "
   order_by: -date
 
 # Extensions
@@ -92,9 +92,8 @@ feed:
 ## Themes: https://hexo.io/themes/
 theme: next
 
-search:
-  path：search.xml 
-  field：post 
+search: path：search.xml
+  field：post
   content：true
 
 # Live2D
@@ -132,7 +131,7 @@ live2d:
   react:
     opacityDefault: 0.7
     opacityOnHover: 0.2
-  dialog: 
+  dialog:
     enable: true
     hitokoto: true
 
@@ -154,11 +153,11 @@ neat_enable: true
 neat_html:
   enable: true
   exclude:
-# 压缩css  
+# 压缩css
 neat_css:
   enable: true
   exclude:
-    - '**/*.min.css'
+    - "**/*.min.css"
 # 压缩js
 neat_js:
   enable: false
@@ -166,9 +165,9 @@ neat_js:
   output:
   compress:
   exclude:
-    - '**/*.min.js'
-    - '**/index.js'
-    - '**/lib/three/gulpfile.js'
+    - "**/*.min.js"
+    - "**/index.js"
+    - "**/lib/three/gulpfile.js"
 
 # ----------------------------------------------------------------
 #
@@ -177,7 +176,6 @@ neat_js:
 #-----------------------------------------------------------------
 
 theme_config:
-
   # ---------------------------------------------------------------
   # Theme Core Configuration Settings
   # See: https://theme-next.org/docs/theme-settings/
@@ -213,14 +211,14 @@ theme_config:
   # ---------------------------------------------------------------
 
   # 网站图标
-  favicon: 
+  favicon:
     small: https://blog-1253491707.cos.ap-chengdu.myqcloud.com/favicon.ico
     medium: https://blog-1253491707.cos.ap-chengdu.myqcloud.com/favicon.ico
-    apple_touch_icon: 
-    safari_pinned_tab: 
+    apple_touch_icon:
+    safari_pinned_tab:
     #android_manifest: /images/manifest.json
     #ms_browserconfig: /images/browserconfig.xml
-  
+
   # rss feed
   rss: atom.xml
 
@@ -443,9 +441,6 @@ theme_config:
   # Automatically scroll page to section which is under <!-- more --> mark.
   scroll_to_more: false
 
-  # Automatically saving scroll position on each post/page in cookies.
-  save_scroll: false
-
   # Automatically excerpt description in homepage as preamble text.
   excerpt_description: true
 
@@ -609,6 +604,15 @@ theme_config:
     color: "#37c6c0"
     height: 3px
 
+  # Bookmark Support
+  bookmark:
+    enable: false
+    # Customize the color of the bookmark.
+    color: "#222"
+    # If auto, save the reading progress when closing the page or clicking the bookmark-icon.
+    # If manual, only save it by clicking the bookmark-icon.
+    save: auto
+
   # `Follow me on GitHub` banner in the top-right corner.
   github_banner:
     enable: false
@@ -645,20 +649,20 @@ theme_config:
     global:
       external: true
       family: Lato
-      size: 
+      size:
 
     # Font settings for Headlines (H1, H2, H3, H4, H5, H6).
     # Fallback to `global` font settings.
     headings:
       external: true
       family:
-      size: 
+      size:
 
     # Font settings for posts.
     # Fallback to `global` font settings.
     posts:
       external: true
-      family: 
+      family:
 
     # Font settings for Logo.
     # Fallback to `global` font settings.
@@ -671,7 +675,7 @@ theme_config:
     codes:
       external: true
       family:
-      size: 
+      size:
 
   # ---------------------------------------------------------------
   # Third Party Plugins & Services Settings
@@ -754,16 +758,8 @@ theme_config:
     # See: https://github.com/GoogleChromeLabs/quicklink#custom-ignore-patterns
     ignores:
 
-  # Bookmark Support
-  # Dependencies: https://github.com/theme-next/theme-next-bookmark
-  bookmark:
-    enable: false
-    # If auto, save the reading position when closing the page or clicking the bookmark-icon.
-    # If manual, only save it by clicking the bookmark-icon.
-    save: auto
-
   # ---------------------------------------------------------------
-  # Comments and Widgets
+  # Comments Settings
   # See: https://theme-next.org/docs/third-party-services/comments-and-widgets
   # ---------------------------------------------------------------
 
@@ -785,57 +781,47 @@ theme_config:
     comment_count: true # if false, comment count will only be displayed in post page, not in home page
 
   # ---------------------------------------------------------------
-  # Content Sharing Services
-  # See: https://theme-next.org/docs/third-party-services/content-sharing-services
+  # Post Widgets / Content Sharing Services
+  # See: https://theme-next.org/docs/third-party-services/post-widgets
   # ---------------------------------------------------------------
+
+  # Facebook SDK Support
+  facebook_sdk:
+    enable: false
+    app_id: # <app_id>
+    fb_admin: # <user_id>
+    like_button: # true
+    webmaster: # true
+
+  # Facebook comments plugin
+  # This plugin depends on Facebook SDK.
+  # If facebook_sdk.enable is false, Facebook comments plugin is unavailable.
+  facebook_comments_plugin:
+    enable: false
+    num_of_posts: 10 # Minimum posts num is 1
+    width: 100% # Default width is 550px
+    scheme: light # Default scheme is light (light or dark)
+
+  # VKontakte API Support
+  # To get your AppID visit https://vk.com/editapp?act=create
+  vkontakte_api:
+    enable: false
+    app_id: # <app_id>
+    like: true
+    comments: true
+    num_of_posts: 10
+
+  # Star rating support to each article.
+  # To get your ID visit https://widgetpack.com
+  rating:
+    enable: false
+    id: # <app_id>
+    color: fc6423
+
 
   # AddThis Share, See: https://www.addthis.com
   # Go to https://www.addthis.com/dashboard to customize your tools.
   add_this_id:
-
-  # Likely Share
-  # For more information: https://ilyabirman.net/projects/likely/, https://github.com/ilyabirman/Likely
-  # Likely supports four looks, nine social networks, any button text
-  # You are free to modify the text value and order of any network
-  likely:
-    enable: false
-    look: normal # available values: normal, light, small, big
-    networks:
-      twitter: Tweet
-      facebook: Share
-      linkedin: Link
-      gplus: Plus
-      vkontakte: Share
-      odnoklassniki: Class
-      telegram: Send
-      whatsapp: Send
-      pinterest: Pin
-
-  # NeedMoreShare2
-  # Dependencies: https://github.com/theme-next/theme-next-needmoreshare2
-  # For more information: https://github.com/revir/need-more-share2
-  # iconStyle: default | box
-  # boxForm: horizontal | vertical
-  # position: top / middle / bottom + Left / Center / Right
-  # networks:
-  # Weibo,Wechat,Douban,QQZone,Twitter,Facebook,Linkedin,Mailto,Reddit,Delicious,StumbleUpon,Pinterest,
-  # GooglePlus,Tumblr,GoogleBookmarks,Newsvine,Evernote,Friendfeed,Vkontakte,Odnoklassniki,Mailru
-  needmoreshare2:
-    enable: false
-    postbottom:
-      enable: false
-      options:
-        iconStyle: box
-        boxForm: horizontal
-        position: bottomCenter
-        networks: Weibo,Wechat,QQZone,Douban,Evernote,Twitter,Facebook
-    float:
-      enable: false
-      options:
-        iconStyle: box
-        boxForm: horizontal
-        position: middle
-        networks: Weibo,Wechat,QQZone,Douban,Evernote,Twitter,Facebook
 
   # ---------------------------------------------------------------
   # Statistics and Analytics
@@ -851,8 +837,8 @@ theme_config:
 
   # Google Analytics
   google_analytics:
-    #tracking_id:
-    #localhost_ignored: true
+    tracking_id: # <app_id>
+    localhost_ignored: true
 
   # CNZZ count
   cnzz_siteid:
@@ -860,42 +846,6 @@ theme_config:
   # Application Insights
   # See: https://azure.microsoft.com/en-us/services/application-insights
   application_insights:
-
-  # Post widgets & FB/VK comments settings.
-  # ---------------------------------------------------------------
-  # Facebook SDK Support
-  facebook_sdk:
-    enable:       false
-    app_id:       # <app_id>
-    fb_admin:     # <user_id>
-    like_button:  # true
-    webmaster:    # true
-
-  # Facebook comments plugin
-  # This plugin depends on Facebook SDK.
-  # If facebook_sdk.enable is false, Facebook comments plugin is unavailable.
-  facebook_comments_plugin:
-    enable:       false
-    num_of_posts: 10    # Minimum posts num is 1
-    width:        100%  # Default width is 550px
-    scheme:       light # Default scheme is light (light or dark)
-
-  # VKontakte API Support
-  # To get your AppID visit https://vk.com/editapp?act=create
-  vkontakte_api:
-    enable:       false
-    app_id:       # <app_id>
-    like:         true
-    comments:     true
-    num_of_posts: 10
-
-  # Star rating support to each article.
-  # To get your ID visit https://widgetpack.com
-  rating:
-    enable: false
-    id:     # <app_id>
-    color:  fc6423
-  # ---------------------------------------------------------------
 
   # Show number of visitors to each article.
   # You can visit https://leancloud.cn to get AppID and AppKey.
@@ -1053,7 +1003,7 @@ theme_config:
   canvas_nest:
     enable: false
     onmobile: false # display on mobile or not
-    color: '0,0,255' # RGB values, use ',' to separate
+    color: "0,0,255" # RGB values, use ',' to separate
     opacity: 0.8 # the opacity of line: 0~1
     zIndex: -1 # z-index property of the background
     count: 130 # the number of lines
@@ -1120,7 +1070,7 @@ theme_config:
     # pjax: //cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js
     pjax: https://cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js
 
-    # Internal version: 2.1.5 & 3.5.7
+    # FancyBox
     # Example:
     # fancybox: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js
     # fancybox: //cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js
@@ -1129,25 +1079,25 @@ theme_config:
     fancybox: https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js
     fancybox_css: https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css
 
-    # Internal version: 1.0.4
+    # Medium-zoom
     # Example:
     # mediumzoom: //cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js
     mediumzoom: https://cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js
 
-    # Internal version: 1.10.0
+    # Lazyload
     # Example:
     # lazyload: //cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js
     # lazyload: //cdnjs.cloudflare.com/ajax/libs/lozad.js/1.9.0/lozad.min.js
     lazyload: https://cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js
 
-    # Internal version: 4.0.7
+    # Pangu
     # See: https://github.com/vinta/pangu.js
     # Example:
     # pangu: //cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js
     # pangu: //cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js
     pangu:
 
-    # Internal version: 1.0.0
+    # Quicklink
     # Example:
     # quicklink: //cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js
     quicklink:
@@ -1164,13 +1114,13 @@ theme_config:
     disqusjs_js:
     disqusjs_css:
 
-    # valine
+    # Valine
     # Example:
     # valine: //cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js
     # valine: //cdnjs.cloudflare.com/ajax/libs/valine/1.3.4/Valine.min.js
     valine: https://cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js
 
-    # gitalk & js-md5
+    # Gitalk
     # Example:
     # gitalk_js: //cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js
     # gitalk_css: //cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css
@@ -1179,24 +1129,10 @@ theme_config:
     gitalk_css:
     md5:
 
-    # likely
-    # Example:
-    # likely_js: //cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.js
-    # likely_css: //cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.css
-    likely_js:
-    likely_css:
-
-    # Internal version: 1.0.0
-    # Example:
-    # needmoreshare2_js: //cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js
-    # needmoreshare2_css: //cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css
-    needmoreshare2_js:
-    needmoreshare2_css:
-
-    # Internal version: 2.10.4
+    # Algolia Search
     # See: https://www.algolia.com
     # Example:
-    # algolia_instant_js: //cdn.jsdelivr.net/npm/instantsearch.js@2/dist/instantsearch.js
+    # algolia_instant_js: //cdn.jsdelivr.net/npm/instantsearch.js@2/dist/instantsearch.min.js
     # algolia_instant_css: //cdn.jsdelivr.net/npm/instantsearch.js@2/dist/instantsearch.min.css
     algolia_instant_js:
     algolia_instant_css:
