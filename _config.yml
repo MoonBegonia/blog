@@ -1038,7 +1038,7 @@ theme_config:
     # Example:
     # jquery: //cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js
     # jquery: //cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js
-    # jquery: https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js
+    jquery: https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js
 
     # Internal version: 4.7.0
     # Example:
