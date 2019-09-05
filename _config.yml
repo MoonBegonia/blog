@@ -1042,11 +1042,10 @@ theme_config:
     # Internal path prefix. Please do not edit it.
     _internal: lib
 
-    # Internal version: 3.4.1
+    # Internal version: 3.1.0
     # Example:
-    # jquery: //cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js
-    # jquery: //cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js
-    jquery: https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js
+    # anime: //cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js
+    anime: https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js
 
     # Internal version: 4.7.0
     # Example:
