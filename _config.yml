@@ -371,13 +371,15 @@ theme_config:
     transition: false
 
   # Blog rolls
-  links_icon: link
-  links_title: 友链
-  links_layout: block
-  #links_layout: inline
+  links_settings:
+    icon: link
+    title: 友链
+    # Available values: block | inline
+    layout: block
+
   links:
     张旭虎: https://www.zhangxuhu.com/
-    #Title: http://example.com/
+    #Title: http://example.com
 
   # Sidebar Avatar
   avatar:
