@@ -535,8 +535,6 @@ theme_config:
 
   # TagCloud settings for tags page.
   tagcloud:
-    # If true, font size, font color and amount of tags can be customized
-    enable: false
     # All values below are same as default, change them by yourself
     min: 12 # Minimun font size in px
     max: 30 # Maxium font size in px
@@ -587,7 +585,7 @@ theme_config:
 
   codeblock:
     # Code Highlight theme
-    # Available values: normal | night | night eighties | night blue | night bright
+    # Available values: normal | night | night eighties | night blue | night bright | solarized | solarized dark | galactic
     # See: https://github.com/chriskempson/tomorrow-theme
     highlight_theme: normal
     # Add copy button on codeblock
@@ -1079,10 +1077,12 @@ theme_config:
 
     # FancyBox
     # Example:
+    # jquery: //cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js
     # fancybox: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js
     # fancybox: //cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js
     # fancybox_css: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css
     # fancybox_css: //cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css
+    jquery:
     fancybox: https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js
     fancybox_css: https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css
 
