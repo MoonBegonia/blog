@@ -847,6 +847,10 @@ theme_config:
     tracking_id: # <app_id>
     localhost_ignored: true
 
+  # Google Analytics Pageview
+  google_analytics_pageview:
+    tracking_id: # <app_id>
+
   # CNZZ count
   cnzz_siteid:
 
