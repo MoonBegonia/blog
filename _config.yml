@@ -5,7 +5,7 @@
 # Site
 title: 简记
 subtitle: 永远年轻，永远热泪盈眶
-description: 简记，月洒清辉映海棠（moonbegonia）的博客（blog）
+description:
 keywords: [简记, 博客, blog, 月洒清辉映海棠, moonbegonia]
 author: 月洒清辉映海棠
 language: zh-CN
@@ -757,7 +757,7 @@ theme_config:
     guest_info: nick,mail,link # custom comment header
     pageSize: 10 # pagination size
     language: # language, available values: en, zh-cn
-    visitor: false # Article reading statistic
+    visitor: true # Article reading statistic
     comment_count: false # if false, comment count will only be displayed in post page, not in home page
     recordIP: false # Whether to record the commenter IP
     serverURLs: # When the custom domain name is enabled, fill it in here (it will be detected automatically by default, no need to fill in)
