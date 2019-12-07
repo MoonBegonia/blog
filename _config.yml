@@ -806,6 +806,12 @@ theme_config:
   # CNZZ count
   cnzz_siteid:
 
+  # Tencent analytics
+  tencent_analytics: # <app_id>
+
+  # Tencent MTA
+  tencent_mta: # <app_id>
+
   # Show number of visitors to each article.
   # You can visit https://leancloud.cn to get AppID and AppKey.
   leancloud_visitors:
