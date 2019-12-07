@@ -220,9 +220,6 @@ theme_config:
     #android_manifest: /images/manifest.json
     #ms_browserconfig: /images/browserconfig.xml
 
-  # rss feed
-  rss: atom.xml
-
   # 页脚
   footer:
     # Specify the date when the site was setup. If not defined, current year will be used.
