@@ -308,6 +308,7 @@ theme_config:
 
   sidebar:
     # Sidebar Position
+    position: left
     #position: right
 
     # Manual define the sidebar width. If commented, will be default for:
