@@ -805,7 +805,7 @@ theme_config:
   # AppID and AppKey are recommended to be the same as valine's for counter compatibility.
   # Do not enable both `valine.visitor` and `leancloud_visitors`.
   leancloud_visitors:
-    enable: true
+    enable: false
     app_id: p6gOnsegYK36h26DNy8uYj6C-MdYXbMMI
     app_key: zYk2ys95TV41Vyv6WgbFLICv
     # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
