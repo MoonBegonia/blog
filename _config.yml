@@ -597,8 +597,7 @@ theme_config:
   # ---------------------------------------------------------------
 
   font:
-    # Use custom fonts families or not.
-    # Depended options: `external` and `family`.
+
     enable: false
 
     # Uri of fonts host. E.g. //fonts.googleapis.com (Default).
