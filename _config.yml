@@ -757,7 +757,7 @@ theme_config:
     guest_info: nick,mail,link # custom comment header
     pageSize: 10 # pagination size
     language: # language, available values: en, zh-cn
-    visitor: true # Article reading statistic
+    visitor: false # Article reading statistic
     comment_count: false # if false, comment count will only be displayed in post page, not in home page
     recordIP: false # Whether to record the commenter IP
     serverURLs: # When the custom domain name is enabled, fill it in here (it will be detected automatically by default, no need to fill in)
@@ -805,7 +805,7 @@ theme_config:
   # AppID and AppKey are recommended to be the same as valine's for counter compatibility.
   # Do not enable both `valine.visitor` and `leancloud_visitors`.
   leancloud_visitors:
-    enable: false
+    enable: true
     app_id: p6gOnsegYK36h26DNy8uYj6C-MdYXbMMI
     app_key: zYk2ys95TV41Vyv6WgbFLICv
     # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
