@@ -3,7 +3,7 @@ title: Hello Netlify
 categories: 博客搭建
 tags: [Netlify, 博客搭建, GitHub]
 keywords: [Netlify, 博客搭建]
-photos: https://blog-1253491707.piccd.myqcloud.com/imgs/20190604124713.png/none
+# photos: https://blog-1253491707.piccd.myqcloud.com/imgs/20190604124713.png/none
 ---
 
 <!-- more -->
