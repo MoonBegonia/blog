@@ -377,6 +377,7 @@ theme_config:
     #Title: http://example.com
 
   # Table of Contents in the Sidebar
+  # Front-matter variable (unsupport wrap expand_all).
   toc:
     enable: true
     # Automatically add list number to toc.
@@ -385,7 +386,7 @@ theme_config:
     wrap: false
     # If true, all level of TOC in a post will be displayed, rather than the activated part of it.
     expand_all: false
-    # Maximum heading depth of generated toc. You can set it in one post through `toc_max_depth` in Front Matter.
+    # Maximum heading depth of generated toc.
     max_depth: 6
 
   # A button to open designated chat widget in sidebar.
@@ -439,6 +440,8 @@ theme_config:
   tag_icon: true
 
   # Reward (Donate)
+  # Front-matter variable (unsupport animation).
+
   reward_settings:
     # If true, reward would be displayed in every article by default.
     # You can show or hide reward in a specific article throuth `reward: true | false` in Front-matter.
@@ -721,14 +724,13 @@ theme_config:
   pangu: false
 
   # Quicklink Support
-  # Dependencies: https://github.com/theme-next/theme-next-quicklink
   # For more information: https://github.com/GoogleChromeLabs/quicklink
+  # Front-matter variable (unsupport animation).
+
   quicklink:
     enable: false
-
-    # Quicklink (quicklink.umd.js script) is loaded on demand.
-    # Add `quicklink: true` in Front-matter of the page or post you need.
     # Home page and archive page can be controlled through home and archive options below.
+    # This configuration item is independent of `enable`.
     home: true
     archive: true
 
