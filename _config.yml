@@ -332,9 +332,7 @@ theme_config:
 
   # Sidebar Avatar
   avatar:
-    # in theme directory(source/images): /images/avatar.gif
-    # in site  directory(source/uploads): /uploads/avatar.gif
-    # You can also use other linking images.
+  # Replace the default image and set the url here.
     url: https://blog-1253491707.piccd.myqcloud.com/avatar1.jpg/none #/images/avatar.gif
     # If true, the avatar would be dispalyed in circle.
     rounded: true
@@ -347,8 +345,8 @@ theme_config:
   # Social Links.
   # Usage: `Key: permalink || icon`
   # Key is the link label showing to end users.
-  # Value before `||` delimeter is the target permalink.
-  # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
+  # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
+
   social:
     GitHub: https://github.com/MoonBegonia || github
     #E-Mail: mailto:yourname@gmail.com || envelope
@@ -404,9 +402,6 @@ theme_config:
   # See: https://theme-next.org/docs/theme-settings/posts
   # ---------------------------------------------------------------
 
-  # Automatically scroll page to section which is under <!-- more --> mark.
-  scroll_to_more: false
-
   # Automatically excerpt description in homepage as preamble text.
   excerpt_description: true
 
@@ -442,12 +437,6 @@ theme_config:
 
   # Use icon instead of the symblo # to indicate the tag at the bottom of the post
   tag_icon: true
-
-  # Wechat Subscriber
-  wechat_subscriber:
-    enable: false
-    qcode: #/uploads/wechat-qcode.jpg
-    #description: Subscribe to my blog by scanning my public wechat account.
 
   # Reward (Donate)
   reward_settings:
@@ -492,7 +481,7 @@ theme_config:
 
   # TagCloud settings for tags page.
   tagcloud:
-    # All values below are same as default, change them by yourself
+    # All values below are same as default, change them by yourself.
     min: 12 # Minimun font size in px
     max: 30 # Maxium font size in px
     start: "#ccc" # Start color (hex, rgba, hsla or color keywords)
@@ -501,9 +490,6 @@ theme_config:
 
   # Google Calendar
   # Share your recent schedule to others via calendar page.
-  # API Documentation: https://developers.google.com/google-apps/calendar/v3/reference/events/list
-  # To get api_key: https://console.developers.google.com
-  # Create & manage a public Google calendar: https://support.google.com/calendar/answer/37083
   calendar:
     enable: false
     calendar_id: <required> # Your Google account E-Mail
@@ -533,9 +519,6 @@ theme_config:
 
   # Hide sticky headers and color the menu bar on Safari (iOS / macOS).
   safari_rainbow: false
-
-  # Optimize the display of scrollbars on webkit based browsers.
-  custom_scrollbar: false
 
   # Custom Logo (Do not support scheme Mist)
   custom_logo: #/uploads/custom-logo.jpg
@@ -692,8 +675,6 @@ theme_config:
 
   # Math Formulas Render Support
   math:
-    enable: false
-
     # Default (true) will load mathjax / katex script on demand.
     # That is it only render those page which has `mathjax: true` in Front-matter.
     # If you set it to false, it will load mathjax / katex srcipt EVERY PAGE.
@@ -792,32 +773,6 @@ theme_config:
   # See: https://theme-next.org/docs/third-party-services/post-widgets
   # ---------------------------------------------------------------
 
-  # Facebook SDK Support
-  facebook_sdk:
-    enable: false
-    app_id: # <app_id>
-    fb_admin: # <user_id>
-    like_button: # true
-    webmaster: # true
-
-  # Facebook comments plugin
-  # This plugin depends on Facebook SDK.
-  # If facebook_sdk.enable is false, Facebook comments plugin is unavailable.
-  facebook_comments_plugin:
-    enable: false
-    num_of_posts: 10 # Minimum posts num is 1
-    width: 100% # Default width is 550px
-    scheme: light # Default scheme is light (light or dark)
-
-  # VKontakte API Support
-  # To get your AppID visit https://vk.com/editapp?act=create
-  vkontakte_api:
-    enable: false
-    app_id: # <app_id>
-    like: true
-    comments: true
-    num_of_posts: 10
-
   # Star rating support to each article.
   # To get your ID visit https://widgetpack.com
   rating:
@@ -834,13 +789,6 @@ theme_config:
   # See: https://theme-next.org/docs/third-party-services/statistics-and-analytics
   # ---------------------------------------------------------------
 
-  # Baidu Analytics
-  baidu_analytics: # <app_id>
-
-  # Growingio Analytics
-  # Copyright 2015-2018 GrowingIO, Inc. More info available at https://www.growingio.com
-  growingio_analytics: # <project_id>
-
   # Google Analytics
   google_analytics:
     tracking_id: # <app_id>
@@ -849,12 +797,14 @@ theme_config:
     # If you only need the pageview feature, set the following option to true to get a better performance.
     only_pageview: false
 
+  # Baidu Analytics
+  baidu_analytics: # <app_id>
+
+  # Growingio Analytics
+  growingio_analytics: # <project_id>
+
   # CNZZ count
   cnzz_siteid:
-
-  # Application Insights
-  # See: https://azure.microsoft.com/en-us/services/application-insights
-  application_insights:
 
   # Show number of visitors to each article.
   # You can visit https://leancloud.cn to get AppID and AppKey.
