@@ -3,12 +3,11 @@ title: Hello Netlify
 categories: 博客搭建
 tags: [Netlify, 博客搭建, GitHub]
 keywords: [Netlify, 博客搭建]
-# photos: https://blog-1253491707.piccd.myqcloud.com/imgs/20190604124713.png/none
 ---
 
-<!-- more -->
-
 本来博客一直是部署在 GitHub Pages 的，但是经常抽风，前两天偶然知道 Netlify 同样可以部署静态页面、持续集成、CDN，而且速度比 github 要快。在网上搜索了一下评价不错，便决定尝试一下。网上对 Netlify 的介绍很多，这里就不再赘述，和 GitHub Pages 的对比可以在 [这里](https://www.netlify.com/github-pages-vs-netlify/) 查看。还有一个原因就是不知道为啥 GitHub 屏蔽了百度的爬虫，所以就不能被百度索引（害得我折腾了很久，至于为什么屏蔽，咱也不敢问）。
+
+<!-- more -->
 
 {% note info %}
 
