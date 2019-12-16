@@ -1,5 +1,5 @@
 ---
-title: 修复 CI 构建博客造成的错误更新时间
+title: 修复 CI 构建博客造成的更新时间错误
 categories: 博客搭建
 tags: 博客搭建
 keywords: [netlify, hexo, next]
