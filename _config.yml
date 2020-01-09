@@ -716,7 +716,7 @@ theme_config:
     # Leave api empty if you are able to connect to Disqus API. Otherwise you need a reverse proxy for it.
     # For example:
     # api: https://disqus.skk.moe/disqus/
-    api: https://qisqus.moonbegonia.workers.dev/api/
+    api: https://disqusjs-proxy.moonbegonia.now.sh/
     apikey: 09QHJrC2OLCrKTdbscYYZFi5UK36FsySx9hlR446EEa1CnPqRo7i4bNbcbTAORdd # Register new application from https://disqus.com/api/applications/
     shortname: moonbegonia-xyz # See: https://disqus.com/admin/settings/general/
 
