@@ -251,7 +251,7 @@ theme_config:
   menu:
     home: / || home
     #about: /about/ || user
-    categories: /categories/ || th
+    #categories: /categories/ || th
     tags: /tags/ || tags
     archives: /archives/ || archive
     #schedule: /schedule/ || calendar
@@ -379,7 +379,7 @@ theme_config:
     updated_at:
       enable: true
       another_day: true
-    categories: true
+    categories: false
 
   #字数统计及阅读时长
   # Post wordcount display settings
