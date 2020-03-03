@@ -1019,7 +1019,6 @@ theme_config:
     pace:
     pace_css:
 
-
   # Assets
   css: css
   js: js
