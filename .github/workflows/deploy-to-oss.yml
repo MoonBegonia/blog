@@ -42,8 +42,8 @@ jobs:
         access-key-id: "${{ secrets.OSS_KEY_ID }}"
         access-key-secret: "${{ secrets.OSS_KEY_SECRET }}"
 
-#    - name: clean bucket
-#      run: ossutil rm oss://mb-blog/ -rf
+    - name: clean bucket
+      run: ossutil rm oss://mb-blog/ -rf
 
     - name: deploy to oss
       run: ossutil cp public/ oss://mb-blog/ -rf
