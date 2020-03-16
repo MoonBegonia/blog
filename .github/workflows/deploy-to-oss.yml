@@ -25,15 +25,6 @@ jobs:
     - uses: actions/setup-node@v1
       with: 
         node-version: "12.x"
-
-    - name: install dependencies
-      run: |
-        npm install yarn -g
-        export PATH="$PATH:`yarn global bin`"
-        yarn global add hexo-cli
-        yarn
-        hexo clean
-        hexo g
         
     - name: fix wrong update time with ci
       run: |
@@ -44,7 +35,11 @@ jobs:
 
     - name: hexo generate
       run: |
-        hexo cl
+        npm install yarn -g
+        export PATH="$PATH:`yarn global bin`"
+        yarn global add hexo-cli
+        yarn
+        hexo clean
         hexo g
 
     - name: setup oss util
