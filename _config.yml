@@ -175,8 +175,8 @@ theme_config:
 
   # 网站图标
   favicon:
-    small: https://blog-1253491707.cos.ap-chengdu.myqcloud.com/favicon.ico
-    medium: https://blog-1253491707.cos.ap-chengdu.myqcloud.com/favicon.ico
+    small: https://image-1253491707.file.myqcloud.com/favicon.ico
+    medium: https://image-1253491707.file.myqcloud.com/favicon.ico
     apple_touch_icon:
     safari_pinned_tab:
     #android_manifest: /images/manifest.json
@@ -298,7 +298,7 @@ theme_config:
   # Sidebar Avatar
   avatar:
   # Replace the default image and set the url here.
-    url: https://blog-1253491707.piccd.myqcloud.com/avatar1.jpg/none #/images/avatar.gif
+    url: https://image-1253491707.file.myqcloud.com/avatar1.jpg/webp #/images/avatar.gif
     # If true, the avatar will be dispalyed in circle.
     rounded: true
     # If true, the avatar will be rotated with the cursor.
@@ -409,7 +409,7 @@ theme_config:
     #comment: Donate comment here.
 
   reward:
-    wechatpay: https://blog-1253491707.piccd.myqcloud.com/reward-wechat.jpg/none
+    wechatpay: https://image-1253491707.file.myqcloud.com/reward-wechat.jpg/webp
     #alipay: /images/alipay.png
     #paypal: /images/paypal.png
     #bitcoin: /images/bitcoin.png

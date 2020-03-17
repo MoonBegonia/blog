@@ -101,7 +101,7 @@ wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbol
 xset q
 ```
 
-![xset q](https://blog-1253491707.piccd.myqcloud.com/imgs/20181120130005.png/style)
+![xset q](https://image-1253491707.file.myqcloud.com/20181120130005.png/webp)
 
 将符号字体移动到有效的 X 字体路径。
 

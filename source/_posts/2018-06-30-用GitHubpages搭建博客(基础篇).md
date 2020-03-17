@@ -16,20 +16,20 @@ keywords: [博客,github pages]
 
 注册之后的第一步就是新建一个代码仓库啦。
 
-![创建代码仓库](https://blog-1253491707.piccd.myqcloud.com/images/gitpageblog1.png/style)
+![创建代码仓库](https://image-1253491707.file.myqcloud.com/gitpageblog1.png/webp)
 
 然后就会跳转到这个界面，在这里我们要用到 git 把本地仓库跟远程仓库关联起来，关于 git 的使用在这里就不多多说了，可以去看看 [廖雪峰的博客](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)。
 
-![创建成功界面](https://blog-1253491707.piccd.myqcloud.com/images/gitpageblog2.png/style)
+![创建成功界面](https://image-1253491707.file.myqcloud.com/gitpageblog2.png/webp)
 
 然后进入设置 (settings)，下滑找到 GitHub pages，随便选择一个主题，保存之后就可以通过给出的那个网址访问我们的博客啦。
 
-![github pages](https://blog-1253491707.piccd.myqcloud.com/images/gitpageblog3.png/style)
+![github pages](https://image-1253491707.file.myqcloud.com/gitpageblog3.png/webp)
 
-![github pages](https://blog-1253491707.piccd.myqcloud.com/images/gitpageblog4.png/style)
+![github pages](https://image-1253491707.file.myqcloud.com/gitpageblog4.png/webp)
 
 虽然我们的博客已经搭建好了，但是大家可能会说啦，这个这么简陋，根本就不是我心中想搭建的那种博客嘛，那是因为我用了其他人做好的主题，GitHub 上有很多做好的 Jekyll 静态博客的主题，下载下来修改一下上传到我们自己的仓库就好啦。下载压缩包或者用 git 是一样的。一般在主题的 README.md 都有对主题的使用说明。
 
-![jekyll 主题](https://blog-1253491707.piccd.myqcloud.com/images/gitpageblog5.png/style)
+![jekyll 主题](https://image-1253491707.file.myqcloud.com/gitpageblog5.png/webp)
 
 现在我们的博客就算是搭建好啦，接下来专注于写博客就好了，我是用 markdown 来写的， 写好就帮我们自动解析成网页了。在这里不得不说一句，用 markdown 写作真的挺舒服的。

@@ -28,11 +28,11 @@ keywords: [Netlify, 博客搭建]
 
 点击 New site from Git
 
-![点击 New site from Git](https://blog-1253491707.piccd.myqcloud.com/imgs/20190604211358.png/style)
+![点击 New site from Git](https://image-1253491707.file.myqcloud.com/imgs/20190604211358.png/webp)
 
 选择站点托管在什么程序，这里选择 GitHub
 
-![选择站点托管在什么程序，这里选择 GitHub](https://blog-1253491707.piccd.myqcloud.com/imgs/20190604211656.png/style)
+![选择站点托管在什么程序，这里选择 GitHub](https://image-1253491707.file.myqcloud.com/imgs/20190604211656.png/webp)
 
 然后弹出授权页面，建议选择第二个选项也就是选择能查看什么 repo，如果以后想要更改可以去 GitHub 的设置中 [更改](https://github.com/settings/installations)。（因为我已经授权过了，所以没有截图）
 
@@ -45,20 +45,20 @@ keywords: [Netlify, 博客搭建]
 <!-- tab source 文件夹 -->
 Netlify 会自动检测 repo 配置，如果检测到 hexo 就只需要改一下 build command。推荐使用这种方式。
 
-![Create a new site](https://blog-1253491707.piccd.myqcloud.com/imgs/20190605094005.png/style)
+![Create a new site](https://image-1253491707.file.myqcloud.com/imgs/20190605094005.png/webp)
 <!-- endtab -->
 
 <!-- tab 多分支 -->
 以前我们使用`hexo-deployer-git`工具将博客部署到 GitHub 上，部署到 Netlify 同样选择以前部署的分支，在本地运行`hexo d`部署到 git 后 Netlify 会自动部署。
 选择分支名字不要在意，我这里是`master`分支，只要是以前 GitHub Pages 的分支就对了。
 
-![Create a new site](https://blog-1253491707.piccd.myqcloud.com/imgs/20190604213002.png/style)
+![Create a new site](https://image-1253491707.file.myqcloud.com/imgs/20190604213002.png/webp)
 <!-- endtab -->
 
 <!-- tab public 文件夹 -->
 这种方式只是在本地部署到 `repo/public` 文件夹下然后 push，部署时选择这个文件夹就可以了。（这种方式不推荐）
 
-![Create a new site](https://blog-1253491707.piccd.myqcloud.com/imgs/20190605100120.png/style)
+![Create a new site](https://image-1253491707.file.myqcloud.com/imgs/20190605100120.png/webp)
 <!-- endtab -->
 
 {% endtabs %}
@@ -68,7 +68,7 @@ Netlify 提供了`netlify.toml`来定义如何构建和部署站点，上面的�
 {% note success %}
 过一会儿就部署成功啦，如果有错误也会提醒的，对着改改就好啦。
 
-![deployed](https://blog-1253491707.piccd.myqcloud.com/imgs/20190605101030.png/style)
+![deployed](https://image-1253491707.file.myqcloud.com/imgs/20190605101030.png/webp)
 {% endnote %}
 
 ## 修改前缀
@@ -81,7 +81,7 @@ Netlify 默认是给一个随机的二级域名，如果想自定义的话可以
 
 点击自定义域名然后填写域名就好啦。
 
-![填写域名](https://blog-1253491707.piccd.myqcloud.com/imgs/20190605101528.png/style)
+![填写域名](https://image-1253491707.file.myqcloud.com/imgs/20190605101528.png/webp)
 
 ### 解析
 
@@ -103,7 +103,7 @@ www CNAME xxxx.netlify.com
 {% note success %}
 等待一会儿刷新没有 Check DNS configuration 就说明成功啦
 
-![success](https://blog-1253491707.piccd.myqcloud.com/imgs/20190605131827.png/style)
+![success](https://image-1253491707.file.myqcloud.com/imgs/20190605131827.png/webp)
 {% endnote %}
 
 ### 证书
@@ -112,7 +112,7 @@ www CNAME xxxx.netlify.com
 
 ### 重定向
 
-![redirects](https://blog-1253491707.piccd.myqcloud.com/imgs/20190605144519.png/style)
+![redirects](https://image-1253491707.file.myqcloud.com/imgs/20190605144519.png/webp)
 
 虽然官方在域名管理中给出了域名重定向的教程，但是我实测是没有用的。按照官方教程将`_redirects`文件放到 hexo 分支`source/`文件夹下发现并不会自动生成到`public/`文件夹下，在`_config.yml`中设置`skip_render`也没有用，官方只提到使用 jekyll 需要注意额外设置以避免跳过`_`开头的文件。既然如此，就使用`netlify.toml`好了，用 toml 还强大一点。`ntlify.toml`详细教程可以去 [官网](https://www.netlify.com/docs/netlify-toml-reference/) 查看。重定向实现过程如下：
 

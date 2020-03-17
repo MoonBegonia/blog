@@ -20,39 +20,39 @@ keywords: [博客,github pages]
 
 进入官网后选择右上方的注册账户
 
-![注册账户](https://blog-1253491707.piccd.myqcloud.com/images/gitpageblog10.png/style)
+![注册账户](https://image-1253491707.file.myqcloud.com/gitpageblog10.png/webp)
 
 然后根据提示新建一个账户，新建好之后就可以到主页搜索我们想要的域名
 
-![搜索域名](https://blog-1253491707.piccd.myqcloud.com/images/gitpagesblog11.png/style)
+![搜索域名](https://image-1253491707.file.myqcloud.com/gitpagesblog11.png/webp)
 
 然后勾选自己想要的域名，再点击下方的蓝色按钮 ‘注册选中的域名’
 
-![注册域名](https://blog-1253491707.piccd.myqcloud.com/images/gjitpagesblog12.png/style)
+![注册域名](https://image-1253491707.file.myqcloud.com/gjitpagesblog12.png/webp)
 
 进入域名的配置界面，按着图片配置就好，然后跳转到付费界面
 
-![配置域名](https://blog-1253491707.piccd.myqcloud.com/images/gitpagesblog13.png/style)
+![配置域名](https://image-1253491707.file.myqcloud.com/gitpagesblog13.png/webp)
 
 付费有其他的可以自行选择，这里我们选择支付宝，然后输入支付宝绑定的邮箱，点击 GO 支付
 
-![支付](https://blog-1253491707.piccd.myqcloud.com/images/gitpagesblog14.png/style)
+![支付](https://image-1253491707.file.myqcloud.com/gitpagesblog14.png/webp)
 
 付费完毕后，点击右上方的我的账户 (My Account), 然后点击 domain manager 进入域名管理
 
-![域名管理](https://blog-1253491707.piccd.myqcloud.com/images/gitpagesblog15.png/style)
+![域名管理](https://image-1253491707.file.myqcloud.com/gitpagesblog15.png/webp)
 
 然后进入 DNS 管理
 
-![DNS 管理](https://blog-1253491707.piccd.myqcloud.com/images/gjitpagesblog15.png/style)
+![DNS 管理](https://image-1253491707.file.myqcloud.com/gjitpagesblog15.png/webp)
 
 将域名的 DNS 解析到博客以前的地址，也就是 GitHub 预留的域名
 
-![解析域名](https://blog-1253491707.piccd.myqcloud.com/images/gitpagesblog16.png/style)
+![解析域名](https://image-1253491707.file.myqcloud.com/gitpagesblog16.png/webp)
 
 这边设置好之后还需要在 GitHub 设置一下，进入存放博客的仓库，进入设置界面
 
-![github 设置](https://blog-1253491707.piccd.myqcloud.com/images/gitpagesblog17.png/style)
+![github 设置](https://image-1253491707.file.myqcloud.com/gitpagesblog17.png/webp)
 
 现在两边都设置好啦，就等着生效，等一会儿就好啦
 
@@ -64,19 +64,19 @@ keywords: [博客,github pages]
 
 为啥选择万象优图呢，一个是早就有腾讯云的账号了，再就是万象优图每个月提供的免费套餐挺不错的。
 
-![万象优图介绍](https://blog-1253491707.piccd.myqcloud.com/images/wxyt.png/style)
+![万象优图介绍](https://image-1253491707.file.myqcloud.com/wxyt.png/webp)
 
 首先找到万象优图，点击进入
 
-![进入万象优图](https://blog-1253491707.piccd.myqcloud.com/images/wxyt1.png/style)
+![进入万象优图](https://image-1253491707.file.myqcloud.com/wxyt1.png/webp)
 
 然后然后点击左侧的 Bucket 管理，新建，保存
 
-![bucket 管理](https://blog-1253491707.piccd.myqcloud.com/images/wxyt2.png/style)
+![bucket 管理](https://image-1253491707.file.myqcloud.com/wxyt2.png/webp)
 
 点击进入 bucket，点击域名管理开启防盗链设置
 
-![防盗链设置](https://blog-1253491707.piccd.myqcloud.com/images/wxyt3.png/style)
+![防盗链设置](https://image-1253491707.file.myqcloud.com/wxyt3.png/webp)
 
 还可以在样式设置中设置图片水印，bucket 配置中还有原图保护，这些东西就按需使用，不多做说明。
 
@@ -84,11 +84,11 @@ keywords: [博客,github pages]
 
 PicGo 是一款十分好用的图床工具，支持的图床很丰富
 
-![PicGo](https://blog-1253491707.piccd.myqcloud.com/images/picgo1.png/style)
+![PicGo](https://image-1253491707.file.myqcloud.com/picgo1.png/webp)
 
 不仅可以批量上传文件还可以剪切板上传图片，跳过了截图后保存的步骤，可谓是十分方便。
 
-![PicGo 主界面介绍](https://blog-1253491707.piccd.myqcloud.com/images/picgo2.png/style)
+![PicGo 主界面介绍](https://image-1253491707.file.myqcloud.com/picgo2.png/webp)
 
 不仅如此，PicGo 还支持一键复制设置好的链接，可以自定义格式，免去了打很多代码，还可以搭配万象优图的样式生成水印。更多的信息可以去 [官网](https://molunerfinn.com/PicGo/) 查看，此软件还在 [GitHub](https://github.com/Molunerfinn/picgo) 上开源。
 

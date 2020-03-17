@@ -21,11 +21,11 @@ keywords: [hadoop, linux安装]
 
 首先要开启 WSL 框架组件
 
-![开启 WSL](https://blog-1253491707.piccd.myqcloud.com/images/20181009193626.png/style)
+![开启 WSL](https://image-1253491707.file.myqcloud.com/20181009193626.png/webp)
 
 重启后打开 Microsoft store 搜索 Linux ，会发现有许多的 Linux 系统可供选择，在这里我选择 Ubuntu 安装
 
-![linux](https://blog-1253491707.piccd.myqcloud.com/images/20181009194708.png/style)
+![linux](https://image-1253491707.file.myqcloud.com/20181009194708.png/webp)
 
 安装之后就可以启动 Ubuntu 了，打开之后会进行初始化，等一会儿就好了。初始化之后会提示新建账户，用户名不与 Windows 用户名互通。密码输入是非明文的，不会显示*号，不要以为是键盘坏了。..（当然此时是可以直接关掉重开的，重开时会默认以 root 账户登录）
 
