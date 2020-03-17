@@ -58,7 +58,7 @@ jobs:
         run: |
           curl -X POST \
           -H 'Content-Type: application/json' \
-          -d '{"chat_id": ${{ secrets.TG_CHAT_ID }}, "parse_mode": Markdown, "text": "${{ github.event_name }} ${{ github.ref }} deploy to oss succeed!"}' \
+          -d '{"chat_id": ${{ secrets.TG_CHAT_ID }}, "parse_mode": "Markdown", "text": "${{ github.event_name }} ${{ github.ref }} deploy to oss succeed!"}' \
           https://api.telegram.org/bot${{ secrets.TG_BOT_TOKEN }}/sendMessage
 
       - name: failure notification
@@ -66,5 +66,5 @@ jobs:
         run: |
           curl -X POST \
           -H 'Content-Type: application/json' \
-          -d '{"chat_id": ${{ secrets.TG_CHAT_ID }}, "parse_mode": Markdown, "text": "${{ github.event_name }} ${{ github.ref }} deploy to oss failure!"}' \
+          -d '{"chat_id": ${{ secrets.TG_CHAT_ID }}, "parse_mode": "Markdown", "text": "${{ github.event_name }} ${{ github.ref }} deploy to oss failure!"}' \
           https://api.telegram.org/bot${{ secrets.TG_BOT_TOKEN }}/sendMessage
