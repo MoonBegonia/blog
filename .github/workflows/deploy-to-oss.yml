@@ -60,3 +60,4 @@ jobs:
           botToken: ${{ secrets.TG_BOT_TOKEN }}
           chatId: ${{ secrets.TG_CHAT_ID }}
           jobStatus: ${{ job.status }}
+          skipSuccess: false
