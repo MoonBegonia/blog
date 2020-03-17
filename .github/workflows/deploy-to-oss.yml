@@ -1,12 +1,10 @@
-# This is a basic workflow to help you get started with Actions
-
 name: deploy to oss
 
-# Controls when the action will run. Triggers the workflow on push or pull request 
-# events but only for the master branch
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the hexo branch (change to your hexo blog branch)
 on:
   push:
-    branches: [ hexo ]
+    branches: [hexo]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -17,40 +15,56 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v1
-      with:
-        submodules: true
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v1
+        with:
+          submodules: true
 
-    - uses: actions/setup-node@v1
-      with: 
-        node-version: "12.x"
-        
-    - name: fix wrong update time with ci
-      run: |
-        git config core.quotepath false
-        git ls-files | while read file
-        do touch -d "$(git log -1 --format="@%ct" "$file")" "$file"
-        done
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
 
-    - name: hexo generate
-      run: |
-        npm install yarn -g
-        export PATH="$PATH:`yarn global bin`"
-        yarn global add hexo-cli
-        yarn
-        hexo clean
-        hexo g
+      - name: fix wrong update time with ci
+        run: |
+          git config core.quotepath false
+          git ls-files | while read file
+          do touch -d "$(git log -1 --format="@%ct" "$file")" "$file"
+          done
 
-    - name: setup oss util
-      uses: manyuanrong/setup-ossutil@v1.0
-      with:
-        endpoint: "oss-cn-hongkong.aliyuncs.com"
-        access-key-id: "${{ secrets.OSS_KEY_ID }}"
-        access-key-secret: "${{ secrets.OSS_KEY_SECRET }}"
+      - name: hexo generate
+        run: |
+          npm install yarn -g
+          export PATH="$PATH:`yarn global bin`"
+          yarn global add hexo-cli
+          yarn
+          hexo clean
+          hexo g
 
-    - name: clean bucket
-      run: ossutil rm oss://mb-blog/ -rf
+      - name: setup oss util
+        uses: manyuanrong/setup-ossutil@v1.0
+        with:
+          endpoint: 'oss-cn-hongkong.aliyuncs.com'
+          access-key-id: '${{ secrets.OSS_KEY_ID }}'
+          access-key-secret: '${{ secrets.OSS_KEY_SECRET }}'
 
-    - name: deploy to oss
-      run: ossutil cp public/ oss://mb-blog/ -rf
+      - name: clean bucket
+        run: ossutil rm oss://mb-blog/ -rf
+
+      - name: deploy to oss
+        run: ossutil cp public/ oss://mb-blog/ -rf
+
+      - name: success notification
+        if: success()
+        run: |
+          curl -X POST \
+          -H 'Content-Type: application/json' \
+          -d '{"chat_id": ${{ secrets.TG_CHAT_ID }}, "parse_mode": Markdown, "text": "${{ github.event_name }} ${{ github.ref }} deploy to oss succeed!"}' \
+          https://api.telegram.org/bot${{ secrets.TG_BOT_TOKEN }}/sendMessage
+
+      - name: failure notification
+        if: failure()
+        run: |
+          curl -X POST \
+          -H 'Content-Type: application/json' \
+          -d '{"chat_id": ${{ secrets.TG_CHAT_ID }}, "parse_mode": Markdown, "text": "${{ github.event_name }} ${{ github.ref }} deploy to oss failure!"}' \
+          https://api.telegram.org/bot${{ secrets.TG_BOT_TOKEN }}/sendMessage
