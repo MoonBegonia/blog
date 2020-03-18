@@ -23,3 +23,9 @@ keywords: [netlify, hexo, next]
 ``` bash
 git config core.quotepath false; git ls-files | while read file; do touch -d "$(git log -1 --format="@%ct" "$file")" "$file"; done; hexo cl; hexo g;
 ```
+
+最近将 blog 从 netlify 迁移到 阿里云 OSS 时发现那时候走入误区了，`git ls-files` 不好用我为啥不用 `find` 呢，遂改为下面这样，不用设置 `git config` 了。
+
+``` bash
+find source/_posts -name '*.md' | while read file; do touch -d "$(git log -1 --format="@%ct" "$file")" "$file"; done
+```
