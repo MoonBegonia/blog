@@ -489,9 +489,6 @@ theme_config:
   # Android Chrome header panel color ($brand-bg / $headband-bg => $black-deep).
   android_chrome_color: "#222"
 
-  # Hide sticky headers and color the menu bar on Safari (iOS / macOS).
-  safari_rainbow: false
-
   # Custom Logo (Do not support scheme Mist)
   custom_logo: #/uploads/custom-logo.jpg
 
@@ -601,11 +598,6 @@ theme_config:
 
   # Disable Baidu transformation on mobile devices.
   disable_baidu_transformation: true
-
-  # Set a canonical link tag for your Hexo site.
-  # See: https://support.google.com/webmasters/answer/139066
-  # Remember to set up your URL in Hexo `_config.yml` (e.g. url: http://yoursite.com)
-  canonical: true
 
   # Change headers hierarchy on site-subtitle (will be main site description) and on all post / page titles for better SEO-optimization.
   seo: true
