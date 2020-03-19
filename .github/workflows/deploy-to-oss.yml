@@ -40,10 +40,10 @@ jobs:
           hexo clean
           hexo g
 
-      - name: deploy theme source to cos
+      - name: deploy css, js and images to cos
         uses: zkqiang/tencent-cos-action@master
         with:
-          args: upload -rs themes/next/source /next
+          args: upload -rs public/css /next/css && upload -rs public/images /next/images && upload -rs public/js /next/js
           secret_id: ${{ secrets.COS_KEY_ID }}
           secret_key: ${{ secrets.COS_KEY_SECERT }}
           bucket: ${{ secrets.COS_BUCKET }}
