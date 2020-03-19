@@ -43,7 +43,7 @@ jobs:
       - name: deploy theme source to cos
         uses: zkqiang/tencent-cos-action@master
         with:
-          args: upload -rs themes/source /next
+          args: upload -rs themes/next/source /next
           secret_id: ${{ secrets.COS_KEY_ID }}
           secret_key: ${{ secrets.COS_KEY_SECERT }}
           bucket: ${{ secrets.COS_BUCKET }}
