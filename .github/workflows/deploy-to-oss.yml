@@ -40,14 +40,35 @@ jobs:
           hexo clean
           hexo g
 
-      - name: deploy css, js and images to cos
-        uses: zkqiang/tencent-cos-action@master
+      - name: deploy public/css to cos
+        uses: TencentCloud/cos-action@v1
         with:
-          args: upload -rs public/css /next/css && upload -rs public/images /next/images && upload -rs public/js /next/js
           secret_id: ${{ secrets.COS_KEY_ID }}
           secret_key: ${{ secrets.COS_KEY_SECERT }}
-          bucket: ${{ secrets.COS_BUCKET }}
-          region: ${{ secrets.COS_REGION }}
+          cos_bucket: ${{ secrets.COS_BUCKET }}
+          cos_region: ${{ secrets.COS_REGION }}
+          local_path: public/css
+          remote_path: next/css
+
+      - name: deploy public/js to cos
+        uses: TencentCloud/cos-action@v1
+        with:
+          secret_id: ${{ secrets.COS_KEY_ID }}
+          secret_key: ${{ secrets.COS_KEY_SECERT }}
+          cos_bucket: ${{ secrets.COS_BUCKET }}
+          cos_region: ${{ secrets.COS_REGION }}
+          local_path: public/js
+          remote_path: next/js
+
+      - name: deploy public/images to cos
+        uses: TencentCloud/cos-action@v1
+        with:
+          secret_id: ${{ secrets.COS_KEY_ID }}
+          secret_key: ${{ secrets.COS_KEY_SECERT }}
+          cos_bucket: ${{ secrets.COS_BUCKET }}
+          cos_region: ${{ secrets.COS_REGION }}
+          local_path: public/images
+          remote_path: next/images
 
       - name: setup oss util
         uses: manyuanrong/setup-ossutil@v1.0
