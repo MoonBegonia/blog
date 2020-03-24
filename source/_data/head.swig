@@ -1,4 +1,11 @@
 <script>
+var targetProtocol = "https:";
+var host = "localhost";
+if (window.location.protocol !== targetProtocol && host !== "localhost") {
+  window.location.href = targetProtocol + window.location.href.substring(window.location.protocol.length);
+}
+</script>
+<script>
   window.ga_tid = "UA-119354100-3";
   window.ga_api = 'https://load.moonbegonia.workers.dev/';
   (function () {
