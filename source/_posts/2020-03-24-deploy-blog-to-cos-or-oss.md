@@ -222,6 +222,26 @@ jobs:
       ${{ runner.os }}-yarn-
 ```
 
+腾讯云 coscmd 是使用 pip 安装的，如果是使用的 COS 的话还可以缓存 pip 模块提高速度。添加的位置跟上面一样。
+
+```yaml deployment.yaml https://github.com/actions/cache/blob/master/examples.md#python---pip examples.md#python - pip
+- name: Get pip cache
+  id: pip-cache
+  run: |
+    python -c "from pip._internal.locations import USER_CACHE_DIR; print('::set-output name=dir::' + USER_CACHE_DIR)"
+
+- name: Get coscmd's requirements
+  run: wget https://raw.githubusercontent.com/tencentyun/coscmd/master/requirements.txt
+
+- name: Pip cache
+  uses: actions/cache@v1
+  with:
+    path: ${{ steps.pip-cache.outputs.dir }}
+    key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+    restore-keys: |
+      ${{ runner.os }}-pip-
+```
+
 <!-- endtab -->
 <!-- tab 发送部署通知到 TG -->
 想让部署通知发送到 TG 只需要在 actions 最后面添加以下内容即可（前提是添加过相关密钥）。**注意缩进！**
