@@ -1,4 +1,4 @@
-name: deploy to oss
+name: Deployment
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the hexo branch (change to your hexo blog branch)
@@ -21,10 +21,15 @@ jobs:
         with:
           submodules: true
 
-      - name: setup nodejs
+      - name: Setup nodejs
         uses: actions/setup-node@v1
         with:
           node-version: '12.x'
+
+      - name: Setup python
+        uses: actions/setup-python@v1
+        with:
+          python-version: '3.6'
 
       - name: Change post files modified time
         run: |
@@ -32,21 +37,19 @@ jobs:
           do touch -d "$(git log -1 --format="@%ct" "$file")" "$file"
           done
 
-      - name: hexo generate
+      - name: Install dependencies
         run: |
           npm install yarn -g
           export PATH="$PATH:`yarn global bin`"
           yarn global add hexo-cli
-          yarn
+          yarn install
+
+      - name: Generate site
+        run: |
           hexo clean
           hexo g
 
-      - name: setup python
-        uses: actions/setup-python@v1
-        with:
-          python-version: '3.6'
-
-      - name: setup coscmd
+      - name: Setup coscmd
         env:
           SECRET_ID: ${{ secrets.COS_KEY_ID }}
           SECRET_KEY: ${{ secrets.COS_KEY_SECERT }}
@@ -56,26 +59,26 @@ jobs:
           pip install coscmd
           coscmd config -a $SECRET_ID -s $SECRET_KEY -b $BUCKET -r $REGION -m 30
 
-      - name: deploy to cos
+      - name: Deploy to cos
         run: |
           coscmd upload -rs --delete public/css next/css
           coscmd upload -rs --delete public/js next/js
           coscmd upload -rs --delete public/images next/images
 
-      - name: setup oss util
+      - name: Setup oss util
         uses: manyuanrong/setup-ossutil@v1.0
         with:
           endpoint: '${{ secrets.OSS_ENDPOINT }}'
           access-key-id: '${{ secrets.OSS_KEY_ID }}'
           access-key-secret: '${{ secrets.OSS_KEY_SECRET }}'
 
-      - name: clean bucket
+      - name: Clean bucket
         run: ossutil rm oss://${{ secrets.OSS_BUCKET }}/ -rf
 
-      - name: deploy to oss
+      - name: Deploy to oss
         run: ossutil cp public/ oss://${{ secrets.OSS_BUCKET }}/ -rf
 
-      - name: notification
+      - name: Notification
         if: cancelled() == false
         uses: xinthink/action-telegram@v1.1
         with:
