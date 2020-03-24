@@ -21,7 +21,8 @@ jobs:
         with:
           submodules: true
 
-      - uses: actions/setup-node@v1
+      - name: setup nodejs
+        uses: actions/setup-node@v1
         with:
           node-version: '12.x'
 
@@ -40,35 +41,26 @@ jobs:
           hexo clean
           hexo g
 
-      - name: deploy public/css to cos
-        uses: TencentCloud/cos-action@v1
+      - name: setup python
+        uses: actions/setup-python@v1
         with:
-          secret_id: ${{ secrets.COS_KEY_ID }}
-          secret_key: ${{ secrets.COS_KEY_SECERT }}
-          cos_bucket: ${{ secrets.COS_BUCKET }}
-          cos_region: ${{ secrets.COS_REGION }}
-          local_path: public/css
-          remote_path: next/css
+          python-version: '3.6'
 
-      - name: deploy public/js to cos
-        uses: TencentCloud/cos-action@v1
-        with:
-          secret_id: ${{ secrets.COS_KEY_ID }}
-          secret_key: ${{ secrets.COS_KEY_SECERT }}
-          cos_bucket: ${{ secrets.COS_BUCKET }}
-          cos_region: ${{ secrets.COS_REGION }}
-          local_path: public/js
-          remote_path: next/js
+      - name: setup coscmd
+        env:
+          SECRET_ID: ${{ secrets.COS_KEY_ID }}
+          SECRET_KEY: ${{ secrets.COS_KEY_SECERT }}
+          BUCKET: ${{ secrets.COS_BUCKET }}
+          REGION: ${{ secrets.COS_REGION }}
+        run: |
+          pip install coscmd
+          coscmd config -a $SECRET_ID -s $SECRET_KEY -b $BUCKET -r $REGION -m 30
 
-      - name: deploy public/images to cos
-        uses: TencentCloud/cos-action@v1
-        with:
-          secret_id: ${{ secrets.COS_KEY_ID }}
-          secret_key: ${{ secrets.COS_KEY_SECERT }}
-          cos_bucket: ${{ secrets.COS_BUCKET }}
-          cos_region: ${{ secrets.COS_REGION }}
-          local_path: public/images
-          remote_path: next/images
+      - name: deploy to cos
+        run: |
+          coscmd upload -rs public/css next/css
+          coscmd upload -rs public/js next/js
+          coscmd upload -rs public/images next/images
 
       - name: setup oss util
         uses: manyuanrong/setup-ossutil@v1.0
