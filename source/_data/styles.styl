@@ -50,13 +50,12 @@ body {
   margin-top: 20px;
 }
 
-
 .post-body {
-    font-size: 1em;
+  font-size: 1em;
 }
 
 p {
-    margin: 0 0 10px 0;
+  margin: 0 0 10px 0;
 }
 
 .post-block {
@@ -83,8 +82,8 @@ p {
 .post-body .exturl {
   color: $custom-link-color;
   border-bottom: none;
-  // border-bottom: 1px solid $custom-link-color;
 
+  // border-bottom: 1px solid $custom-link-color;
   &:hover {
     color: $custom-link-hover-color;
     border-bottom: none;
@@ -95,6 +94,11 @@ p {
 /* footer */
 .footer {
   color: #fff;
+}
+
+/* code */
+.highlight-container figcaption {
+  background: #21252b;
 }
 
 code {
@@ -128,4 +132,23 @@ code {
 ::-moz-selection {
   background: rgba(0, 149, 255, 0.2);
   color: #555;
+}
+
+// 代码块滑动条
+.table-container {
+  scrollbar-width: thin;
+}
+
+.table-container::-webkit-scrollbar {
+  width: 0.5em;
+  height: 0.5em;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #666b7a;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: none;
 }
