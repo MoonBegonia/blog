@@ -563,6 +563,10 @@ theme_config:
   #   - CDNJS (cdnjs.cloudflare.com), provided by cloudflare
   # ---------------------------------------------------------------
 
+  # Easily enable fast Ajax navigation on your website.
+  # Dependencies: https://github.com/theme-next/theme-next-pjax
+  pjax: true
+
   # A JavaScript library for zooming images like Medium.
   # Do not enable both `fancybox` and `mediumzoom`.
   # Dependencies: https://github.com/theme-next/theme-next-mediumzoom
@@ -653,7 +657,7 @@ theme_config:
     #  - modern    bs-callout new (v2-v3) alert style.
     #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
     #  - disabled  disable all CSS styles import of note tag.
-    style: modern
+    style: simple
     icons: true
     # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
     # Offset also applied to label tag variables. This option can work with disabled note tag.
@@ -728,6 +732,10 @@ theme_config:
     # fontawesome: //cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css
     # fontawesome: //cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css
     fontawesome: https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css
+
+    # Internal version: 0.2.8
+    # pjax: //cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js
+    pjax: https://cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js
 
     # Medium-zoom
     # mediumzoom: //cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js
