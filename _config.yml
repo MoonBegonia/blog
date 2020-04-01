@@ -448,7 +448,7 @@ theme_config:
     # Code Highlight theme
     # Available values: normal | night | night eighties | night blue | night bright | solarized | solarized dark | galactic
     # See: https://github.com/chriskempson/tomorrow-theme
-    highlight_theme: normal
+    highlight_theme: night bright
     # Add copy button on codeblock
     copy_button:
       enable: true
@@ -764,3 +764,6 @@ theme_config:
   css: https://assets-1253491707.file.myqcloud.com/next/css
   js: https://assets-1253491707.file.myqcloud.com/next/js
   images: https://assets-1253491707.file.myqcloud.com/next/images
+  # css: /css
+  # js: /js
+  # images: /images
