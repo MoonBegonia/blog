@@ -300,6 +300,7 @@ theme_config:
     #Instagram: https://instagram.com/yourname || fab fa-instagram
     #Skype: skype:yourname?call|chat || fab fa-skype
     Telegram: https://t.me/MoonBegonia || fab fa-telegram
+    RSS: https://moonbegonia.xyz/atom.xml || fas fa-rss
 
   social_icons:
     enable: true
