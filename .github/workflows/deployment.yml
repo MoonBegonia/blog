@@ -84,9 +84,9 @@ jobs:
 
       - name: Deploy to cos
         run: |
-          coscmd upload -rs --delete public/css next/css
-          coscmd upload -rs --delete public/js next/js
-          coscmd upload -rs --delete public/images next/images
+          coscmd upload -rs --delete -f public/css next/css
+          coscmd upload -rs --delete -f public/js next/js
+          coscmd upload -rs --delete -f public/images next/images
 
       - name: Setup oss util
         uses: manyuanrong/setup-ossutil@v1.0
