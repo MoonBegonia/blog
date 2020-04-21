@@ -146,7 +146,7 @@ jobs:
           coscmd config -a $SECRET_ID -s $SECRET_KEY -b $BUCKET -r $REGION -m 30
 
       - name: Deploy to cos
-        run: coscmd upload -rs --delete public/ /
+        run: coscmd upload -rs --delete -f public/ /
 ```
 <!-- endtab -->
 <!-- tab 部署博客到 OSS-->
