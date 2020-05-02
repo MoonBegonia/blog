@@ -1,6 +1,6 @@
 <script>
 var targetProtocol = "https:";
-var host = "localhost";
+var host = window.location.hostname;
 if (window.location.protocol !== targetProtocol && host !== "localhost") {
   window.location.href = targetProtocol + window.location.href.substring(window.location.protocol.length);
 }
