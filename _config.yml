@@ -447,9 +447,10 @@ theme_config:
 
   codeblock:
     # Code Highlight theme
-    # Available values: normal | night | night eighties | night blue | night bright | solarized | solarized dark | galactic
-    # See: https://github.com/chriskempson/tomorrow-theme
-    highlight_theme: night bright
+    # See: https://github.com/highlightjs/highlight.js/tree/master/src/styles
+    theme:
+      light: atom-one-light
+      dark: atom-one-dark-reasonable
     # Add copy button on codeblock
     copy_button:
       enable: true
