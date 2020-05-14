@@ -468,9 +468,9 @@ vendors:
   velocity_ui: https://cdn.jsdelivr.net/npm/velocity-animate@1/velocity.ui.min.js
 
 # Assets
-# css: https://assets-1253491707.file.myqcloud.com/next/css
-# js: https://assets-1253491707.file.myqcloud.com/next/js
-# images: https://assets-1253491707.file.myqcloud.com/next/images
-css: /css
-js: /js
-images: /images
+css: https://assets-1253491707.file.myqcloud.com/next/css
+js: https://assets-1253491707.file.myqcloud.com/next/js
+images: https://assets-1253491707.file.myqcloud.com/next/images
+# css: /css
+# js: /js
+# images: /images
