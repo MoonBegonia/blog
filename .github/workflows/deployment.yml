@@ -62,15 +62,12 @@ jobs:
           done
 
       - name: Install dependencies
-        run: |
-          yarn global add hexo-cli
-          yarn install
+        run: yarn install
 
       - name: Generate site
         run: |
-          export PATH="$PATH:`yarn global bin`"
-          hexo clean
-          hexo g
+          yarn clean
+          yarn build
 
       - name: Setup coscmd
         env:
