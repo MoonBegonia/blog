@@ -1,7 +1,7 @@
 <script>
 var targetProtocol = "https:";
 var host = window.location.hostname;
-if (window.location.protocol !== targetProtocol && host !== "localhost") {
+if (window.location.protocol !== targetProtocol && !host.match(/^(localhost|127\.0\.0\.1)$/)) {
   window.location.href = targetProtocol + window.location.href.substring(window.location.protocol.length);
 }
 </script>
