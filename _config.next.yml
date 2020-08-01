@@ -47,7 +47,7 @@ footer:
     # If you want to animate the icon, set it to true.
     animated: true
     # Change the color of icon, using Hex Code.
-    color: "#ff0000"
+    color: '#ff0000'
 
   powered: true
 
@@ -101,7 +101,7 @@ menu_settings:
 
 # Sidebar Avatar
 avatar:
-# Replace the default image and set the url here.
+  # Replace the default image and set the url here.
   url: https://image-1253491707.file.myqcloud.com/avatar1.jpg/webp #/images/avatar.gif
   # If true, the avatar will be dispalyed in circle.
   rounded: true
@@ -201,11 +201,12 @@ codeblock:
   theme:
     light: atom-one-light
     dark: atom-one-dark-reasonable
+  prism:
+    light: prism
+    dark: prism-dark
   # Add copy button on codeblock
   copy_button:
     enable: true
-    # Show text copy result
-    show_result: true
     # Available values: default | flat | mac
     style: mac
 
@@ -221,7 +222,7 @@ reading_progress:
   enable: true
   # Available values: top | bottom
   position: top
-  color: "#37c6c0"
+  color: '#37c6c0'
   height: 3px
 
 # ---------------------------------------------------------------
@@ -310,7 +311,7 @@ baidu_push: false
 
 # Easily enable fast Ajax navigation on your website.
 # Dependencies: https://github.com/next-theme/pjax
-pjax: true
+pjax: false
 
 # A JavaScript library for zooming images like Medium.
 # Do not enable both `fancybox` and `mediumzoom`.
@@ -397,25 +398,19 @@ local_search:
 # Animation Settings
 # ---------------------------------------------------------------
 
-# Use velocity to animate everything.
-# For more information: http://velocityjs.org
+# Use Animate.css to animate everything.
+# For more information: https://animate.style
 motion:
   enable: true
   async: false
   transition:
-    # Transition variants:
-    # fadeIn | flipXIn | flipYIn | flipBounceXIn | flipBounceYIn
-    # swoopIn | whirlIn | shrinkIn | expandIn
-    # bounceIn | bounceUpIn | bounceDownIn | bounceLeftIn | bounceRightIn
-    # slideUpIn | slideDownIn | slideLeftIn | slideRightIn
-    # slideUpBigIn | slideDownBigIn | slideLeftBigIn | slideRightBigIn
-    # perspectiveUpIn | perspectiveDownIn | perspectiveLeftIn | perspectiveRightIn
+    # All available transition variants: https://theme-next.js.org/animate/
     post_block: fadeIn
-    post_header: slideDownIn
-    post_body: slideDownIn
-    coll_header: slideLeftIn
+    post_header: fadeInDown
+    post_body: fadeInDown
+    coll_header: fadeInLeft
     # Only for Pisces | Gemini.
-    sidebar: slideUpIn
+    sidebar: fadeInUp
 
 #! ---------------------------------------------------------------
 #! DO NOT EDIT THE FOLLOWING SETTINGS
@@ -424,50 +419,10 @@ motion:
 #! ---------------------------------------------------------------
 
 # Script Vendors. Set a CDN address for the vendor you want to customize.
-# Be aware that you would better use the same version as internal ones to avoid potential problems.
+# CDN URLs from UNPKG and CDNJS are provided in the comments for selection.
+# If left blank, jsDelivr will be used as the default CDN provider.
+# It's recommended to use the same version as internal ones to avoid potential problems.
 # Remember to use the https protocol of CDN files when you enable https on your site.
-
 vendors:
-  # Internal path prefix.
-  _internal: lib
-
-  # Internal version: 3.1.0
-  # anime: //cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js
-  anime: https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js
-
-  # Internal version: 5.13.0
-  # fontawesome: //cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css
-  # fontawesome: //cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css
-  fontawesome: https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css
-
-  # Internal version: 0.2.8
-  # pjax: //cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js
-  pjax: https://cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js
-
-  # Medium-zoom
-  # mediumzoom: //cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js
-  mediumzoom: https://cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js
-
-  # Lazyload
-  # lazyload: //cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js
-  # lazyload: //cdnjs.cloudflare.com/ajax/libs/lozad.js/1.9.0/lozad.min.js
-  lazyload: https://cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js
-
-  # DisqusJS
-  # disqusjs_js: //cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js
-  # disqusjs_css: //cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css
-  disqusjs_js: https://cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js
-  disqusjs_css: https://cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css
-
-  # Internal version: 1.2.1
-  # velocity: //cdn.jsdelivr.net/npm/velocity-animate@1/velocity.min.js
-  # velocity: //cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.min.js
-  # velocity_ui: //cdn.jsdelivr.net/npm/velocity-animate@1/velocity.ui.min.js
-  # velocity_ui: //cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.ui.min.js
-  velocity: https://cdn.jsdelivr.net/npm/velocity-animate@1/velocity.min.js
-  velocity_ui: https://cdn.jsdelivr.net/npm/velocity-animate@1/velocity.ui.min.js
-
-# Assets
-css: https://assets-1253491707.file.myqcloud.com/next/css
-js: https://assets-1253491707.file.myqcloud.com/next/js
-images: https://assets-1253491707.file.myqcloud.com/next/images
+  # Available values: local, jsdelivr, unpkg
+  internal: jsdelivr

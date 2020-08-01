@@ -11,12 +11,6 @@ author: 月洒清辉映海棠
 language: zh-CN
 timezone: Asia/Shanghai
 
-# sitemap
-sitemap:
-  path: sitemap.xml
-  tag: false
-  category: false
-
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://moonbegonia.xyz
@@ -38,7 +32,8 @@ skip_render: admin/**
 new_post_name: :year-:month-:day-:title.md # File name of new posts
 default_layout: post
 titlecase: true # Transform title into titlecase
-external_link: true # Open external links in new tab
+external_link:
+  enable: true
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
@@ -48,14 +43,21 @@ highlight:
   enable: true
   line_number: false
   auto_detect: true
-  tab_replace: true
+  tab_replace: '  '
+  wrap: true
+  hljs: false
+prismjs:
+  enable: false
+  preprocess: true
+  line_number: true
+  tab_replace: ''
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ""
+  path: ''
   per_page: 10
   order_by: -date
 
@@ -70,11 +72,30 @@ tag_map:
 ## http://momentjs.com/docs/#/displaying/format/
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
+## updated_option supports 'mtime', 'date', 'empty'
+updated_option: 'mtime'
 
 # Pagination
 ## Set per_page to 0 to disable pagination
 per_page: 10
 pagination_dir: page
+
+# Include / Exclude file(s)
+## include:/exclude: options only apply to the 'source/' folder
+include:
+exclude:
+ignore:
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: next
+
+# sitemap
+sitemap:
+  path: sitemap.xml
+  tag: false
+  category: false
 
 # rss feed
 feed:
@@ -84,13 +105,8 @@ feed:
   hub:
   content:
   content_limit: 140
-  content_limit_delim: " "
+  content_limit_delim: ' '
   order_by: -date
-
-# Extensions
-## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
-theme: next
 
 search:
   path: search.xml
@@ -123,7 +139,7 @@ neat_html:
 neat_css:
   enable: true
   exclude:
-    - "**/*.min.css"
+    - '**/*.min.css'
 # 压缩js
 neat_js:
   enable: false

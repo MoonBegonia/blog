@@ -1,34 +1,47 @@
-/* header */
+// 隐藏顶部线条
 .headband {
-  display: none; // 隐藏顶部线条
+  display: none;
 }
 
-.header {
-  margin: 12px auto 0; // 顶部空白
+// 顶部空白
+.main {
+  margin: 12px auto 0;
 }
 
+// 圆角计划
 .header-inner {
-  border-radius: $myradius; // 圆角
-
-  +mobile() {
-    margin: 0 8px;
-  }
+  border-radius: $myradius;
 }
 
-/* sidebar */
-.sidebar {
-  background: transparent;
+.site-brand-container {
+  border-radius: $myradius $myradius 0 0;
 }
 
 .sidebar-inner {
-  border-radius: $myradius; // 圆角
+  border-radius: $myradius;
 }
 
 .back-to-top {
-  font-size: 0.8125em; // back to top 字体大小
-  border-radius: 0 0 $myradius $myradius; // 圆角
+  border-radius: 0 0 $myradius $myradius;
 }
 
+.post-block {
+  border-radius: $myradius;
+}
+
+.post-block+.post-block {
+  border-radius: $myradius;
+}
+
+.comments {
+  border-radius: $myradius;
+}
+
+.pagination {
+  border-radius: $myradius;
+}
+
+// 背景图片
 body {
   background-image: url('https://image-1253491707.file.myqcloud.com/bg.webp/none');
   background-repeat: no-repeat;
@@ -41,44 +54,19 @@ body {
   }
 }
 
-/* post */
-.posts-expand .post-meta {
-  margin: 3px 0 20px 0;
-}
-
-.post-button {
-  margin-top: 20px;
-}
-
+// post
+// 字体大小
 .post-body {
   font-size: 1em;
 }
 
-p {
-  margin: 0 0 10px 0;
-}
-
-.post-block {
-  border-radius: $myradius; // 圆角
-}
-
-.post-block+.post-block {
-  border-radius: $myradius; // 圆角
-}
-
-.comments {
-  border-radius: $myradius; // 圆角
-}
-
-.pagination {
-  border-radius: $myradius; // 圆角
-}
-
+// 图片阴影
 .posts-expand .post-body img {
   padding: 0;
   box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.4);
 }
 
+// 链接样式
 .post-body .exturl {
   color: $custom-link-color;
   border-bottom: none;
@@ -91,16 +79,12 @@ p {
   }
 }
 
-/* footer */
-.footer {
-  color: #fff;
-}
-
 /* code */
 code {
   background: pink;
 }
 
+// 页脚主题，hexo链接样式
 .theme-link {
   color: $custom-link-color;
   border-bottom: 1px solid $custom-link-color;
@@ -108,14 +92,6 @@ code {
   &:hover {
     color: $custom-link-hover-color;
     border-bottom: 1px solid $custom-link-hover-color;
-  }
-}
-
-.tag-cloud a {
-  border-bottom: none;
-
-  &:hover {
-    border-bottom: none;
   }
 }
 
