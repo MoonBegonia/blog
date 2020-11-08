@@ -1,46 +1,3 @@
-// 隐藏顶部线条
-.headband {
-  display: none;
-}
-
-// 顶部空白
-.main {
-  margin: 12px auto 0;
-}
-
-// 圆角计划
-.header-inner {
-  border-radius: $myradius;
-}
-
-.site-brand-container {
-  border-radius: $myradius $myradius 0 0;
-}
-
-.sidebar-inner {
-  border-radius: $myradius;
-}
-
-.back-to-top {
-  border-radius: 0 0 $myradius $myradius;
-}
-
-.post-block {
-  border-radius: $myradius;
-}
-
-.post-block+.post-block {
-  border-radius: $myradius;
-}
-
-.comments {
-  border-radius: $myradius;
-}
-
-.pagination {
-  border-radius: $myradius;
-}
-
 // 背景图片
 body {
   background-image: url('https://image-1253491707.file.myqcloud.com/bg.webp/none');
@@ -54,6 +11,56 @@ body {
   }
 }
 
+// 隐藏顶部黑色线条
+.headband {
+  display: none;
+}
+
+// 添加顶部边距
+.main {
+  margin: 12px auto 0;
+}
+
+.header {
+  +mobile() {
+    padding: 8px;
+  }
+}
+
+// 圆角计划
+.header-inner {
+  border-radius: 50px 50px $myradius $myradius;
+}
+.site-brand-container {
+  border-radius: $myradius $myradius 0 0;
+  +mobile() {
+    border-radius: $myradius;
+  }
+}
+.sidebar-inner {
+  border-radius: $myradius;
+}
+.back-to-top {
+  border-radius: 0 0 $myradius $myradius;
+}
+.post-block {
+  border-radius: $myradius !important;
+}
+.pagination {
+  border-radius: $myradius !important;
+}
+.comments {
+  border-radius: $myradius !important;
+}
+
+.site-brand-container {
+background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.footer-inner {
+  color: #fff;
+}
+
 // post
 // 字体大小
 .post-body {
@@ -61,8 +68,7 @@ body {
 }
 
 // 图片阴影
-.posts-expand .post-body img {
-  padding: 0;
+.medium-zoom-image {
   box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.4);
 }
 
@@ -70,7 +76,6 @@ body {
 .post-body .exturl {
   color: $custom-link-color;
   border-bottom: none;
-
   // border-bottom: 1px solid $custom-link-color;
   &:hover {
     color: $custom-link-hover-color;
@@ -79,9 +84,10 @@ body {
   }
 }
 
-/* code */
+// code
 code {
   background: pink;
+  color:#383a42;
 }
 
 // 页脚主题，hexo链接样式
@@ -100,7 +106,6 @@ code {
   background: rgba(0, 149, 255, 0.2);
   color: #555;
 }
-
 ::-moz-selection {
   background: rgba(0, 149, 255, 0.2);
   color: #555;
@@ -110,17 +115,14 @@ code {
 .table-container {
   scrollbar-width: thin;
 }
-
 .table-container::-webkit-scrollbar {
   width: 0.5em;
   height: 0.5em;
 }
-
 .table-container::-webkit-scrollbar-thumb {
   border-radius: 5px;
   background: #666b7a;
 }
-
 .table-container::-webkit-scrollbar-track {
   background: none;
 }

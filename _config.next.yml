@@ -9,58 +9,16 @@ minify: true
 # Define custom file paths.
 # Create your custom files in site directory `source/_data` and uncomment needed files below.
 custom_file_path:
-  head: source/_data/head.swig
-  #header: source/_data/header.swig
-  #sidebar: source/_data/sidebar.swig
-  #postMeta: source/_data/post-meta.swig
-  #postBodyEnd: source/_data/post-body-end.swig
-  #footer: source/_data/footer.swig
-  #bodyEnd: source/_data/body-end.swig
+  head: source/_data/head.njk
+  #header: source/_data/header.njk
+  #sidebar: source/_data/sidebar.njk
+  #postMeta: source/_data/post-meta.njk
+  #postBodyEnd: source/_data/post-body-end.njk
+  #footer: source/_data/footer.njk
+  #bodyEnd: source/_data/body-end.njk
   variable: source/_data/variables.styl
   #mixin: source/_data/mixins.styl
   style: source/_data/styles.styl
-
-# ---------------------------------------------------------------
-# Site Information Settings
-# See: https://theme-next.js.org/docs/getting-started/
-# ---------------------------------------------------------------
-
-# 网站图标
-favicon:
-  small: https://image-1253491707.file.myqcloud.com/favicon.ico
-  medium: https://image-1253491707.file.myqcloud.com/favicon.ico
-  apple_touch_icon:
-  safari_pinned_tab:
-  #android_manifest: /images/manifest.json
-  #ms_browserconfig: /images/browserconfig.xml
-
-# 页脚
-footer:
-  # Specify the date when the site was setup. If not defined, current year will be used.
-  since: 2018
-
-  # Icon between year and copyright info.
-  icon:
-    # Icon name in fontawesome, see: https://fontawesome.com/v4.7.0/icons
-    # `heart` is recommended with animation in red (#ff0000).
-    name: fa fa-heartbeat
-    # If you want to animate the icon, set it to true.
-    animated: true
-    # Change the color of icon, using Hex Code.
-    color: '#ff0000'
-
-  powered: true
-
-# Creative Commons 4.0 International License.
-# See: https://creativecommons.org/share-your-work/licensing-types-examples
-# Available values of license: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
-# You can set a language value if you prefer a translated version of CC license, e.g. deed.zh
-# CC licenses are available in 39 languages, you can find the specific and correct abbreviation you need on https://creativecommons.org
-creative_commons:
-  license: by-nc-sa
-  sidebar: false
-  post: true
-  language: zh
 
 # ---------------------------------------------------------------
 # Scheme Settings
@@ -74,6 +32,27 @@ scheme: Gemini
 
 # Dark Mode
 darkmode: true
+
+# ---------------------------------------------------------------
+# Site Information Settings
+# See: https://theme-next.js.org/docs/getting-started/
+# ---------------------------------------------------------------
+
+# 网站图标
+favicon:
+  small: https://image-1253491707.file.myqcloud.com/favicon.ico
+  medium: https://image-1253491707.file.myqcloud.com/favicon.ico
+
+# Creative Commons 4.0 International License.
+# See: https://creativecommons.org/share-your-work/licensing-types-examples
+# Available values of license: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
+# You can set a language value if you prefer a translated version of CC license, e.g. deed.zh
+# CC licenses are available in 39 languages, you can find the specific and correct abbreviation you need on https://creativecommons.org
+creative_commons:
+  license: by-nc-sa
+  sidebar: false
+  post: true
+  language: zh
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -132,8 +111,30 @@ links_settings:
 links:
   张旭虎: https://www.zhangxuhu.com/
   xzOS: https://xzos.net/
-  [Starx's Home]: https://www.ioflow.xyz/
+  # [Starx's Home]: https://www.starx.ink/
   Coelacanthus: https://blog.coelacanthus.moe/
+
+# ---------------------------------------------------------------
+# Footer Settings
+# See: https://theme-next.js.org/docs/theme-settings/footer
+# ---------------------------------------------------------------
+
+# 页脚
+footer:
+  # Specify the date when the site was setup. If not defined, current year will be used.
+  since: 2018
+
+  # Icon between year and copyright info.
+  icon:
+    # Icon name in fontawesome, see: https://fontawesome.com/v4.7.0/icons
+    # `heart` is recommended with animation in red (#ff0000).
+    name: fa fa-heartbeat
+    # If you want to animate the icon, set it to true.
+    animated: true
+    # Change the color of icon, using Hex Code.
+    color: '#ff0000'
+
+  powered: true
 
 # ---------------------------------------------------------------
 # Post Settings
@@ -152,7 +153,7 @@ post_meta:
 # Post wordcount display settings
 # Dependencies: https://github.com/theme-next/hexo-symbols-count-time
 symbols_count_time:
-  separated_meta: false
+  separated_meta: true
   item_text_post: true
   item_text_total: false
 
@@ -172,24 +173,6 @@ reward:
   wechatpay: https://image-1253491707.file.myqcloud.com/reward-wechat.jpg/webp
   #alipay: /images/alipay.png
   #paypal: /images/paypal.png
-
-# Related popular posts
-# Dependencies: https://github.com/tea3/hexo-related-popular-posts
-related_posts:
-  enable: false
-  title: # Custom header, leave empty to use the default one
-  display_in_home: false
-  params:
-    maxCount: 5
-    #PPMixingRate: 0.0
-    #isDate: false
-    #isImage: false
-    #isExcerpt: false
-
-# ---------------------------------------------------------------
-# Custom Page Settings
-# See: https://theme-next.org/docs/theme-settings/custom-pages
-# ---------------------------------------------------------------
 
 # ---------------------------------------------------------------
 # Misc Theme Settings
@@ -281,10 +264,6 @@ font:
 # SEO Settings
 # ---------------------------------------------------------------
 
-# If true, will add site-subtitle to index page, added in main hexo config.
-# subtitle: Subtitle
-index_with_subtitle: true
-
 # Automatically add external URL with BASE64 encrypt & decrypt.
 exturl: true
 
@@ -303,15 +282,12 @@ baidu_push: false
 # Third Party Plugins & Services Settings
 # See: https://theme-next.js.org/docs/third-party-services/
 # More plugins: https://github.com/next-theme/awesome-next
-# You may need to install dependencies or set CDN URLs in `vendors`
-# There are two different CDN providers by default:
-#   - jsDelivr (cdn.jsdelivr.net), works everywhere even in China
-#   - CDNJS (cdnjs.cloudflare.com), provided by cloudflare
+# You may need to install the corresponding dependency packages
 # ---------------------------------------------------------------
 
 # Easily enable fast Ajax navigation on your website.
 # Dependencies: https://github.com/next-theme/pjax
-pjax: false
+pjax: true
 
 # A JavaScript library for zooming images like Medium.
 # Do not enable both `fancybox` and `mediumzoom`.
@@ -342,11 +318,6 @@ disqusjs:
   shortname: moonbegonia-xyz # See: https://disqus.com/admin/settings/general
 
 # ---------------------------------------------------------------
-# Post Widgets & Content Sharing Services
-# See: https://theme-next.org/docs/third-party-services/post-widgets
-# ---------------------------------------------------------------
-
-# ---------------------------------------------------------------
 # Statistics and Analytics
 # See: https://theme-next.js.org/docs/third-party-services/statistics-and-analytics
 # ---------------------------------------------------------------
@@ -354,7 +325,7 @@ disqusjs:
 # Show number of visitors of each article.
 # You can visit https://leancloud.cn to get AppID and AppKey.
 # AppID and AppKey are recommended to be the same as valine's for counter compatibility.
-# Do not enable both `valine.visitor` and `leancloud_visitors`.
+# Warning: Do not enable both `valine.visitor` and `leancloud_visitors`.
 leancloud_visitors:
   enable: true
   app_id: p6gOnsegYK36h26DNy8uYj6C-MdYXbMMI
@@ -385,16 +356,6 @@ local_search:
   preload: false
 
 # ---------------------------------------------------------------
-# Chat Services
-# See: https://theme-next.org/docs/third-party-services/chat-services
-# ---------------------------------------------------------------
-
-# ---------------------------------------------------------------
-# Tags Settings
-# See: https://theme-next.org/docs/tag-plugins/
-# ---------------------------------------------------------------
-
-# ---------------------------------------------------------------
 # Animation Settings
 # ---------------------------------------------------------------
 
@@ -402,27 +363,33 @@ local_search:
 # For more information: https://animate.style
 motion:
   enable: true
-  async: false
+  async: true
   transition:
     # All available transition variants: https://theme-next.js.org/animate/
     post_block: fadeIn
-    post_header: fadeInDown
-    post_body: fadeInDown
+    post_header: fadeIn
+    post_body: fadeIn
     coll_header: fadeInLeft
     # Only for Pisces | Gemini.
     sidebar: fadeInUp
 
-#! ---------------------------------------------------------------
+#! ==============================================================
 #! DO NOT EDIT THE FOLLOWING SETTINGS
 #! UNLESS YOU KNOW WHAT YOU ARE DOING
-#! See: https://theme-next.js.org/docs/advanced-settings
-#! ---------------------------------------------------------------
+#! See: https://theme-next.js.org/docs/advanced-settings/vendors
+#! ==============================================================
 
-# Script Vendors. Set a CDN address for the vendor you want to customize.
-# CDN URLs from UNPKG and CDNJS are provided in the comments for selection.
-# If left blank, jsDelivr will be used as the default CDN provider.
-# It's recommended to use the same version as internal ones to avoid potential problems.
-# Remember to use the https protocol of CDN files when you enable https on your site.
+# It's recommended to use the same version as in `_vendors.yml` to avoid potential problems.
+# Remember to use the https protocol of CDN links when you enable https on your site.
 vendors:
-  # Available values: local, jsdelivr, unpkg
+  # The CDN provider of NexT internal scripts.
+  # Available values: local | jsdelivr | unpkg | cdnjs
+  # Warning: If you are using the latest master branch of NexT, please set `internal: local`
   internal: jsdelivr
+  # The default CDN provider of third-party plugins.
+  # Available values: local | jsdelivr | unpkg | cdnjs
+  # Dependencies for `plugins: local`: https://github.com/next-theme/plugins
+  plugins: jsdelivr
+
+  # In the following settings, you can specify the CDN link for each plugin.
+  # If left blank, the default CDN provider set by `plugins` option will be used.
