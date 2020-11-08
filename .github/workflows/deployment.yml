@@ -21,10 +21,10 @@ jobs:
         with:
           submodules: true
 
-      - name: Setup python
-        uses: actions/setup-python@v1
-        with:
-          python-version: '3.6'
+      # - name: Setup python
+      #   uses: actions/setup-python@v1
+      #   with:
+      #     python-version: '3.6'
 
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
@@ -39,21 +39,21 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
 
-      - name: Get pip cache
-        id: pip-cache
-        run: |
-          python -c "from pip._internal.locations import USER_CACHE_DIR; print('::set-output name=dir::' + USER_CACHE_DIR)"
+      # - name: Get pip cache
+      #   id: pip-cache
+      #   run: |
+      #     python -c "from pip._internal.locations import USER_CACHE_DIR; print('::set-output name=dir::' + USER_CACHE_DIR)"
 
-      - name: Get coscmd's requirements
-        run: wget https://raw.githubusercontent.com/tencentyun/coscmd/master/requirements.txt
+      # - name: Get coscmd's requirements
+      #   run: wget https://raw.githubusercontent.com/tencentyun/coscmd/master/requirements.txt
 
-      - name: Pip cache
-        uses: actions/cache@v1
-        with:
-          path: ${{ steps.pip-cache.outputs.dir }}
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
+      # - name: Pip cache
+      #   uses: actions/cache@v1
+      #   with:
+      #     path: ${{ steps.pip-cache.outputs.dir }}
+      #     key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-pip-
 
       - name: Change post files modified time
         run: |
@@ -69,21 +69,21 @@ jobs:
           yarn clean
           yarn build
 
-      - name: Setup coscmd
-        env:
-          SECRET_ID: ${{ secrets.COS_KEY_ID }}
-          SECRET_KEY: ${{ secrets.COS_KEY_SECERT }}
-          BUCKET: ${{ secrets.COS_BUCKET }}
-          REGION: ${{ secrets.COS_REGION }}
-        run: |
-          pip install coscmd
-          coscmd config -a $SECRET_ID -s $SECRET_KEY -b $BUCKET -r $REGION -m 30
+      # - name: Setup coscmd
+      #   env:
+      #     SECRET_ID: ${{ secrets.COS_KEY_ID }}
+      #     SECRET_KEY: ${{ secrets.COS_KEY_SECERT }}
+      #     BUCKET: ${{ secrets.COS_BUCKET }}
+      #     REGION: ${{ secrets.COS_REGION }}
+      #   run: |
+      #     pip install coscmd
+      #     coscmd config -a $SECRET_ID -s $SECRET_KEY -b $BUCKET -r $REGION -m 30
 
-      - name: Deploy to cos
-        run: |
-          coscmd upload -rs --delete -f public/css next/css
-          coscmd upload -rs --delete -f public/js next/js
-          coscmd upload -rs --delete -f public/images next/images
+      # - name: Deploy to cos
+      #   run: |
+      #     coscmd upload -rs --delete -f public/css next/css
+      #     coscmd upload -rs --delete -f public/js next/js
+      #     coscmd upload -rs --delete -f public/images next/images
 
       - name: Setup oss util
         uses: manyuanrong/setup-ossutil@v1.0
