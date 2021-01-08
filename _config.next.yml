@@ -271,13 +271,6 @@ exturl: true
 # See: https://www.google.com/webmasters
 google_site_verification: uGBNF83sgg7uZTxWsvqWZyQp6PswDH1uBfIYuC13LLw
 
-# Baidu Webmaster tools verification.
-# See: https://ziyuan.baidu.com/site
-baidu_site_verification: WOmbfKoQ7x
-
-# Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO.
-baidu_push: false
-
 # ---------------------------------------------------------------
 # Third Party Plugins & Services Settings
 # See: https://theme-next.js.org/docs/third-party-services/

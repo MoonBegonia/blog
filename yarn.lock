@@ -571,10 +571,10 @@ hexo-generator-searchdb@^1.3.3:
   dependencies:
     nunjucks "^3.2.2"
 
-hexo-generator-seo-friendly-sitemap@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/hexo-generator-seo-friendly-sitemap/-/hexo-generator-seo-friendly-sitemap-0.1.1.tgz#73d566d55e57f2ceb458e8353c14c02dcb5fbcb4"
-  integrity sha512-3fWgV5uVDhrF+ZcRh8Bbbp7Rtv/bUJpVIs1FBB+aIbTx/0kiqvvQNH+pQ+b15XrlNU9iWwarCJ/2oP7PVYpIAQ==
+hexo-generator-seo-friendly-sitemap@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/hexo-generator-seo-friendly-sitemap/-/hexo-generator-seo-friendly-sitemap-0.2.1.tgz#996a0c10ced51575d0d1aad59f65aad233946e87"
+  integrity sha512-DtEulX/7U2X4bRLztb6cDtHEvtwhEPSaL6shaxNtk2oPljJlnep9vFGGlF3KvTD1XADxSOtvVHd3RKWZEXl9WA==
   dependencies:
     bluebird "3.5.4"
     ejs "2.6.1"
@@ -663,6 +663,11 @@ hexo-symbols-count-time@^0.7.1:
   dependencies:
     hexo-util "1.9.0"
 
+hexo-theme-next@^8.2.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/hexo-theme-next/-/hexo-theme-next-8.2.0.tgz#e882343642b3d2061b66bb6cf58e4f435c3c7cde"
+  integrity sha512-whvcjF4Fl+afZxkuS0LbpREsO0f4otkTLH3rSuw2qkR0wI1yTTqZ4sTZc9P/9X87+CgYPuzS2AzurDQFaPXyAQ==
+
 hexo-util@1.9.0:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/hexo-util/-/hexo-util-1.9.0.tgz#0018429319720599253b2a3ddde0c5e4e4cfc652"
@@ -694,10 +699,10 @@ hexo-util@^2.0.0, hexo-util@^2.1.0, hexo-util@^2.4.0:
     strip-indent "^3.0.0"
     striptags "^3.1.1"
 
-hexo@^5.2.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/hexo/-/hexo-5.2.0.tgz#cf8b2e3df3ba29805a17d96145ad41b38432a8e5"
-  integrity sha512-lX4OqpZv+AGANHHyxmlXdlU5hDiJyPDqEBdRwtIo5BLp86RsCi/xlTtkdVV0fRi1uRjtLc9vwXf7LVjAd/l45g==
+hexo@^5.3.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/hexo/-/hexo-5.3.0.tgz#477362f13b676d7d79ecb353418ff830eb27761c"
+  integrity sha512-Q8JPpXYDemyIzRIjRx3555HALvnOqIeCj4NnW6T8aiZpi9hgZxTnpFDY2fBPdKIPNc5GvP4mL/705znxAM8kcA==
   dependencies:
     abbrev "^1.1.1"
     archy "^1.0.0"
